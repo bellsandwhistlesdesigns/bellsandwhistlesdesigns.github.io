@@ -1,0 +1,150 @@
+body {
+	font-family: 'Segoe UI', sans-serif;
+	margin: 0;
+	background: #f9fafb;
+	color: #333;
+}
+
+/* Hero Header */
+.hero-header {
+	position: relative;
+	height: 30vh; /* taller for immersive feel */
+	background: url('../images/Bluesky.jpg') center/cover no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	text-align: center;
+	overflow: hidden;
+}
+/* Overlay for better text visibility */
+.hero-header::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.1); /* dark overlay for readability */
+	z-index: 1;
+}
+/* Logo Styling */
+.logo {
+	width: 200px;
+	height: auto;
+	border-radius: 12px;
+	box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Text Styling */
+.header-text {
+	flex: 1;
+	text-align: center;
+}
+
+.header-text h1 {
+	margin: 0;
+	font-size: 1.8rem;
+}
+
+.header-text p {
+	margin: 0.2rem 0 0;
+	font-size: 1rem;
+}
+main {
+	padding: 2rem;
+	max-width: 800px;
+	margin: auto;
+}
+h2 {
+	color: #00796b;
+}
+footer {
+	text-align: center;
+	padding: 1.5rem;
+	background: #004d40;
+	color: white;
+	font-size: 0.9em;
+}
+footer a {
+	color: #80cbc4;
+	text-decoration: none;
+	font-weight: bold;
+}
+footer a:hover {
+	text-decoration: underline;
+	color: #b2dfdb;
+}
+.about {
+	max-width: 800px;
+	margin: 3rem auto;
+	text-align: center;
+	padding: 1rem;
+}
+
+.about h2 {
+	font-size: 1.8rem;
+	margin-bottom: 1rem;
+	color: #00796b;
+}
+
+.about p {
+	font-size: 1.1rem;
+	line-height: 1.6;
+	color: #333;
+}
+
+.verified {
+	text-align: center;
+	background: yellow;
+	border-left: 5px solid #00796b;
+	padding: 1rem;
+	margin-top: 1.5rem;
+	border-radius: 8px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.coming-soon {
+	background: linear-gradient(180deg, #e8f5e9 0%, #c8e6c9 100%);
+	text-align: center;
+	padding: 3rem 1rem;
+	border-top: 1px solid #b2dfdb;
+	border-bottom: 1px solid #b2dfdb;
+	border-radius: 12px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+	opacity: 0;
+	transform: translateY(20px);
+	animation: fadeUp 2s ease-out forwards;
+}
+@keyframes fadeUp {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.coming-soon h2 {
+	font-size: 1.8rem;	
+	color: #00796b;
+	margin-bottom: 1rem;
+}
+
+.coming-soon p {
+	font-size: 1.1rem;
+	color: #444;
+	line-height: 1.6;
+	max-width: 700px;
+	margin: 0 auto 1.5rem;
+}
+
+.app-preview {
+	margin-top: 2rem;
+}
+
+.app-image {
+	width: 200px;
+	height: auto;
+	border-radius: 16px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.status {
+	font-weight: bold;
+	color: #00796b;
+	margin-top: 0.5rem;
+}
