@@ -47,7 +47,32 @@
 		</section>
 
 	</main>
+	<section id="contact" class="contact-section">
+  <h2>Get in Touch</h2>
+  <p>Have a question, an app idea, or want to collaborate? I’d love to hear from you!</p>
 
+  <form class="contact-form" action="https://formspree.io/f/yourformid" method="POST">
+    	<label for="name">Full Name:</label>
+    	<input type="text" id="name" name="name" required>
+
+    	<label for="email">Email:</label>
+    	<input type="email" id="email" name="_replyto" required>
+
+    	<label for="reason">What can we help with?</label>
+    	<select id="reason" name="reason" required>
+     		<option value="">-- Please Choose --</option>
+      		<option value="inquiry">General Inquiry</option>
+      		<option value="support">Customer Support</option>
+      		<option value="feedback">Feedback</option>
+      		<option value="partnership">Partnership</option>
+    </select>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+
+    <button type="submit" class="contact-button">Let Us Know!</button>
+  </form>
+</section>
 	<footer>
 	<p>
 		© 2025 
@@ -69,3 +94,4 @@
 	</footer>
 </body>
 </html>
+
