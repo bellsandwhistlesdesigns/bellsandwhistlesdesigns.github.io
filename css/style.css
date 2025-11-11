@@ -14,6 +14,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	color: white;
+	padding-top: 20px;
 	text-align: center;
 	overflow: hidden;
 }
@@ -31,6 +32,8 @@ body {
 	height: auto;
 	border-radius: 12px;
 	box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+	display: block;
+	margin: 20px auto 0:
 }
 
 /* Text Styling */
@@ -151,6 +154,11 @@ footer a:hover {
 	font-weight: bold;
 	color: #00796b;
 	margin-top: 0.5rem;
+}
+@media (max-width: 600px) {
+	.logo {
+		width: 150px;
+	}
 }
 
 
