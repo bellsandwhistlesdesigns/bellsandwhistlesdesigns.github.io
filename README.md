@@ -20,7 +20,7 @@ This site is being used to showcase that I am creating a Learn to Draw Series fo
 
 ## Next Steps
 - Add Authentication and authorization
-- Improve Error handling and loading stated
+- Improve Error handling and loading states
 - Expand my test coverage
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
