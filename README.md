@@ -5,7 +5,7 @@ Official site for Bells and Whistles Designs - all code and designs created by D
 
 ## Bells and Whistles Designs Overview
 This site is being used to showcase that I am creating a Learn to Draw Series for the Google Play Store.
-- I want to teach people that everyone can draw, whether through templates or freehand.
+- I want to teach people that everyone can draw, whether through templates or freehand
 - First App in the series is called Learn to Draw Dinosaurs
 
 ## Tech Stack
