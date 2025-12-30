@@ -9,7 +9,7 @@ This site is being used to showcase that I am creating a Learn to Draw Series fo
 - First App in the series is called Learn to Draw Dinosaurs
 
 ## Tech Stack
-- Frontend: HTML5, CSS3 (soon React and JavaScript) .
+- Frontend: HTML5, CSS3 (soon React and JavaScript) 
 - Database: (currently creating a SQL Server to support this data driven application)
 - Backend: (soon Node.js)
 
@@ -27,8 +27,7 @@ This site is being used to showcase that I am creating a Learn to Draw Series fo
 
 ## Ridgeline Web Studio - local machine 
 # Overview
-A full stack web application built to explore component-based UI development and API-driven data handling in a real-world project context. Not published, local use only
-Soon to be uploaded to Github
+A full stack web site built to explore component-based UI development and API-driven data handling in a real-world project context. Not published, local use only
 
 ## Tech Stack
 - Frontend: React, JavaScript, HTML5, CSS3
@@ -39,9 +38,10 @@ Soon to be uploaded to Github
 ## Features
 - Responsive user interface built with reusable React components
 - Dynamic data loading using browser APIs
-- Form handling and basic client-side validation
+- Form handling and client-side validation
 
 ## What I Learned
+- Site interaction with users
 - Building and organizing React components
 - Managing state and side effects with hooks
 - Connecting frontend components to backend APIs
