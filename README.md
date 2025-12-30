@@ -6,7 +6,7 @@ Official site for Bells and Whistles Designs - all code and designs created by D
 ## Bells and Whistles Designs Overview
 This site is being used to showcase that I am creating a Learn to Draw Series for the Google Play Store.
 - I want to teach people that everyone can draw, whether through templates or freehand.
-- First Application is called Learn to Draw Dinosaurs
+- First App in the series is called Learn to Draw Dinosaurs
 
 ## Tech Stack
 - Frontend: HTML5, CSS3 (soon React and JavaScript) .
@@ -47,6 +47,8 @@ Soon to be uploaded to Github
 - Connecting frontend components to backend APIs
 
 ## Future Improvements
-- Add database games for logged in users to experience 
+- Add database games for logged in users to experience
+- Add options for Avatars within dashboard
+- Add options for users about backgrounds
 
 
