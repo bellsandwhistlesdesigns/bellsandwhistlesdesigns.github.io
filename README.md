@@ -1,5 +1,5 @@
 # bellsandwhistlesdesigns.github.io
-Official site for Bells and Whistles Designs - created by Douglas Moth
+Official site for Bells and Whistles Designs - all code and designs created by Douglas Moth
 
 # Learn To Draw a Google Play Store App
 
