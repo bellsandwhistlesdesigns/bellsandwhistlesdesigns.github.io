@@ -1,0 +1,190 @@
+.timeline-container {
+	padding: 40px 20px;
+	max-width: 1600px;
+	margin: auto;
+}
+
+.timeline-title {
+	text-align: center;
+	margin-bottom: 40px;
+}	
+
+.timeline {
+	width: 100%;
+	max-width: 800px;
+	margin: auto;
+	padding: 2rem;
+}
+.timeline-event {
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: #222;
+	border: 2px solid #6df76d;
+	padding: 1.5rem;
+	border-radius: 10px;
+	padding: 2rem;
+	max-width: 730px;
+	height: 140px;
+	box-shadow: 0 0 10px rgba(0, 255, 100, 0.3);
+	transition: all 0.6s ease-in-out;
+	opacity: 0;
+	transform: translateY(20px);
+	position: absolute;
+	z-index: 2;
+}
+.event-wrapper {
+	position: relative;
+	height: 180px; /* Adjust depending on your event + block size */
+	margin-bottom: 3rem;
+}
+.landing-block {
+	position: relative;
+	overflow: visible;
+	top: 0;
+	left: 0;
+	height: 140px;
+	max-width: 800px;
+	margin: 2rem auto;
+	border: 2px solid #6df76d;
+	border-radius: 10px;
+	background-color: #ffffff;
+	box-shadow: inset 0 0 10px rgba(0,255,100,0.5);
+	opacity: 0.2;
+	transition: opacity 0.3s ease;
+}
+.landing-block.active::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 250px;
+	height: 250px;
+	background: url('data:image/svg+xml;utf8,\
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">\
+		<g stroke="navy" stroke-width="4">\
+		<line x1="50" y1="10" x2="50" y2="90"/>\
+		<line x1="10" y1="50" x2="90" y2="50"/>\
+		<line x1="20" y1="20" x2="80" y2="80"/>\
+		<line x1="80" y1="20" x2="20" y2="80"/>\
+		</g>\
+	</svg>') no-repeat center center;
+	background-size: contain;
+	transform: translate(-50%, -50%) scale(0);
+	animation: svgBurst 0.7s ease-out backwards;
+	opacity: 0.9;
+	pointer-events: none;
+	z-index: 3;
+}
+.landing-block.active {
+	box-shadow: 0 0 25px rgba(0, 255, 100, 0.8), inset 0 0 10px rgba(0, 255, 100, 0.4);
+	opacity: 0.8;
+	transition: all 0.6s ease;
+}
+.landing-block:hover {
+	background: lightgrey;
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+}
+.timeline-event.visible {
+	opacity: 0.8;
+	transform: translateX(0);
+}
+.timeline-event.left {
+	height: 80px;
+	text-align: left;
+	background-color: lightblue;
+	border: 2px solid darkblue;
+	color: white;
+}
+.timeline-event.right {
+	height: 80px;
+	text-align: right;
+	background-color: yellow;
+	border: 2px solid red;
+	color: #bbb;
+}
+.timeline-event.center {
+	height: 80px;
+	text-align: left;
+	background-color: green;
+	border: 2px solid yellow;
+	color: white;
+}
+.timeline-event:hover {
+	background: lightgrey;
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+}
+.timeline-event.left:hover {
+	background: red;
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+}
+.timeline-event.right:hover {
+	background: cyan;
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+}
+.timeline-event.center:hover {
+	background: lightblue;
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+}
+.timeline-event.offscreen-left {
+	transform: translateX(-200vw); /* way off the screen */
+	opacity: 0;
+}
+.timeline-event.offscreen-right {
+	transform: translateX(200vw); /* way of the screen */
+	opacity: 0;
+}
+.timeline-event.offscreen-center {
+	transform: translateX(-200vw);
+	opacity: 0;
+}
+.year-label.label-1{
+	font-size: 6rem;
+	font-weight: bold;
+	color: #bbb;
+	text-align: right;
+	width: 100%;
+	margin-bottom: 0.75rem;
+}
+.year-label.label-2 {
+	font-size: 6rem;
+	font-weight: bold;
+	color: green;
+	text-align: left;
+	width: 100%;
+	margin-bottom: 0.75rem;
+}
+.year-label.label-3 {
+	font-size: 6rem;
+	font-weight: bold;
+	color: red;
+	text-align: right;
+	width: 100%;
+	margin-bottom: 0.75rem;
+}
+@keyframes bounceTwice {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-60px); }
+  50%  { transform: translateY(0); }
+  70%  { transform: translateY(-30px); }
+  100% { transform: translateY(0); }
+}
+
+.timeline-event.bounce {
+  animation: bounceTwice 1s ease;
+}
+@keyframes svgBurst {
+  0% {
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 1;
+  }
+  60% {
+    transform: translate(-50%, -50%) scale(1.3);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+ 

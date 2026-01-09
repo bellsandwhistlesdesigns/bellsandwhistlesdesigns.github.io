@@ -1,0 +1,91 @@
+<!-- Bells and Whistles contact me -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact Me |Bells and Whistles Designs</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style-contactus.css">
+</head>
+<body>
+<header class="hero-header">
+	<div class="header-content">
+		<img src="images/bellsandwhistles.svg" alt="Bells and Whistles Designs Logo" class="logo">
+    <div class="header-text">
+		<h1>Douglas Moth | A Full Stack Developer</h1>
+	</div>
+	</div>
+	<div id="container">
+		
+		<ul class="nav-links" id="nav-links">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="projects.html">My Dev Skills</a></li>
+		<li><a href="appdev.html">Android Apps</a></li>
+		<li><a href="login.html">Log In</a></li>
+		
+		</ul>
+	</div>
+</header>
+<main> 
+	<div class="contact"> 
+		<section class="contact-section">
+		<h1>Get in Touch with me</h1> 
+		<form class="contact-form" action="#" method="post">
+		<table>
+				<tr>
+					<td><label for="name">Full Name:</label></td>
+					<td><input type="text" id="name" name="name" required></td>
+				</tr>
+				<tr>
+					<td><label for="email">Email:</label></td>
+					<td><input type="email" id="email" name="email" required></td>
+				</tr>
+				<tr>
+					<td><label for="phone">Phone Number:</label></td>
+					<td><input type="tel" id="phone" name="phone" required></td>
+				</tr>
+				<tr>
+					<td><label for="reason">Open to work:</label></td>
+					<td>
+						<select id="reason" name="reason" required>
+							<option value="">-- Quick Toggle Option --</option>
+							<option value="inquiry">Authentication Systems</option>
+							<option value="support">RESTful APIs</option>
+							<option value="feedback">UI/UX</option>
+							<option value="partnership">Employment</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="message">Message:</label></td>
+					<td><textarea id="message" name="message" rows="4"></textarea></td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-align: center;">
+						<a href="mailto:douglasmoth@outlook.com" class="email-button">
+							Let me know
+					</td>
+				</tr>
+				
+			</table>
+		</form>
+		</section>
+	</div>
+</main>
+<footer>
+	<p>
+		© 2026 
+		<a href="https://bellsandwhistlesdesigns.github.io" target="_blank" rel="noopener noreferrer">
+		Bells and Whistles Designs - proudly created by Douglas Moth
+		</a>
+	</p>
+	<p>
+		<span id="email"></span>
+	</p>
+</footer>
+<script src="scripts/email.js"></script> 
+
+</body>
+</html>

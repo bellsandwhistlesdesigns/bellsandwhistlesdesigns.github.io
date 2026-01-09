@@ -1,0 +1,92 @@
+/* ==========================
+   Contact Page
+   ========================== */
+
+.contact {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 3rem 1rem;
+	min-height: 60vh;
+}
+
+.contact-section {
+	background: white;
+	padding: 2.5rem 2rem;
+	border-radius: 16px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+	max-width: 520px;
+	width: 100%;
+	animation: fadeUp 0.8s ease-out forwards;
+}
+
+.contact-section h1 {
+	margin-top: 0;
+	margin-bottom: 1.5rem;
+	text-align: center;
+	color: #00796b;
+	font-size: 1.8rem;
+}
+
+/* Form Layout */
+.contact-form table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.contact-form td {
+	padding: 0.4rem 0.3rem;
+	vertical-align: top;
+}
+
+.contact-form label {
+	font-weight: 600;
+	font-size: 0.9rem;
+	color: #004d40;
+	white-space: nowrap;
+}
+
+/* Inputs */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+	width: 100%;
+	padding: 0.6rem 0.7rem;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+	font-size: 0.95rem;
+	font-family: inherit;
+	transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form textarea {
+	resize: vertical;
+	min-height: 100px;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+	outline: none;
+	border-color: #00796b;
+	box-shadow: 0 0 0 2px rgba(0, 121, 107, 0.2);
+}
+
+/* Button */
+.contact-form button {
+	margin-top: 1.2rem;
+	padding: 0.7rem 1.5rem;
+	border-radius: 10px;
+	border: none;
+	background: #00796b;
+	color: white;
+	font-size: 1rem;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+	background: #004d40;
+	transform: translateY(-2px);
+}

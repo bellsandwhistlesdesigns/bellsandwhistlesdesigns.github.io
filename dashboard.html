@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Your dashboard | Bells and Whistles Designs</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style-dashboard.css">
+</head>
+
+<body>
+
+	<header class="hero-header">
+		<div class="header-content">
+			<img src="images/bellsandwhistles.svg" alt="Bells and Whistles Designs Logo" class="logo">
+			<div class="header-text">
+				<h1>My Credentials as a full stack developer</h1>
+			</div>
+		</div>
+		
+	<div id="container">
+		<!-- Nav links -->
+		<ul class="nav-links" id="nav-links">
+			<li>	
+				<button id="logoutBtn" class="logout-Btn" style="display:none;">
+					Log out
+				</button>
+			</li>
+		</ul>
+	</div>
+</header>
+<main>
+<section id="shop">
+	<h2 class="dashboard-title">
+	<h2>You Have made it this far! Thank you!</h2>
+	<div class="product-grid">
+		<div class="product-card">
+			<h3>Web and App Diploma</h3>
+			<p class="product-desc">
+				Check my scholastic credentials
+			</p>
+			<p class="product-price">Free</p>
+      		<a href="images/webandapp.jpg" target="_blank" class="buy-button">
+				Click Me
+			</a>
+		</div>
+		<div class="product-card">
+			<h3>Transcript</h3>
+			<p class="product-desc">
+				Grades
+			</p>
+			<p class="product-price">Free</p>
+			<a href="images/wandatransc.pdf" target="_blank" class="buy-button">
+			Click Me
+		</a>
+		</div>
+		<div class="product-card">
+			<img src="images/pacman.jpg" alt="Pacman" class="product-img">
+			<h3>PacMan</h3>
+			<p class="product-desc">
+				No introductrion needed.
+			</p>
+			<p class="product-price">Free</p>
+			<a href="#" target="_blank" class="buy-button">
+			Doesn't Work
+		</a>
+		</div>
+	</div>
+</section>
+</main>
+<footer>
+	<p>
+		© 2026 
+		<a href="https://bellsandwhistlesdesigns.github.io" target="_blank" rel="noopener noreferrer">
+		Bells and Whistles Designs - proudly created by Douglas Moth
+		</a>
+	</p>
+	<p>
+		<span id="email"></span>
+	</p>
+</footer>
+	<script>
+    // Email obfuscation (keeps spam bots from scraping it)
+		const user = "supasta.jdfm";
+		const domain = "gmail.com";
+		const emailLink = document.getElementById("email");
+		emailLink.innerHTML = `<a href="mailto:${user}@${domain}">Contact me today</a>`;
+	</script> 
+<script src="scripts/database.js"></script>
+<script src="scripts/dashboard.js"></script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>RESTful API | Bells and Whistles Designs</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style-projects.css">
+</head>
+<body>
+<header class="hero-header">
+	<div class="header-content">
+		<img src="images/bellsandwhistles.svg" alt="Bells and Whistles Designs Logo" class="logo">
+    <div class="header-text">
+		<h1>When information matters!</h1>
+	</div>
+	</div>
+	<div id="container">
+		<!-- Nav links -->
+		<ul class="nav-links" id="nav-links">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="projects.html" class="active">My Dev Skills</a></li>
+		<li><a href="login.html">Log In</a></li>
+		<li><a href="contactus.html">Contact Me</a></li>
+		</ul>
+	</div>
+</header>
+<main>
+<section class="news-demo">
+	<h2>News API Demo</h2>
+	<p class="news-intro">
+		"This demo showcases consuming a RESTful API, handling JSON responses,
+		and dynamically rendering results in the UI. **Endpoints shown are representative of real REST APIs**"
+	</p>
+
+	<div class="news-controls">
+		<input
+			type="text"
+			id="newsQuery"
+			placeholder="Search for news (e.g. technology, sports)"
+		>
+		<button id="fetchNewsBtn">Fetch News</button>
+	</div>
+
+	<div id="news-status" class="news-status"></div>
+
+	<div id="news-results" class="news-results">
+		<!-- Articles will be injected here -->
+	</div>
+</section>
+
+</main>
+
+<footer>
+	<p>
+		© 2026 
+		<a href="https://bellsandwhistlesdesigns.github.io" target="_blank" rel="noopener noreferrer">
+		Bells and Whistles Designs - proudly created by Douglas Moth
+		</a>
+	</p>
+	<p>
+		<span id="email"></span>
+	</p>
+</footer>
+<script src="scripts/email.js">	</script> 
+<script src="scripts/news-demo.js"></script>
+
+</body>
+</html>

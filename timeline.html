@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="css/style-timeline.css">
+	<link rel="stylesheet" href="css/style.css"><!-- Note that this information will not show up. It is built within my folder structure -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<title>Douglas | Bells and Whistles Timeline</title> <!-- This is used for welcome name on the tab -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head> 
+<body>
+<header class="hero-header">
+	<div class="header-content">
+		<img src="images/bellsandwhistles.svg" alt="Bells and Whistles Designs Logo" class="logo">
+    <div class="header-text">
+		<h1>A Proud Web and App Development Force</h1>
+	</div>
+	</div>
+	<div id="container">
+		<!-- Nav links -->
+		<ul class="nav-links" id="nav-links">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="projects.html">My Dev Skills</a></li>
+		<li><a href="login.html">Log In</a></li>
+		</ul>
+	</div>
+</header>
+		    
+<main class="timeline-container">
+	<h1 class="timeline-title">My Web Development Timeline Animations</h1>
+	<div class="timeline">
+		<div class="event-wrapper">
+			<div class="landing-block">
+			<div class="year-label label-1">2006</div>
+			</div>
+				<div class="timeline-event left">
+					<div class="content">
+						<h3>HTML / CSS</h3>
+						<p>Just the beginning</p>
+					</div>
+				</div>
+		</div>
+		<div class="event-wrapper">
+			<div class="landing-block">
+			<div class="year-label label-2">2016</div>
+			</div>
+				<div class="timeline-event right">
+					<div class="content">
+						<h3>I Married the love of my life</h3>
+						<p>Going on 10 years marrined</p>
+					</div>
+				</div>
+		</div>
+		<div class="event-wrapper">
+			<div class="landing-block">
+			<div class="year-label label-3">2024</div>
+			</div>
+				<div class="timeline-event center">
+						<div class="content">
+							<h3>Started Web and App Programming</h3>
+							<p>I would love to do this FULL TIME!</p>
+						</div>
+				</div>
+		</div>	
+	</div>
+</main>
+<footer>
+	<p>
+		© 2026 
+		<a href="https://bellsandwhistlesdesigns.github.io" target="_blank" rel="noopener noreferrer">
+		Bells and Whistles Designs - proudly created by Douglas Moth
+		</a>
+	</p>
+	<p>
+		<span id="email"></span>
+	</p>
+</footer>
+	<script>
+    // Email obfuscation (keeps spam bots from scraping it)
+		const user = "supasta.jdfm";
+		const domain = "gmail.com";
+		const emailLink = document.getElementById("email");
+		emailLink.innerHTML = `<a href="mailto:${user}@${domain}">You can reach out anytime</a>`;
+	</script> 
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="SCRIPTS/TLmain.js"></script><!-- please note that you will have to remove the SCRIPTS from this line, I built it to my folder structure and I am not sending all the files. -->
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+/* ==========================
+   Login / Registration Forms
+   ========================== */
+
+.login-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 60vh;
+	padding: 2rem 1rem;
+}
+
+.login-box {
+	background: white;
+	padding: 2.5rem 2rem;
+	border-radius: 16px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+	max-width: 420px;
+	width: 100%;
+	text-align: left;
+	animation: fadeUp 0.8s ease-out forwards;
+}
+
+.login-box h2 {
+	margin-top: 0;
+	margin-bottom: 1.5rem;
+	text-align: center;
+	color: #00796b;
+	font-size: 1.6rem;
+}
+
+/* Form Elements */
+.login-box form {
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+}
+
+.login-box label {
+	font-weight: 600;
+	font-size: 0.9rem;
+	color: #004d40;
+}
+
+.login-box input {
+	padding: 0.6rem 0.7rem;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+	font-size: 0.95rem;
+	transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-box input:focus {
+	outline: none;
+	border-color: #00796b;
+	box-shadow: 0 0 0 2px rgba(0, 121, 107, 0.2);
+}
+
+/* Submit Button */
+.login-box button {
+	margin-top: 1.2rem;
+	padding: 0.7rem;
+	border-radius: 10px;
+	border: none;
+	background: #00796b;
+	color: white;
+	font-size: 1rem;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.login-box button:hover {
+	background: #004d40;
+	transform: translateY(-2px);
+}
+
+/* Messages */
+#register-message {
+	margin-top: 1rem;
+	font-weight: 600;
+	text-align: center;
+}
+
+/* Links */
+.login-links,
+.login-box a {
+	display: block;
+	text-align: center;
+	margin-top: 1rem;
+	font-size: 0.9rem;
+	color: #00796b;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.login-box a:hover {
+	text-decoration: underline;
+	color: #004d40;
+}
