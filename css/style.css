@@ -11,11 +11,13 @@ body {
 	height: 30vh; /* taller for immersive feel */
 	background: url('../images/Bluesky.jpg') center/cover no-repeat;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	color: white;
 	text-align: center;
 	overflow: hidden;
+	padding: 1.5 rem 1 rem;
 }
 /* Overlay for better text visibility */
 .hero-header::before {
@@ -209,6 +211,27 @@ footer a:hover {
 	opacity: 0.85;
 	transform: translateY(-2px);
 }
+/* Hamburger Button */
+.nav-toggle {
+	display: none;
+	position: absolute;
+	top: 1.2rem;
+	right: 1.2rem;
+	background: none;
+	border: none;
+	cursor: pointer;
+	z-index: 3;
+}
+
+.nav-toggle span {
+	display: block;
+	width: 26px;
+	height: 3px;
+	margin: 5px 0;
+	background: white;
+	border-radius: 3px;
+	transition: 0.3s ease;
+}
 
 /* Optional: active page indicator */
 .nav-links a.active {
@@ -358,5 +381,40 @@ footer a:hover {
 .inline-link:hover {
 	text-decoration: underline;
 	color: #004d40;
+}
+/* Mobile Nav Behaviour */
+@media (max-width: 768px) {
+
+	.nav-toggle {
+		display: block;
+	}
+
+	#container {
+		width: 100%;
+	}
+
+	.nav-links {
+		display: none;
+		flex-direction: column;
+		background: rgba(0, 0, 0, 0.85);
+		position: absolute;
+		top: 100%;
+		right: 1rem;
+		width: 220px;
+		padding: 1rem;
+		border-radius: 12px;
+	}
+
+	.nav-links.active {
+		display: flex;
+	}
+
+	.nav-links li {
+		margin: 0.5rem 0;
+	}
+
+	.hero-header {
+		text-align: center;
+	}
 }
 
