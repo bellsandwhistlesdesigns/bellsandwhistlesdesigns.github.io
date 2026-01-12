@@ -386,7 +386,7 @@ footer a:hover {
 @media (max-width: 768px) {
 
 	.nav-toggle {
-		display: block;
+		display: none;
 	}
 
 	#container {
@@ -407,6 +407,7 @@ footer a:hover {
 
 	.nav-links.active {
 		display: flex;
+		flex-direction: column;
 	}
 
 	.nav-links li {
@@ -417,4 +418,5 @@ footer a:hover {
 		text-align: center;
 	}
 }
+
 
