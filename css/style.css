@@ -8,7 +8,7 @@ body {
 /* Hero Header */
 .hero-header {
 	position: relative;
-	height: 30vh; /* taller for immersive feel */
+	min-height: 30vh; /* use min-height so header can expand if needed */
 	background: url('../images/Bluesky.jpg') center/cover no-repeat;
 	display: flex;
 	flex-direction: column;
@@ -17,7 +17,8 @@ body {
 	color: white;
 	text-align: center;
 	overflow: hidden;
-	padding: 1.5 rem 1 rem;
+	padding: 1.5rem 1rem; /* fixed invalid units */
+	z-index: 0; /* establish stacking context so following content won't overlap */
 }
 /* Overlay for better text visibility */
 .hero-header::before {
@@ -27,14 +28,14 @@ body {
 	background: rgba(0, 0, 0, 0.1); /* dark overlay for readability */
 	z-index: 1;
 }
-.header-content,
-#container {
+.header-content {
 	position: relative;
 	z-index: 2;
 }
 /* Logo Styling */
 .logo {
-	width: 200px;
+	max-width: 200px;
+	width: 100%;
 	height: auto;
 	border-radius: 12px;
 	box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
@@ -180,6 +181,7 @@ footer a:hover {
    Navigation
    ========================== */
 
+/* keep nav container absolute inside the header */
 #container {
 	position: absolute;
 	top: 1.5rem;
@@ -238,6 +240,7 @@ footer a:hover {
 	border-bottom: 2px solid #80cbc4;
 	padding-bottom: 2px;
 }
+[... remaining CSS unchanged ...]
 /* ==========================
    News API Demo
    ========================== */
@@ -354,7 +357,6 @@ footer a:hover {
 	text-decoration: underline;
 	color: #004d40;
 }
-/* Email Button */
 .email-button {
 	display: inline-block;
 	padding: 0.7rem 1.5rem;
@@ -371,7 +373,6 @@ footer a:hover {
 	background: #004d40;
 	transform: translateY(-2px);
 }
-/* Inline text links */
 .inline-link {
 	color: #00796b;
 	font-weight: bold;
@@ -383,5 +384,19 @@ footer a:hover {
 	color: #004d40;
 }
 
-
-
+/* Responsive tweaks for small screens */
+@media (max-width: 600px) {
+	.hero-header {
+		min-height: 40vh;
+		padding: 2rem 1rem;
+	}
+	.logo {
+		max-width: 140px;
+	}
+	.nav-links {
+		display: none; /* show hamburger instead */
+	}
+	.nav-toggle {
+		display: block;
+	}
+}
