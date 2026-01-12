@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>React Component Demo</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/registration.css">
+	<!-- React CDN -->
+	<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+<header class="hero-header">
+	<div class="header-content">
+		<img src="images/bellsandwhistles.svg" alt="Bells and Whistles Designs Logo" class="logo">
+    <div class="header-text">
+		<h1>React Demonstration - playing around</h1>
+	</div>
+	</div>
+	<button class="nav-toggle" aria-label="Toggle navigation">
+		<span></span>
+		<span></span>
+		<span></span>
+	</button>
+	<div id="container">
+		<!-- Nav links -->
+		<ul class="nav-links" id="nav-links">
+		<li><a href="projects.html">My Dev Skills</a></li>
+		<li><a href="appdev.html">Android Apps</a></li>
+		<li><a href="login.html">Log In</a></li>
+		<li><a href="contactus.html">Contact Me</a></li>
+		</ul>
+	</div>
+</header>
+<main>
+		<div class="login-container">
+			<section class="login-box">
+				<div id="root"></div>
+			</section>
+		</div>
+</main>
+<footer>
+	<p>
+		© 2026 
+		<a href="https://bellsandwhistlesdesigns.github.io" target="_blank" rel="noopener noreferrer">
+		Bells and Whistles Designs - proudly created by Douglas Moth
+		</a>
+	</p>
+	<p>
+		<span id="email"></span>
+	</p>
+</footer>
+<script type="text/babel">
+		function FeatureToggle({ label }) {
+			const [enabled, setEnabled] = React.useState(false);
+
+			return (
+				<div style={{ marginBottom: "1rem" }}>
+					<p>
+						<strong>{label}</strong>: {enabled ? "Enabled" : "Disabled"}
+					</p>
+					<button
+						className="btn"
+						onClick={() => setEnabled(!enabled)}
+					>
+						Toggle
+					</button>
+				</div>
+			);
+		}
+
+		function App() {
+			return (
+				<div>
+					<h2>Component-Based UI</h2>
+					<p>
+						This in progress demo: showcases React components, state management,
+						and reusable UI logic.
+					</p>
+
+					<FeatureToggle label="Authentication Feature" />
+					<FeatureToggle label="API Integration" />
+					<FeatureToggle label="Dark Mode" />
+				</div>
+			);
+		}
+
+		const root = ReactDOM.createRoot(document.getElementById("root"));
+		root.render(<App />);
+	</script>
+
+<script src="scripts/mobilenav.js"></script>
+<script src="scripts/email.js"></script> 
+
+
+</body>
+</html>
