@@ -382,41 +382,6 @@ footer a:hover {
 	text-decoration: underline;
 	color: #004d40;
 }
-/* Mobile Nav Behaviour */
-@media (max-width: 768px) {
 
-	.nav-toggle {
-		display: none;
-	}
-
-	#container {
-		width: 100%;
-	}
-
-	.nav-links {
-		display: none;
-		flex-direction: column;
-		background: rgba(0, 0, 0, 0.85);
-		position: absolute;
-		top: 100%;
-		right: 1rem;
-		width: 220px;
-		padding: 1rem;
-		border-radius: 12px;
-	}
-
-	.nav-links.active {
-		display: flex;
-		flex-direction: column;
-	}
-
-	.nav-links li {
-		margin: 0.5rem 0;
-	}
-
-	.hero-header {
-		text-align: center;
-	}
-}
 
 
