@@ -54,8 +54,8 @@ h2 {
 	border-radius: 16px;
 	box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 	padding: 1.5rem;
-	max-width: 300px;
-	flex: 1 1 250px;
+	max-width: 150px;
+	flex: 1 1 150px;
 	text-align: center;
 	transition: transform 0.3s ease;
 }
