@@ -14,10 +14,14 @@
 		<div class="header-content">
 			<img src="images/bellsandwhistles.svg" alt="Bells and Whistles Designs Logo" class="logo">
 			<div class="header-text">
-				<h1>My Credentials as a full stack developer</h1>
+				<h1>Weekly blog, Transcript, and Sunrises</h1>
 			</div>
 		</div>
-		
+		<button class="nav-toggle" aria-label="Toggle navigation">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
 	<div id="container">
 		<!-- Nav links -->
 		<ul class="nav-links" id="nav-links">
@@ -35,57 +39,53 @@
 	<h2>You Have made it this far! Thank you!</h2>
 	<div class="product-grid">
 		<div class="product-card">
-			<h3>Web and App Diploma</h3>
+			<img src="images/Waves.jpg" alt="dusk" class="product-img">
+			<h3>Weekly Blog</h3>
 			<p class="product-desc">
-				Check my scholastic credentials
+				Thoughts / New products of the week
 			</p>
 			<p class="product-price">Free</p>
-      		<a href="images/webandapp.jpg" target="_blank" class="buy-button">
+      		<a href="weekthoughts.html" target="_blank" class="buy-button">
 				Click Me
 			</a>
 		</div>
 		<div class="product-card">
+			<img src="images/webandapp.jpg" alt="dusk" class="product-img">
 			<h3>Transcript</h3>
 			<p class="product-desc">
-				Grades
+				Knowlege
 			</p>
 			<p class="product-price">Free</p>
 			<a href="images/wandatransc.pdf" target="_blank" class="buy-button">
-			Click Me
-		</a>
+				Click Me
+			</a>
 		</div>
 		<div class="product-card">
-			<img src="images/pacman.jpg" alt="Pacman" class="product-img">
-			<h3>PacMan</h3>
+			<img src="images/Newmom.jpg" alt="dusk" class="product-img">
+			<h3>Weekly Sunrises</h3>
 			<p class="product-desc">
-				No introductrion needed.
+				View of Mt. Baker 
 			</p>
 			<p class="product-price">Free</p>
-			<a href="#" target="_blank" class="buy-button">
-			Doesn't Work
-		</a>
+			<a href="bakerviews.html" target="_blank" class="buy-button">
+			So Grand
+			</a>
 		</div>
 	</div>
 </section>
 </main>
-<footer>
-	<p>
-		© 2026 
-		<a href="https://bellsandwhistlesdesigns.github.io" target="_blank" rel="noopener noreferrer">
-		Bells and Whistles Designs - proudly created by Douglas Moth
-		</a>
-	</p>
-	<p>
-		<span id="email"></span>
-	</p>
+<footer class="site-footer">
+	<div class="footer-content">
+		<p>© 2026 Douglas Moth - Bells & Whistles Designs</p>
+
+		<ul class="footer-links">
+			<li><a href="projects.html">Projects</a></li>
+			<li><a href="contactus.html">Contact Me</a></li>
+			<li><a href="privacypolicy.html">Privacy Policy</a></li>
+			<li><a href="https://bellsandwhistlesdesigns.github.io" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+		</ul>
+	</div>
 </footer>
-	<script>
-    // Email obfuscation (keeps spam bots from scraping it)
-		const user = "supasta.jdfm";
-		const domain = "gmail.com";
-		const emailLink = document.getElementById("email");
-		emailLink.innerHTML = `<a href="mailto:${user}@${domain}">Contact me today</a>`;
-	</script> 
 <script src="scripts/database.js"></script>
 <script src="scripts/dashboard.js"></script>
 
