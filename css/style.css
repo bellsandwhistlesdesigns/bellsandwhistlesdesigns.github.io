@@ -449,7 +449,11 @@ footer a:hover {
 .footer-links a:hover {
 	text-decoration: underline;
 }
-
+ul {
+	list-style: none;
+	padding-left: 0;
+	margin-left: 0;
+}
 
 
 

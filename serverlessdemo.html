@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Serverless Computing Demo | Bells and Whistles Designs</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="hero-header">
+	<div class="header-content">
+		<img src="images/bellsandwhistles.svg" alt="Bells and Whistles Designs Logo" class="logo">
+    <div class="header-text">
+		<h1>Serverless Computing Demo</h1>
+	</div>
+	</div>
+	<button class="nav-toggle" aria-label="Toggle navigation">
+		<span></span>
+		<span></span>
+		<span></span>
+	</button>
+	<div id="container">
+		<!-- Nav links -->
+		<ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+		<li><a href="projects.html">My Dev Skills</a></li>
+		<li><a href="appdev.html">Android Apps</a></li>
+		<li><a href="contactus.html">Contact Me</a></li>
+		</ul>
+	</div>
+</header>
+<main class="content">
+    <section class="coming-soon">
+      <h2>What I know about Serverless Computing?</h2>
+      <p>
+        Serverless computing allows developers to run backend logic without managing
+        servers. Code is executed in response to events (such as HTTP requests), scales
+        automatically, and only runs when needed.
+      </p>
+      <p>
+        Common serverless platforms include AWS Lambda, Azure Functions, and Google
+        Cloud Functions.
+      </p>
+    
+    <section class="coming-soon">
+        <h2>Typical Serverless Architechture</h2>
+        <ul>
+            <li>Client sends HTTP request</li>
+            <li>API Gateway receives the request</li>
+            <li>Serverless function executes business logic</li>
+            <li>Optional database or external API interaction</li>
+            <li>JSON response returned to the client</li>
+        </ul>
+    </section>
+
+    <h2>Example Serverless Function (JavaScript)</h2>
+    <pre>
+export const handler = async (event) => {
+  return {
+    statusCode: 200,
+    body: JSON.stringify({
+      message: "Hello from a serverless function!",
+      timestamp: new Date().toISOString()
+    })
+  };
+};
+</pre>
+<section class="coming-soon">
+    <h2>Frontend Integration Concept</h2>
+        <p>In a real application, the frontend would call this function through a RESTful 
+            API endpoint. The response would then be used to update the UI dynamically.
+        </p>
+    
+     <pre>
+fetch('/api/hello')
+  .then(response => response.json())
+  .then(data => console.log(data.message));
+      </pre>
+    
+</section>
+    <section class="about">
+      <h2>Why Serverless?</h2>
+      <ul class="tech-list">
+        <li>No server maintenance</li>
+        <li>Automatic scaling</li>
+        <li>Cost-effective (pay per execution)</li>
+        <li>Secure separation of frontend and backend logic</li>
+      </ul>
+    </section>
+</section>
+</main>
+
+
+<footer class="site-footer">
+	<div class="footer-content">
+		<p>© 2026 Douglas Moth - Bells & Whistles Designs</p>
+
+		<ul class="footer-links">
+			<li><a href="projects.html">Projects</a></li>
+			<li><a href="contactus.html">Contact Me</a></li>
+			<li><a href="privacypolicy.html">Privacy Policy</a></li>
+			<li><a href="https://bellsandwhistlesdesigns.github.io" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+		</ul>
+	</div>
+</footer>
+<script src="scripts/mobilenav.js"></script>
+</body>
+</html>
