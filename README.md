@@ -7,7 +7,7 @@ Showcasing full-stack web and application development concepts through real, wor
 
 ## What This Project Is
 
-This portfolio was built to demonstrate practical, real-world development skills — not just visual design, but how modern web applications are structured, connected, and maintained.
+This portfolio was built to demonstrate practical, real-world development skills not just visual design, but how modern web applications are structured, connected, and maintained.
 
 The site highlights both **frontend execution** and **backend architecture concepts**, with a focus on clarity, usability, and clean implementation.
 
