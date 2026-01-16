@@ -1,4 +1,4 @@
-body {
+.body {
       font-family: Arial, sans-serif;
       background: #f4f4f4;
       padding: 2em;
@@ -31,7 +31,7 @@ h2 {
 #shop {
 	text-align: center;
 	padding: 3rem 1rem;
-	background: #f9f9f9; /* light neutral background */
+	background: #f9f9f9; 
 	border-radius: 16px;
 }
 

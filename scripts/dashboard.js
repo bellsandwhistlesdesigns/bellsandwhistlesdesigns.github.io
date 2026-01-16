@@ -1,10 +1,11 @@
 //dashboard.js
-
+console.log("dashboard.js is working");
 document.addEventListener("DOMContentLoaded", () => {
 	const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-	const logoutBtn = document.getElementById("logoutBtn");
+	
+	const logoutBtn = document.getElementById("logout-item");
 
-	// Show or hide logout button globally
+		// Show or hide logout button globally
 	if (logoutBtn) {
 		if (currentUser) {
 			logoutBtn.style.display = "inline-block";
@@ -23,4 +24,5 @@ document.addEventListener("DOMContentLoaded", () => {
 	if (dashboardHeader && currentUser) {
 		dashboardHeader.textContent = `Welcome back, ${currentUser.username}`;
 	}
+	
 });

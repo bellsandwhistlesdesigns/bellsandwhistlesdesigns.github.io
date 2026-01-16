@@ -5,32 +5,33 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Blog | Bells and Whistles Designs</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style-dashboard.css">
 </head>
 <body>
-	<header class="hero-header">
-		<div class="header-content">
-			<img src="images/bellsandwhistles.svg" alt="Bells and Whistles Designs Logo" class="logo">
+<header class="hero-header">
+	<div class="header-content">
+		<img src="images/bellsandwhistles.svg" alt="Bells and Whistles Designs Logo" class="logo">
 			<div class="header-text">
 				<h1>Weekly Development Notes</h1>
 			</div>
-		</div>
-		<button class="nav-toggle" aria-label="Toggle navigation">
+	</div>
+	<div id="container">
+	<button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">
 		<span></span>
 		<span></span>
 		<span></span>
-		</button>
-		<div id="container">
-			<!-- Nav links -->
-			<ul class="nav-links" id="nav-links">
-				<li><a href="dashboard.html">Dashboard</a></li>
-			</ul>
-			<button id="logoutBtn" class="logout-Btn">
-				Log out
-			</button>
-		</div>
-	</header>
+	</button>
 
-	<main>
+  <!-- Nav -->
+	<ul class="nav-links" id="nav-links">
+		<li><a href="dashboard.html">Back</a></li>
+		<li id="logout-item" style="display: none;">
+		<a href="#" id="logout-btn">Log Out</a>
+	</li>
+	</ul>
+	</div>
+</header>
+<main>
 		<section class="about">
 		<h2>Who I am</h2>
 		<p>
