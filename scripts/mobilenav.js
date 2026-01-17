@@ -2,12 +2,14 @@ console.log("mobilenav.js is working");
 
 
 document.addEventListener("DOMContentLoaded", () => {
-	const toggle = document.querySelector(".navToggle");
-	const nav = document.querySelector(".nav-links");
+  const toggle = document.getElementById("navToggle");
+  const nav = document.getElementById("nav-links");
 
-	if (toggle && navLinks) {
-		toggle.addEventListener("click", () => {
-			nav.classList.toggle("active");
-		});
-	}
+  if (!toggle || !nav) return;
+
+  toggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("active");
+    toggle.setAttribute("aria-expanded", isOpen);
+  });
 });
+

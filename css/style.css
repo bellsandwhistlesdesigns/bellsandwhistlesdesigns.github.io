@@ -385,33 +385,45 @@ footer a:hover {
 }
 
 /* Responsive tweaks for small screens */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
 	.nav-toggle {
 		display: block;
 	}
 
 	#container {
-		top: 4.5rem;
-		right: 1rem;
+		position: relative;
 	}
 
 	.nav-links {
-		display: none;
-		flex-direction: column;
-		background: rgba(0, 0, 0, 0.85);
-		padding: 1rem;
-		border-radius: 12px;
-		width: 220px;
-	}
+    display: none;
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.95);
+    padding: 1rem;
+    border-radius: 12px;
+    width: 220px;
+    z-index: 1000;
+  }
 
-	.nav-links.active {
-		display: flex;
-	}
+  .nav-links.active {
+    display: flex;
+  }
 
-	.nav-links li {
-		margin: 0.5rem 0;
-	}
+  .nav-links li {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+
+  .nav-links a {
+    color: white;
+    font-size: 1rem;
+  }
+}
+.hidden {
+	display: none;
 }
 .site-footer {
 	background: #0d1b1e;

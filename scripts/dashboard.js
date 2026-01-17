@@ -2,8 +2,8 @@
 console.log("dashboard.js is working");
 document.addEventListener("DOMContentLoaded", () => {
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-  const logoutItem = document.getElementById("logout-item");
-  const logoutBtn = document.getElementById("logout-btn");
+  const logoutItem = document.getElementById("logoutItem");
+  const logoutBtn = document.getElementById("logoutBtn");
 
   // Show logout only if logged in
   if (currentUser && logoutItem) {
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-	// Page-specific logic (only runs if elements exist)
+	// Page-specific logic 
 	const dashboardHeader = document.querySelector("h2.dashboard-title");
 	if (dashboardHeader && currentUser) {
 		dashboardHeader.textContent = `Welcome back, ${currentUser.username}`;
