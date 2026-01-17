@@ -1,23 +1,22 @@
 //dashboard.js
 console.log("dashboard.js is working");
 document.addEventListener("DOMContentLoaded", () => {
-	const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-	
-	const logoutBtn = document.getElementById("logout-item");
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  const logoutItem = document.getElementById("logout-item");
+  const logoutBtn = document.getElementById("logout-btn");
 
-		// Show or hide logout button globally
-	if (logoutBtn) {
-		if (currentUser) {
-			logoutBtn.style.display = "inline-block";
+  // Show logout only if logged in
+  if (currentUser && logoutItem) {
+    logoutItem.style.display = "block";
+  }
 
-			logoutBtn.addEventListener("click", () => {
-				localStorage.removeItem("currentUser");
-				window.location.href = "login.html";
-			});
-		} else {
-			logoutBtn.style.display = "none";
-		}
-	}
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      localStorage.removeItem("currentUser");
+      window.location.href = "login.html";
+    });
+  }
 
 	// Page-specific logic (only runs if elements exist)
 	const dashboardHeader = document.querySelector("h2.dashboard-title");
