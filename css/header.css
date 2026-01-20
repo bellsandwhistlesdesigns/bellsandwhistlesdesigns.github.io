@@ -3,7 +3,8 @@
   background: #0a1a2f;
   color: white;
   width: 100%;
-  z-index: 1000:
+  z-index: 1000;
+  border-radius: 12px;
 }
 
 .header-inner {
