@@ -18,8 +18,7 @@ h2 {
 	margin: 3rem auto;
 	text-align: center;
 	padding: 1rem;
-	border-top: 1px solid blue;
-	border-bottom: 1px solid blue;
+	border: 1px solid blue;
 	border-radius: 12px;
 	
 }
