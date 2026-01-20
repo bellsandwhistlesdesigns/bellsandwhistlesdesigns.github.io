@@ -1,13 +1,12 @@
 # Bells and Whistles Designs
 
 Official personal portfolio site created by **Douglas Moth**  
-Showcasing full-stack web and application development concepts through real, working demos.
+Showcasing full-stack web and application development, responsive UI design, and authentication-aware user experiences.
 
 ---
 
 ## What This Project Is
-
-This portfolio was built to demonstrate practical, real-world development skills not just visual design, but how modern web applications are structured, connected, and maintained.
+This site serves as a living portfolio and technical playground where I design, build, and refine real-world web application features.
 
 The site highlights both **frontend execution** and **backend architecture concepts**, with a focus on clarity, usability, and clean implementation.
 
@@ -66,3 +65,4 @@ This project is actively evolving as new features and improvements are added.
 It reflects ongoing learning, iteration, and refinement of both frontend and backend development skills.
 
 Feedback, discussion, and professional connections are always welcome.
+Actively seeking opportunities to contribute to production-grade software.
