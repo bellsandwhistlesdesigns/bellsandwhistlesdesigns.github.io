@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>React Component Demo</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/style-registration.css">
 	<!-- React CDN -->
 	<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
@@ -12,27 +13,37 @@
 	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 </head>
 <body>
-<header class="hero-header">
-	<div class="header-content">
-		<img src="images/bellsandwhistles.svg" alt="Bells and Whistles Designs Logo" class="logo">
-    <div class="header-text">
-		<h1>React Demonstration - playing around</h1>
-	</div>
-	</div>
-	<button class="nav-toggle" aria-label="Toggle navigation">
-		<span></span>
-		<span></span>
-		<span></span>
-	</button>
-	<div id="container">
-		<!-- Nav links -->
-		<ul class="nav-links" id="nav-links">
-		<li><a href="projects.html">My Dev Skills</a></li>
-		<li><a href="appdev.html">Android Apps</a></li>
-		<li><a href="contactus.html">Contact Me</a></li>
-		</ul>
-	</div>
+<header class="site-header">
+
+  <div class="header-inner">
+
+    <!-- Logo -->
+    <div class="brand">
+      <img src="images/bellsandwhistles.svg" alt="Bells and Whistles Designs Logo">
+      <span class="brand-text">Bells & Whistles Designs</span>
+	 </div>
+
+    <!-- Hamburger -->
+    <button class="nav-toggle"
+            id="navToggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false">
+      ☰
+    </button>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+	  <a href="projects.html">My Dev Skills</a>
+	  <a href="appdev.html">Android Skills</a>
+	  <a href="contactus.html">Contact Me</a>
+	  <a href="#" id="logoutBtn" class="logout hidden">Log Out</a>
+	</nav>
+
+  </div>
+
 </header>
+
 <main>
 		<div class="login-container">
 			<section class="login-box">

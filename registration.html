@@ -6,30 +6,41 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Registration Page | Bells and Whistles Designs</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/style-registration.css">
 </head>
 
 <body>
 
-	<header class="hero-header">
-		<div class="header-content">
-			<img src="images/bellsandwhistles.svg" alt="Bells and Whistles Designs Logo" class="logo">
-			<div class="header-text">
-				<h1>My Development Projects</h1>
-			</div>
-		</div>
-	<button class="nav-toggle" aria-label="Toggle navigation">
-		<span></span>
-		<span></span>
-		<span></span>
-	</button>
-	<div id="container">
-		<!-- Nav links -->
-		<ul class="nav-links" id="nav-links">
-		<li><a href="index.html">Home</a></li>
-		<li><a href="projects.html">My Dev Skills</a></li>
-		</ul>
-	</div>
+<header class="site-header">
+
+  <div class="header-inner">
+
+    <!-- Logo -->
+    <div class="brand">
+      <img src="images/bellsandwhistles.svg" alt="Bells and Whistles Designs Logo">
+      <span class="brand-text">Bells & Whistles Designs</span>
+	 </div>
+
+    <!-- Hamburger -->
+    <button class="nav-toggle"
+            id="navToggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false">
+      ☰
+    </button>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+	  <a href="projects.html">My Dev Skills</a>
+	  <a href="appdev.html">Android Skills</a>
+	  <a href="contactus.html">Contact Me</a>
+	  <a href="#" id="logoutBtn" class="logout hidden">Log Out</a>
+	</nav>
+
+  </div>
+
 </header>
 <main>
 	<div class="login-container">
@@ -69,7 +80,6 @@
 		</ul>
 	</div>
 </footer>
-<script src="scripts/email.js"></script> 
 <script src="scripts/database.js"></script>
 <script src="scripts/registration.js"></script>
 <script src="scripts/mobilenav.js"></script>

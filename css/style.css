@@ -4,75 +4,6 @@
 	background: #f9fafb;
 	color: #333;
 }
-
-/* Hero Header */
-.hero-header {
-	position: relative;
-	min-height: 30vh; /* use min-height so header can expand if needed */
-	background: url('../images/Bluesky.jpg') center/cover no-repeat;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	color: white;
-	text-align: center;
-	overflow: hidden;
-	padding: 1.5rem 1rem; /* fixed invalid units */
-	z-index: 0; /* establish stacking context so following content won't overlap */
-}
-/* Overlay for better text visibility */
-.hero-header::before {
-	content: "";
-	position: absolute;
-	inset: 0;
-	background: rgba(0, 0, 0, 0.1); /* dark overlay for readability */
-	z-index: 1;
-}
-.header-content {
-	position: relative;
-	z-index: 2;
-}
-/* Logo Styling */
-.logo {
-	max-width: 200px;
-	width: 100%;
-	height: auto;
-	border-radius: 12px;
-	box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
-}
-
-/* Text Styling */
-.header-text {
-	flex: 1;
-	text-align: center;
-}
-
-.header-text h1 {
-	margin: 0;
-	font-size: 1.8rem;
-}
-
-.header-text p {
-	margin: 0.2rem 0 0;
-	font-size: 1rem;
-}
-.logout-btn {
-	display: block;
-	width: 100%;
-	background: transparent;
-	border: 2px solid #80cbc4;
-	color: white;
-	font-weight: 600;
-	padding: 0.35rem 0.9rem;
-	border-radius: 8px;
-	text-align: center;
-}
-
-.logout-btn:hover {
-	background: #80cbc4;
-	color: #004d40;
-	transform: translateY(-2px);
-}
 main {
 	padding: 2rem;
 	max-width: 800px;
@@ -176,69 +107,6 @@ footer a:hover {
 	font-weight: bold;
 	color: #00796b;
 	margin-top: 0.5rem;
-}
-/* ==========================
-   Navigation
-   ========================== */
-
-/* keep nav container absolute inside the header */
-#container {
-	position: absolute;
-	top: 1.5rem;
-	right: 2rem;
-	z-index: 3;
-}
-
-.nav-links {
-	list-style: none;
-	display: flex;
-	gap: 1.5rem;
-	margin: 0;
-	padding: 0;
-}
-
-.nav-links li {
-	display: inline-block;
-}
-
-.nav-links a {
-	text-decoration: none;
-	font-weight: 600;
-	color: white;
-	font-size: 1rem;
-	transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.nav-links a:hover {
-	opacity: 0.85;
-	transform: translateY(-2px);
-}
-/* Hamburger Button */
-.nav-toggle {
-	display: none;
-	position: absolute;
-	top: 1.2rem;
-	right: 1.2rem;
-	background: none;
-	border: none;
-	cursor: pointer;
-	z-index: 3;
-}
-
-.nav-toggle span {
-	display: block;
-	width: 26px;
-	height: 3px;
-	margin: 5px 0;
-	background: white;
-	border-radius: 3px;
-	transition: 0.3s ease;
-}
-
-/* Optional: active page indicator */
-.nav-links a.active {
-	border-bottom: 2px solid #80cbc4;
-	padding-bottom: 2px;
 }
 
 /* ==========================
@@ -384,47 +252,6 @@ footer a:hover {
 	color: #004d40;
 }
 
-/* Responsive tweaks for small screens */
-@media (max-width: 768px) {
-
-	.nav-toggle {
-		display: block;
-	}
-
-	#container {
-		position: relative;
-	}
-
-	.nav-links {
-    display: none;
-    position: absolute;
-    top: 3rem;
-    right: 0;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.95);
-    padding: 1rem;
-    border-radius: 12px;
-    width: 220px;
-    z-index: 1000;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    margin: 0.5rem 0;
-    text-align: center;
-  }
-
-  .nav-links a {
-    color: white;
-    font-size: 1rem;
-  }
-}
-.hidden {
-	display: none;
-}
 .site-footer {
 	background: #0d1b1e;
 	color: #cfd8dc;

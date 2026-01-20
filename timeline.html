@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="stylesheet" href="css/style-timeline.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-	<title>Douglas' Timeline | Bells and Whistles Desings</title> 
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Douglas' Timeline | Bells and Whistles Desings</title> 
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/style-timeline.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">	
 	</head> 
 <body>
-<header class="hero-header">
-	<div class="header-content">
-		<img src="images/bellsandwhistles.svg" alt="Bells and Whistles Designs Logo" class="logo">
-    <div class="header-text">
-		<h1>Fun Java Animation</h1>
-	</div>
-	</div>
-	<button class="nav-toggle" aria-label="Toggle navigation">
-		<span></span>
-		<span></span>
-		<span></span>
-	</button>
-	<div id="container">
-		<!-- Nav links -->
-		<ul class="nav-links" id="nav-links">
-		<li><a href="index.html">Home</a></li>
-		<li><a href="projects.html">My Dev Skills</a></li>
-		<li><a href="appdev.html">Android</a></li>
-		<li><a href="contactus.html">Contact Me</a></li>
-		</ul>
-	</div>
-</header>
-		    
+<header class="site-header">
+
+  <div class="header-inner">
+
+    <!-- Logo -->
+    <div class="brand">
+      <img src="images/bellsandwhistles.svg" alt="Bells and Whistles Designs Logo">
+      <span class="brand-text">Bells & Whistles Designs</span>
+	 </div>
+
+    <!-- Hamburger -->
+    <button class="nav-toggle"
+            id="navToggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false">
+      ☰
+    </button>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+	  <a href="projects.html">My Dev Skills</a>
+	  <a href="appdev.html">Android Skills</a>
+	  <a href="contactus.html">Contact Me</a>
+	  <a href="#" id="logoutBtn" class="logout hidden">Log Out</a>
+	</nav>
+
+  </div>
+
+</header>  
 <main class="timeline-container">
 	<h1 class="timeline-title">JavaScript Animations</h1>
 	<section class="coming-soon">

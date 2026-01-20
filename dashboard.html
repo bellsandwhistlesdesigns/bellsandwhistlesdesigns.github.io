@@ -3,32 +3,36 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Your dashboard | Bells and Whistles Designs</title>
+	<title>Your Dashboard | Bells and Whistles Designs</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/style-dashboard.css">
+	<link rel="stylesheet" href="css/header.css">
 </head>
+<header class="site-header">
 
-<body>
+  <div class="header-inner">
 
-<header class="hero-header">
-	<div class="header-content">
-		<img src="images/bellsandwhistles.svg" alt="Bells and Whistles Designs Logo" class="logo">
-		<div class="header-text">
-			<h1>Weekly blog, Resume, and Sunrises</h1>
-		</div>
-	</div>
-		<button class="nav-toggle" aria-label="Toggle navigation" id="navToggle" aria-expanded="false">
-			<span></span>
-			<span></span>
-			<span></span>
-		</button>
-	<div id="container">
-	<!-- Nav -->
-	<ul class="nav-links" id="nav-links">
-		<li id="logout-item" class="hidden">
-			<a href="#" id="logoutBtn">Log Out</a></li>
-	</ul>
-	</div>
+    <!-- Logo -->
+    <div class="brand">
+      <img src="images/bellsandwhistles.svg"
+           alt="Bells and Whistles Designs Logo">
+      <span class="brand-text">Bells & Whistles Designs</span>
+    </div>
+
+    <!-- Hamburger -->
+    <button class="nav-toggle"
+            id="navToggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false">
+      ☰
+    </button>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="#" id="logoutBtn" class="logout hidden">Log Out</a>
+    </nav>
+
+  </div>
 </header>
 <main>
 <section id="shop">
@@ -53,7 +57,7 @@
 				Knowlege
 			</p>
 			<p class="product-price">Free</p>
-			<a href="images/douglasresume.pdf" target="_blank" class="buy-button">
+			<a href="images/dmresume.pdf" target="_blank" class="buy-button">
 				Click Me
 			</a>
 		</div>
@@ -86,6 +90,7 @@
 <script src="scripts/mobilenav.js"></script>
 <script src="scripts/database.js"></script>
 <script src="scripts/dashboard.js"></script>
+<script src="scripts/logout.js"></script>
 
 
 </body>
