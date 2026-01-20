@@ -13,6 +13,16 @@ The site highlights both **frontend execution** and **backend architecture conce
 
 ---
 
+## Recent Updates
+- Implemented a fully responsive, mobile-first navigation system with a custom hamburger menu
+- Added authentication-aware UI logic (logout visibility based on user session state)
+- Refactored global and component-level CSS for better maintainability
+- Improved mobile usability and cross-device layout consistency
+- Added site-wide favicons for professional browser and bookmark appearance
+- Streamlined development workflow using VS Code and GitHub version control
+
+---
+
 ## Core Concepts Demonstrated
 
 - RESTful API design and integration
