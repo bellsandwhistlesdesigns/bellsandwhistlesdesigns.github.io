@@ -1,7 +1,9 @@
 .site-header {
+  position: relative;
   background: #0a1a2f;
   color: white;
   width: 100%;
+  z-index: 1000:
 }
 
 .header-inner {
@@ -34,6 +36,10 @@
   display: flex;
   align-items: center;
   gap: 1.25rem;
+}
+.nav-links {
+  position: absolute;
+  z-index: 1100;
 }
 
 .nav a {
