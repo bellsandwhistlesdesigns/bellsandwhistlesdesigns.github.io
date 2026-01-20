@@ -12,22 +12,7 @@ main {
 h2 {
 	color: #00796b;
 }
-footer {
-	text-align: center;
-	padding: 1.5rem;
-	background: #004d40;
-	color: white;
-	font-size: 0.9em;
-}
-footer a {
-	color: #80cbc4;
-	text-decoration: none;
-	font-weight: bold;
-}
-footer a:hover {
-	text-decoration: underline;
-	color: #b2dfdb;
-}
+
 .about {
 	max-width: 800px;
 	margin: 3rem auto;
