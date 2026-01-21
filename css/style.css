@@ -12,12 +12,20 @@ main {
 h2 {
 	color: #00796b;
 }
-
+.case-study {
+  	margin-top: 2rem;
+  	padding: 1.5rem;
+ 	border-left: 4px solid #80cbc4;
+}
+.case-study2 {
+  	margin-top: 2rem;
+  	padding: 1.5rem;
+ 	border-right: 4px solid #80cbc4;
+}
 .about {
 	max-width: 800px;
 	margin: 3rem auto;
-	text-align: center;
-	padding: 1rem;
+	text-align: center;	padding: 1rem;
 	border: 1px solid blue;
 	border-radius: 12px;
 	

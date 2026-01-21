@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Case Studies | Bells and Whistles Designs</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-32x32.png">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style-dashboard.css">
+	<link rel="stylesheet" href="css/header.css">
+</head>
+<header class="site-header">
+
+  <div class="header-inner">
+
+    <!-- Logo -->
+    <div class="brand">
+      <img src="images/bellsandwhistles.svg"
+           alt="Bells and Whistles Designs Logo">
+      <span class="brand-text">Bells & Whistles Designs</span>
+    </div>
+
+    <!-- Hamburger -->
+    <button class="nav-toggle"
+            id="navToggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false">
+      ☰
+    </button>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="dashboard.html">Back</a>
+        <a href="#" id="logoutBtn" class="logout hidden">Log Out</a>
+    </nav>
+
+  </div>
+</header>
+<main class="case-studies">
+    <section class="about">
+        <h2>Case Studies</h2>
+        <p>
+        A deeper look into selected engineering challenges from my portfolio,
+        focusing on problem-solving, architecture, and implementation decisions.
+        </p>
+    </section>
+
+    <section class="case-study">
+        <h3>Case Study #1: Responsive Navigation & Auth-Aware UI</h3>
+        <p><strong>Problem:</strong>
+            Navigation worked on desktop but failed on mobile.
+            Hamburger menu logic conflicted with auth state.
+            Logout visibility needed to adapt dynamically.
+            CSS and JS were fighting each other.</p>
+        <p><strong>Approach:</strong>
+            Separated global vs component CSS.
+            Refactored header into modular styles.
+            Centralized auth logic using localStorage.
+            Implemented breakpoint-specific behavior.
+            Debugged stacking contexts (z-index issues)</p>
+        <p><strong>Outcome:</strong>
+            Fully responsive navigation across devices.
+            Clean, predictable auth-based UI behavior.
+            Improved maintainability and clarity.
+            Professional UX polish</p>
+    </section>
+    <section class="case-study2">
+         <h3>Case Study #2: Implementing Client-Side Authentication and Session Handling</h3>
+        <p><strong>Problem:</strong>
+            Needed login/logout behavior without a backend server.
+            Pages required conditional UI rendering.
+            Session state had to persist across refreshes.</p>   
+        <p><strong>Approach:</strong>
+            Used localStorage for session persistence.
+            Centralized auth checks in dashboard.js.
+            Condition-based UI rendering (logout visibility).
+            Redirect handling for protected pages.</p>  
+        <p><strong>Outcome:</strong>
+            Functional authentication flow.
+            Clear separation of concerns.
+            Scalable foundation for backend integration later.</p>
+
+    
+    
+
+  <!-- More case studies later -->
+</main>
+<footer class="site-footer">
+	<div class="footer-content">
+		<p>© 2026 Douglas Moth - Bells & Whistles Designs</p>
+
+		<ul class="footer-links">
+			<li><a href="projects.html">Projects</a></li>
+			<li><a href="contactus.html">Contact Me</a></li>
+			<li><a href="privacypolicy.html">Privacy Policy</a></li>
+			<li><a href="https://github.com/bellsandwhistlesdesigns/bellsandwhistlesdesigns.github.io" target="_blank">GitHub</a></li>
+		</ul>
+	</div>
+</footer>
+<script src="scripts/mobilenav.js"></script>
+<script src="scripts/database.js"></script>
+<script src="scripts/dashboard.js"></script>
+<script src="scripts/logout.js"></script>
+
+
+</body>
+</html>
