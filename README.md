@@ -22,6 +22,15 @@ The site highlights both **frontend execution** and **backend architecture conce
 
 ---
 
+## Quality & Accessibility
+
+This site was audited using Chrome Lighthouse to validate accessibility and
+best practices. Core pages scored 100 in accessibility, with dashboard views
+maintaining 95+ scores due to intentional design tradeoffs related to color
+contrast. Best Practices audits scored 100 across evaluated pages.
+
+---
+
 ## Core Concepts Demonstrated
 
 - RESTful API design and integration
@@ -58,6 +67,16 @@ Some demos are conceptual or simulated to reflect real production patterns witho
 - Responsive navigation and layout
 
 ---
+
+## Future Enhancements
+
+- Backend-backed authentication
+- Persistent data storage
+- Enhanced accessibility auditing
+- Performance optimization
+
+---
+
 
 ## About This Portfolio
 
