@@ -66,3 +66,11 @@ It reflects ongoing learning, iteration, and refinement of both frontend and bac
 
 Feedback, discussion, and professional connections are always welcome.
 Actively seeking opportunities to contribute to production-grade software.
+
+## License & Usage
+
+© 2026 Douglas Moth - Bells & Whistles Designs. All rights reserved.
+
+This repository is provided for portfolio and evaluation purposes only.
+No permission is granted to use, copy, modify, or distribute this code
+without explicit written consent from the author.
