@@ -26,15 +26,27 @@ h2 {
 	max-width: 800px;
 	margin: 3rem auto;
 	text-align: center;	padding: 1rem;
-	border: 1px solid #00796b;
+	border: 3px solid #00796b;
 	border-radius: 12px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 	
 }
 
 .about h2 {
-	font-size: 1.8rem;
-	margin-bottom: 1rem;
-	color: #00796b;
+	font-size: 2rem;
+  	margin-bottom: 1.25rem;
+  	color: #80cbc4;
+  	position: relative;
+	text-shadow: 0 2px 6px rgba(128,203,196,0.35);
+}
+
+.about h2::after {
+ 	content: "";
+	display: block;
+  	width: 60px;
+  	height: 4px;
+  	margin-top: 0.4rem;
+  	background: linear-gradient(90deg, #80cbc4, #004d40);
 }
 
 .about p {
@@ -60,7 +72,7 @@ h2 {
 	background: linear-gradient(180deg, #e8f5e9 0%, #c8e6c9 100%);
 	text-align: center;
 	padding: 3rem 1rem;
-	border-top: 1px solid #b2dfdb;
+	border-top: 4px solid #b2dfdb;
 	border-bottom: 1px solid #b2dfdb;
 	border-radius: 12px;
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
