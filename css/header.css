@@ -77,12 +77,13 @@
     position: absolute;
     top: 64px;
     right: 0;
-    background: #0a1a2f;
+    background: #00796b;
     width: 100%;
     flex-direction: column;
     align-items: center;
     padding: 1rem 0;
     display: none;
+    border-radius: 12px;
   }
 
   .nav.open {
