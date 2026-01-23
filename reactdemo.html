@@ -3,18 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>React Component Demo</title>
+	<title>React Component Demo | Bells and Whistles Designs</title>
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-16x16.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-32x32.png">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/style-registration.css">
-	<!-- React CDN -->
-	<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-	<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-</head>
+	</head>
 <body>
+	
 <header class="site-header">
 
   <div class="header-inner">
@@ -47,11 +44,17 @@
 </header>
 
 <main>
-		<div class="login-container">
-			<section class="login-box">
-				<div id="root"></div>
-			</section>
-		</div>
+	<section class="about">
+		<h2>React demonstrations</h2>
+		<p>
+			Small state-driven React components demonstrating conditional rendering,
+			event handling, and immutable state updates within a feature control panel.
+		</p>
+	</section>
+
+	<section class="coming-soon">
+	<div id="root"></div>
+	</section>
 </main>
 <footer class="site-footer">
 	<div class="footer-content">
@@ -66,45 +69,17 @@
 		</ul>
 	</div>
 </footer>
-<script type="text/babel">
-		function FeatureToggle({ label }) {
-			const [enabled, setEnabled] = React.useState(false);
+<!-- React CDN -->
+	<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 
-			return (
-				<div style={{ marginBottom: "1rem" }}>
-					<p>
-						<strong>{label}</strong>: {enabled ? "Enabled" : "Disabled"}
-					</p>
-					<button
-						className="btn"
-						onClick={() => setEnabled(!enabled)}
-					>
-						Toggle
-					</button>
-				</div>
-			);
-		}
+<!--Babel-->
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
-		function App() {
-			return (
-				<div>
-					<h2>Component-Based UI</h2>
-					<p>
-						This in progress demo: showcases React components, state management,
-						and reusable UI logic.
-					</p>
+<!-- My react demo-->
+<script type="text/babel" src="scripts/react-demo.js"></script>
 
-					<FeatureToggle label="Authentication Feature" />
-					<FeatureToggle label="API Integration" />
-					<FeatureToggle label="Dark Mode" />
-				</div>
-			);
-		}
-
-		const root = ReactDOM.createRoot(document.getElementById("root"));
-		root.render(<App />);
-	</script>
-
+<!-- Mobile Nav-->
 <script src="scripts/mobilenav.js"></script>
 </body>
 </html>

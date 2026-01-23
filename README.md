@@ -73,10 +73,8 @@ Some demos are conceptual or simulated to reflect real production patterns witho
 - Backend-backed authentication
 - Persistent data storage
 - Addition of interactive games
-- Performance optimization
 
 ---
-
 
 ## About This Portfolio
 

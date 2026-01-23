@@ -289,6 +289,11 @@ ul {
 	padding-left: 0;
 	margin-left: 0;
 }
-
+.dark-panel {
+  background: #121212;
+  color: #e0e0e0;
+  padding: 1rem;
+  border-radius: 12px;
+}
 
 
