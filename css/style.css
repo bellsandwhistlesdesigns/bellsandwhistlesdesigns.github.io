@@ -1,7 +1,7 @@
 .body {
 	font-family: 'Segoe UI', sans-serif;
 	margin: 0;
-	background: #f9fafb;
+	background: #ebeef1;
 	color: #333;
 }
 main {
@@ -290,10 +290,30 @@ ul {
 	margin-left: 0;
 }
 .dark-panel {
-  background: #121212;
-  color: #e0e0e0;
-  padding: 1rem;
-  border-radius: 12px;
+  	background: #121212;
+ 	 color: #e0e0e0;
+  	padding: 1rem;
+  	border-radius: 12px;
+}
+.updates-panel {
+  	background: rgba(105, 91, 91, 0.75);
+  	border-radius: 12px;
+  	padding: 1rem;
+  	max-width: 280px;
 }
 
+.updates-panel h3 {
+  	margin-top: 0;
+  	color: #80cbc4;
+}
+
+.updates-panel ul {
+  	list-style: none;
+  	padding: 0;
+}
+
+.updates-panel li {
+  	margin-bottom: 0.75rem;
+  	font-size: 0.9rem;
+}
 
