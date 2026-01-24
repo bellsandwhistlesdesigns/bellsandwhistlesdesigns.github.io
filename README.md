@@ -18,6 +18,9 @@ The site highlights both **frontend execution** and **backend architecture conce
 - Refactored global and component-level CSS for better maintainability
 - Improved mobile usability and cross-device layout consistency
 - Added site-wide favicons for professional browser and bookmark appearance
+- Refactored HTML semantics across all pages for improved accessibility and maintainability
+- Improved internal documentation with descriptive HTML comments
+- Enhanced layout consistency across desktop and mobile views
 - Streamlined development workflow using VS Code and GitHub version control
 
 ---

@@ -1,3 +1,5 @@
+<!-- SQL Example Schema Bells and Whistles Designs -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,18 +12,16 @@
     <link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/style-projects.css">
 </head>
-
 <body>
-
+<!-- Main Navigation: responsive + auth aware-->
 <header class="site-header">
-
-  <div class="header-inner">
+    <div class="header-inner">
 
     <!-- Logo -->
     <div class="brand">
       <img src="images/bellsandwhistles.svg" alt="Bells and Whistles Designs Logo">
       <span class="brand-text">Bells & Whistles Designs</span>
-	 </div>
+	  </div>
 
     <!-- Hamburger -->
     <button class="nav-toggle"
@@ -39,11 +39,10 @@
 	  <a href="contactus.html">Contact Me</a>
 	  <a href="#" id="logoutBtn" class="logout hidden">Log Out</a>
 	</nav>
-
   </div>
-
 </header>
-<main class="content">
+<main>
+    <section class="content">
     <section class="about">
         <h2>Overview</h2>
         <p>
@@ -60,19 +59,19 @@
             connected through foreign key relationships.
         </p>
         <pre>
-TABLE users
-- id (PRIMARY KEY)
-- username
-- email
-- created_at
+        TABLE users
+        - id (PRIMARY KEY)
+        - username
+        - email
+        - created_at
 
-TABLE posts
-- id (PRIMARY KEY)
-- user_id (FOREIGN KEY → users.id)
-- title
-- content
-- created_at
-      </pre>
+        TABLE posts
+        - id (PRIMARY KEY)
+        - user_id (FOREIGN KEY → users.id)
+        - title
+        - content
+        - created_at
+        </pre>
     </div>
 
     <section class="coming-soon">
@@ -112,8 +111,9 @@ WHERE id = 1;
         <li>Backend → JSON response to client</li>
       </ul>
     </div>
-
+    </section>
 </main>
+<!-- Global Footer -->
 <footer class="site-footer">
 	<div class="footer-content">
 		<p>© 2026 Douglas Moth - Bells & Whistles Designs</p>
@@ -127,8 +127,7 @@ WHERE id = 1;
 		</ul>
 	</div>
 </footer>
+<!-- Script Sources -->
 <script src="scripts/mobilenav.js"></script>
-
-	
 </body>
 </html>

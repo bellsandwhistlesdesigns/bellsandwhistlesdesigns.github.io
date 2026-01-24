@@ -1,18 +1,20 @@
+<!-- Serverless Computing Architecture -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Serverless Computing Demo | Bells and Whistles Designs</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-16x16.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-32x32.png">
-	<link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/header.css">
+    <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <title>Serverless Computing Demo | Bells and Whistles Designs</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-16x16.png">
+	  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-32x32.png">
+	  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
 </head>
 <body>
+<!-- Main Navigation: responsive + auth aware-->
 <header class="site-header">
-
-  <div class="header-inner">
+    <div class="header-inner">
 
     <!-- Logo -->
     <div class="brand">
@@ -36,13 +38,12 @@
 	  <a href="contactus.html">Contact Me</a>
 	  <a href="#" id="logoutBtn" class="logout hidden">Log Out</a>
 	</nav>
-
   </div>
-
 </header>
-<main class="content">
+<main>
+    <section class="content">
     <section class="coming-soon">
-      <h2>What I know about Serverless Computing?</h2>
+      <h2>I know AWS with Amplify</h2>
       <p>
         Serverless computing allows developers to run backend logic without managing
         servers. Code is executed in response to events (such as HTTP requests), scales
@@ -53,7 +54,7 @@
         Cloud Functions.
       </p>
     
-    <section class="coming-soon">
+    <section class="coming-soon2">
         <h2>Typical Serverless Architechture</h2>
         <ul>
             <li>Client sends HTTP request</li>
@@ -66,42 +67,39 @@
 
     <h2>Example Serverless Function (JavaScript)</h2>
     <pre>
-export const handler = async (event) => {
-  return {
-    statusCode: 200,
-    body: JSON.stringify({
-      message: "Hello from a serverless function!",
-      timestamp: new Date().toISOString()
+        export const handler = async (event) => {
+        return {
+        statusCode: 200,
+        body: JSON.stringify({
+        message: "Hello from a serverless function!",
+        timestamp: new Date().toISOString()
     })
   };
 };
 </pre>
-<section class="coming-soon">
+<section class="coming-soon2">
     <h2>Frontend Integration Concept</h2>
         <p>In a real application, the frontend would call this function through a RESTful 
             API endpoint. The response would then be used to update the UI dynamically.
         </p>
-    
-     <pre>
-fetch('/api/hello')
-  .then(response => response.json())
-  .then(data => console.log(data.message));
-      </pre>
-    
+       <pre>
+        fetch('/api/hello')
+        .then(response => response.json())
+        .then(data => console.log(data.message));
+        </pre>    
 </section>
-    <section class="about">
-      <h2>Why Serverless?</h2>
+    <!-- Coming back to this -->
+    <h2>Why Serverless?</h2>
       <ul class="tech-list">
         <li>No server maintenance</li>
         <li>Automatic scaling</li>
         <li>Cost-effective (pay per execution)</li>
         <li>Secure separation of frontend and backend logic</li>
       </ul>
-    </section>
+</section>
 </section>
 </main>
-
-
+<!-- Global Footer -->
 <footer class="site-footer">
 	<div class="footer-content">
 		<p>© 2026 Douglas Moth - Bells & Whistles Designs</p>
@@ -115,6 +113,7 @@ fetch('/api/hello')
 		</ul>
 	</div>
 </footer>
+<!-- Script Sources -->
 <script src="scripts/mobilenav.js"></script>
 </body>
 </html>

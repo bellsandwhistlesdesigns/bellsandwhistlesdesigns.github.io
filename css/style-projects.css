@@ -15,7 +15,7 @@
 	background: white;
 	border-radius: 14px;
 	padding: 1.8rem;
-	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.24);
 	transition: transform 0.25s ease, box-shadow 0.25s ease;
 	display: flex;
 	flex-direction: column;
