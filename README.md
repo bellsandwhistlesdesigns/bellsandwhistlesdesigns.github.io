@@ -1,7 +1,18 @@
 # Bells and Whistles Designs
 
 Official personal portfolio site created by **Douglas Moth**  
-Showcasing full-stack web and application development, responsive UI design, and authentication-aware user experiences.
+Showcasing web and application development, responsive UI design, and authentication-aware user experiences.
+
+---
+
+##
+
+Community impact:
+
+Thank you to the community!
+This project has been cloned 750+ times by 350+ unique developers in the last two weeks 
+
+If this project has helped you, please consider giving it a star it helps others discover the repo.
 
 ---
 
@@ -36,8 +47,8 @@ contrast. Best Practices audits scored 100 across evaluated pages.
 
 ## Core Concepts Demonstrated
 
-- RESTful API design and integration
 - Authentication and session-handling flows
+- React components showcasing conditional rendering, event handling, and immutable state updates
 - SQL database design and relational data modeling
 - Serverless computing concepts (stateless functions, API-driven logic)
 - Frontend animations and UI interactions
@@ -52,6 +63,7 @@ Some demos are conceptual or simulated to reflect real production patterns witho
 - HTML5
 - CSS3 (responsive layout & animations)
 - JavaScript (ES6+)
+- React 
 - Fetch API
 - REST architecture principles
 - SQL concepts and relational schema design
@@ -63,6 +75,7 @@ Some demos are conceptual or simulated to reflect real production patterns witho
 ## Featured Demos & Sections
 
 - Authentication Demo (login / registration / session logic)
+- React with conditional rendering, event handling and immutable state updates
 - RESTful API & Fetch integration demo
 - SQL database design & query examples
 - Serverless computing architecture demo
