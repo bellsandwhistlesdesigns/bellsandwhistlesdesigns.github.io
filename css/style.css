@@ -263,7 +263,7 @@ h2 {
 }
 .inline-link {
 	color: red;
-	font-weight: bold;
+	font-weight: 600;
 	text-decoration: none;
 }
 

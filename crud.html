@@ -1,0 +1,129 @@
+<!-- Bells and Whistles Frontend CRUD Demo (Phase 1: No Backend) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Secure Crud Demo | Bells and Whistles Designs</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-32x32.png">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style-crud.css">
+</head>
+<body>
+<!-- Main Navigation: responsive + auth aware-->
+<header class="site-header">
+  	<div class="header-inner">
+
+    <!-- Logo -->
+    <div class="brand">
+      <img src="images/bellsandwhistles.svg" alt="Bells and Whistles Designs Logo">
+      <span class="brand-text">Bells & Whistles Designs</span>
+	</div>
+
+    <!-- Hamburger -->
+    <button class="nav-toggle"
+            id="navToggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false">
+      ☰
+    </button>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+	  <a href="projects.html">My Dev Skills</a>
+	  <a href="appdev.html">Android Skills</a>
+	  <a href="contactus.html">Contact Me</a>
+	  <a href="#" id="logoutBtn" class="logout hidden">Log Out</a>
+	</nav>
+  	</div>
+</header>
+<main class="crud-container">
+    <section class="coming-soon2">
+    <section class="crud-add-project hidden" id="addProjectFormContainer">
+    <h2>Add New Project</h2>
+    <form id="addProjectForm">
+    <div class="form-group">
+        <label for="projectTitle">Title:</label>
+        <input type="text" id="projectTitle" name="projectTitle" required maxlength="100">
+    </div>
+    <div class="form-group">
+        <label for="projectDescription">Description:</label>
+        <textarea id="projectDescription" name="projectDescription" rows="3" maxlength="500"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="projectStatus">Status:</label>
+        <select id="projectStatus" name="projectStatus">
+            <option value="new">New</option>
+            <option value="draft">Draft</option>
+            <option value="active" selected>Active</option>
+            <option value="archived">Archived</option>
+        </select>
+    </div>
+    <!-- Notes Field -->
+    <div class="form-group">
+      <label for="projectNotes">Notes:</label>
+      <textarea id="projectNotes" name="projectNotes" rows="3" maxlength="1000" placeholder="Add any notes here…"></textarea>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn-primary" id="submitProjectBtn">Create Project</button>
+      <button type="button" id="cancelAddProjectBtn" class="btn-secondary">Cancel</button>
+    </div>
+    </form>
+</section>
+    <section class="crud-header">
+    <h1>Project Manager</h1>
+    <p class="crud-description">
+        Frontend CRUD prototype demonstrating data modeling, validation,
+        and access control concepts. (Backend implementation documented in Phase 2.)
+    </p>
+    <button id="addProjectBtn" class="btn-primary">Add Project</button>
+    </section>
+
+    <section class="crud-list">
+    <table class="crud-table">
+        <thead>
+        <tr>
+          <th>Title</th>
+          <th>Status</th>
+          <th>Updated</th>
+          <th>Notes</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+    <tbody id="projectTableBody">
+        <!-- Projects injected by crud.js -->
+    </tbody>
+    </table>
+
+    <p id="emptyState" class="empty-state hidden">
+      No projects yet. Create your first one to get started.
+    </p>
+    </section>
+    </section>
+    </main>
+
+<!-- Global Footer -->
+<footer class="site-footer">
+	<div class="footer-content">
+		<p>© 2026 Douglas Moth - Bells & Whistles Designs</p>
+
+		<ul class="footer-links">
+			<li><a href="projects.html">Projects</a></li>
+			<li><a href="contactus.html">Contact Me</a></li>
+			<li><a href="privacypolicy.html">Privacy Policy</a></li>
+			<li><a href="usage.html">Terms of Use</a></li>
+			<li><a href="https://github.com/bellsandwhistlesdesigns/bellsandwhistlesdesigns.github.io" target="_blank">GitHub</a></li>
+		</ul>
+	</div>
+</footer>
+<!-- Script Sources -->
+<script src="scripts/mobilenav.js"></script>
+<script src="scripts/crud.js"></script>
+
+</body>
+</html>

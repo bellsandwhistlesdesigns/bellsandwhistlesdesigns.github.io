@@ -1,7 +1,7 @@
 # Bells and Whistles Designs
 
 Official personal portfolio site created by **Douglas Moth**  
-Showcasing web and application development, responsive UI design, and authentication-aware user experiences.
+Welcome! This repository hosts my interactive portfolio showcasing real-world web development projects, full-stack readiness, and thoughtful UX design. It demonstrates my ability to build user-centered web applications.
 
 ---
 
@@ -12,7 +12,7 @@ Community impact:
 Thank you to the community!
 This project has been cloned 750+ times by 350+ unique developers in the last two weeks 
 
-If this project has helped you, please consider giving it a star it helps others discover the repo.
+If this project has helped you, please consider giving it a star. It helps others discover the repo.
 
 ---
 
@@ -23,7 +23,19 @@ The site highlights both **frontend execution** and **backend architecture conce
 
 ---
 
-## Recent Updates
+## Recent Updates - 01/26/2026
+Project Manager (CRUD Demo)
+
+-Full frontend CRUD application with Create, Read, Update, and Delete workflows
+-Client-side persistence using localStorage
+-State-driven UI: Add/Edit forms, Cancel-safe workflow, notes support
+-Extensible architecture ready for authentication, image handling, and backend integration
+-Responsive design 
+-Dynamic forms with validation and inline state updates
+-Interactive table with edit/delete actions and visual indicators for notes
+
+
+## Recent Updates - 01/19/2026
 - Implemented a fully responsive, mobile-first navigation system with a custom hamburger menu
 - Added authentication-aware UI logic (logout visibility based on user session state)
 - Refactored global and component-level CSS for better maintainability
@@ -46,8 +58,11 @@ contrast. Best Practices audits scored 100 across evaluated pages.
 ---
 
 ## Core Concepts Demonstrated
-
-- Authentication and session-handling flows
+- Frontend architecture and state-driven JavaScript
+- Dynamic CRUD workflows with safe cancel and edit flows
+- Responsive and accessible design using HTML5 and CSS3
+- Thoughtful UI/UX decisions, including interactive feedback and user-centered workflows
+- Local authentication patterns and gated content management
 - React components showcasing conditional rendering, event handling, and immutable state updates
 - SQL database design and relational data modeling
 - Serverless computing concepts (stateless functions, API-driven logic)
@@ -77,9 +92,9 @@ Some demos are conceptual or simulated to reflect real production patterns witho
 - Authentication Demo (login / registration / session logic)
 - React with conditional rendering, event handling and immutable state updates
 - RESTful API & Fetch integration demo
+- Project Manager (CRUD Demo)
 - SQL database design & query examples
 - Serverless computing architecture demo
-- Animated timeline component
 - Responsive navigation and layout
 
 ---
@@ -88,7 +103,7 @@ Some demos are conceptual or simulated to reflect real production patterns witho
 
 - Backend-backed authentication
 - Persistent data storage
-- Addition of interactive games
+- Anything else I feel like learning to build
 
 ---
 
