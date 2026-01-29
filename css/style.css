@@ -26,9 +26,9 @@ h2 {
 	max-width: 800px;
 	margin: 3rem auto;
 	text-align: center;	padding: 1rem;
-	border: 3px solid #00796b;
+	border: 3px solid #181752;
 	border-radius: 12px;
-	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
 	
 }
 
@@ -62,6 +62,9 @@ h2 {
   gap: 10px;
   margin-top: 20px;
 }
+.verified p {
+	color: #333;
+}
 
 .verified-badge {
   height: 40px;
@@ -81,7 +84,7 @@ h2 {
 	animation: fadeUp 2s ease-out forwards;
 }
 .coming-soon2 {
-	background: linear-gradient(90deg, #e8f5e9 0%, #c8e6c9 100%);
+	background: linear-gradient(90deg, #e8f5e9 0%, #add8ae 100%);
 	text-align: center;
 	padding: 3rem 1rem;
 	border-top: 4px solid #b2dfdb;
@@ -327,7 +330,7 @@ h2 {
 	transform: translateY(-2px);
 }
 .inline-link {
-	color: red;
+	color: #4f46e5;
 	font-weight: 600;
 	text-decoration: none;
 }
@@ -412,7 +415,7 @@ ul {
   max-width: 900px;
   margin: 3rem auto;
   padding: 2rem 2.5rem;
-  background: linear-gradient(180deg, #0f172a, #020617);
+  background: linear-gradient(180deg, #5167a0, #0e1d5f);
   border-radius: 16px;
   box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.4),
@@ -440,7 +443,7 @@ ul {
 
 /* Code / schema block */
 .product-grid pre {
-  background: #020617;
+  background: #0a0d1b;
   border-radius: 12px;
   padding: 1.5rem;
   overflow-x: auto;
