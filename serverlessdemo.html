@@ -10,6 +10,7 @@
 	  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-32x32.png">
 	  <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style-video.css">
 </head>
 <body>
 <!-- Main Navigation: responsive + auth aware-->
@@ -53,9 +54,9 @@
         Common serverless platforms include AWS Lambda, Azure Functions, and Google
         Cloud Functions.
       </p>
-    
-    <section class="coming-soon2">
-        <h2>Typical Serverless Architechture</h2>
+    <section>
+    <section class="coming-soon">
+      <h2>Typical Serverless Architechture</h2>
         <ul>
             <li>Client sends HTTP request</li>
             <li>API Gateway receives the request</li>
@@ -64,7 +65,7 @@
             <li>JSON response returned to the client</li>
         </ul>
     </section>
-
+    <section class="coming-soon2">
     <h2>Example Serverless Function (JavaScript)</h2>
     <pre>
         export const handler = async (event) => {
@@ -77,7 +78,8 @@
   };
 };
 </pre>
-<section class="coming-soon2">
+</section>
+<section class="coming-soon">
     <h2>Frontend Integration Concept</h2>
         <p>In a real application, the frontend would call this function through a RESTful 
             API endpoint. The response would then be used to update the UI dynamically.

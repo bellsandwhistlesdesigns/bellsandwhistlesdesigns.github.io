@@ -111,6 +111,24 @@ h2 {
 	max-width: 700px;
 	margin: 0 auto 1.5rem;
 }
+.coming-soon li {
+  color: #798697; /* muted slate, darker than body text */
+  line-height: 1.6;
+}
+
+.coming-soon pre {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+	font-size: 0.95rem;
+  line-height: 1.6;
+
+  color: #161616; /* darker, muted slate */
+  background: transparent;
+
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+
 
 .app-preview {
 	margin-top: 2rem;
@@ -128,6 +146,53 @@ h2 {
 	color: #00796b;
 	margin-top: 0.5rem;
 }
+
+/* Case Study */
+
+.case-study {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2.25rem 2.5rem;
+  background: linear-gradient(180deg, #020617, #020617);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  color: #e5e7eb;
+}
+
+/* Title */
+.case-study h3 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  font-weight: 600;
+  color: #f8fafc;
+  letter-spacing: -0.015em;
+}
+
+/* Paragraph blocks */
+.case-study p {
+  margin: 0 0 1.25rem;
+  line-height: 1.65;
+  font-size: 1rem;
+  color: #cbd5f5;
+}
+
+/* Section labels (Problem / Approach / Outcome) */
+.case-study p strong {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+/* Subtle divider between sections */
+.case-study p + p {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
 
 /* ==========================
    News API Demo
@@ -273,7 +338,7 @@ h2 {
 }
 
 .site-footer {
-	background: #0d1b1e;
+	background: linear-gradient(180deg, #0f172a, #020617);
 	color: #cfd8dc;
 	padding: 1.5rem 1rem;
 	margin-top: 4rem;
@@ -341,3 +406,72 @@ ul {
   	font-size: 0.9rem;
 }
 
+/* Product- Grid for SQL demo */
+
+.product-grid {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem 2.5rem;
+  background: linear-gradient(180deg, #0f172a, #020617);
+  border-radius: 16px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  color: #e5e7eb;
+}
+
+/* Title */
+.product-grid h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #f8fafc;
+}
+
+/* Description text */
+.product-grid p {
+  margin: 0 0 1.75rem;
+  max-width: 700px;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #cbd5f5;
+}
+
+/* Code / schema block */
+.product-grid pre {
+  background: #020617;
+  border-radius: 12px;
+  padding: 1.5rem;
+  overflow-x: auto;
+
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
+
+  color: #e5e7eb;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+/* Subtle accent line */
+.product-grid pre::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 48px;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
+  border-radius: 999px;
+}
+.pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
+
+  color: #19191a; /* darker, muted slate */
+  background: transparent;
+
+  margin: 0;
+  white-space: pre-wrap;
+}
