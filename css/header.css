@@ -3,7 +3,7 @@
   background: #0a1a2f;
   color: white;
   width: 100%;
-  z-index: 1000;
+  z-index: 2000;
     
 }
 
@@ -85,6 +85,7 @@
     padding: 1rem 0;
     display: none;
     border-radius: 12px;
+    z-index: 3000;
   }
 
   .nav.open {
