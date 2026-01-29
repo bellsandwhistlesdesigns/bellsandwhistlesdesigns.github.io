@@ -9,11 +9,12 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-32x32.png">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/style-video.css">
 </head>
 <body>
 <!-- Main Navigation: responsive + auth aware-->
 <header class="site-header">
-  	<div class="header-inner">
+	<div class="header-inner">
 
     <!-- Logo -->
     <div class="brand">
@@ -38,11 +39,35 @@
 	  <a href="#" id="logoutBtn" class="logout hidden">Log Out</a>
 	</nav>
   	</div>
-</header>
+
+	<section class="hero">
+    <video
+      class="hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      poster="riverposter.png"
+      aria-hidden="true"
+    >
+      <source src="assets/river.mp4" type="video/mp4" />
+      <!-- Optional WebM for performance -->
+      <!-- <source src="assets/river.webm" type="video/webm" /> -->
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h1>My Development Studio</h1>
+      <p>Douglas Moth | Web and Application Developer</p>
+    </div>
+	</section>
+  </header>
 <!--Main Content -->
 <main>
 	<section class="about">
-		<h2>Welcome to my Development Studio</h2>
+		<h2>Always Learning, Always Developing</h2>
 		<p>
 			I created Bells & Whistles Designs to showcase that I can design and maintain user-centered, web-based tools using JavaScript, React, HTML5, CSS3, backend logic, and API integrations. 
 			My approach to UI/UX development prioritizes usability, accessibility, and thoughtful design decisions that are always aiming to improve the overall user experience. Thank you for taking the time to visit.
@@ -57,20 +82,20 @@
   			and maintainability in mind. 			 
 		</p>
 	<section class="coming-soon2">
-		<h2>New! Project Manager (CRUD Demo)</h2>
+		<h2>Project Manager (CRUD Demo)</h2>
 		<p>
 			<strong>Brand New! </strong>
-			Find out more, check out this <a href="crud.html" class="inline-link">Project Manager</a> demo.<br>
-			<strong>My hardest project to date!</strong>
+			Find out more, check out this <a href="crud.html" class="inline-link">Project Manager</a> demo.
+			
 		</p>
-		<h2>New! Completed React Demo</h2>
+		<h2>React Demo</h2>
 		<p>
 			<strong>New! </strong>React Demonstrations: coding complete!
 			Find out more, check out my <a href="reactdemo.html" class="inline-link">React Demo</a>.
 		</p>
 		<h2>Case Studies</h2>
 		<p>
-			<strong>Newish!</strong> Case Study Update: Accessibility Considerations.
+			<strong>New-ish!</strong> Case Study Update: Accessibility Considerations.
 			Find out more in my <a href="login.html" class="inline-link">Case Study</a> page.
 		</p>
 		<h2>About the developer</h2>
@@ -78,9 +103,6 @@
 			Explore more information about <a href="projects.html" class="inline-link">Douglas M</a> in our Dev Team page.
 			I am always creating, developing, learning, buidling and debugging. 
 		</p> 
-		<h2>Thank you Community!!</h2>
-		<p>Over 780 clones and 363 unique cloners in the last 14 days! (as of 01/26/2026).<br>
-		If my code inspires you, feel free to star the repo!</p>
 	</section>
 		<h2>Core Technologies</h2>
 			<p>
@@ -112,6 +134,7 @@
 </footer>
 <!-- Script Sources -->
 <script src="scripts/mobilenav.js"></script>
+<script src="scripts/video.js"></script>
 
 </body>
 </html>

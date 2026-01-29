@@ -29,6 +29,21 @@ cancelAddProjectBtn.addEventListener("click", () => {
   submitProjectBtn.textContent = "Create Project";
 });
 
+// ===== Data Model =====
+function createProject({ title, description = "", status = "active", notes = "" }) {
+  const now = new Date().toISOString();
+
+  return {
+    id: `proj_${Date.now()}`,
+    ownerId: CURRENT_USER.id,
+    title,
+    description,
+    status, // new | draft | active | archived
+    notes,
+    createdAt: now,
+    updatedAt: now
+  };
+}
 
 // ===== Utilities =====
 function loadProjects() {
@@ -171,21 +186,15 @@ addProjectForm.addEventListener("submit", (e) => {
     editingProjectId = null;
   } else {
     // ADD
-    const newProject = {
-      id: `proj_${Date.now()}`,
-      ownerId: CURRENT_USER.id,
-      title,
-      description,
-      status,
-      notes,
-      createdAt: now,
-      updatedAt: now
-    };
-    submitProjectBtn.textContent = "Create Project";
-    projects.push(newProject);
-
-    
-  }
+    const newProject = createProject({
+    title,
+    description,
+    status,
+    notes
+});
+projects.push(newProject);
+       
+}
 
   saveProjects(projects);
   addProjectForm.reset();

@@ -4,13 +4,13 @@
   color: white;
   width: 100%;
   z-index: 1000;
-  border-radius: 12px;
+    
 }
 
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0.75rem 1.25rem;
+  padding: 1.75rem 1.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,11 +24,11 @@
 }
 
 .brand img {
-  height: 42px;
+  height: 60px;
 }
 
 .brand-text {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
