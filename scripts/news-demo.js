@@ -8,8 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ===== CONFIG =====
   const NEWSAPI_KEY = "20b2411f80db4714b6b75a56031369a0";
-  const LOCAL_API_URL = "http://192.168.1.12:3000/articles"; // <-- replace with your computer's local IP
-
+  const LOCAL_API_URL = "http://localhost:3000/articles"; 
   // ===== HELPER: Detect if mobile =====
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
