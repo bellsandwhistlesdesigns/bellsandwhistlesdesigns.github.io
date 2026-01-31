@@ -1,0 +1,19 @@
+{
+  "articles": [
+    {
+      "title": "Web Development Trends in 2026",
+      "description": "A look at modern frontend and API-driven development trends.",
+      "url": "https://example.com/article1"
+    },
+    {
+      "title": "Why RESTful APIs Still Matter",
+      "description": "How REST continues to power modern applications.",
+      "url": "https://example.com/article2"
+    },
+    {
+      "title": "Building UI from JSON Data",
+      "description": "Best practices for rendering API responses dynamically.",
+      "url": "https://example.com/article3"
+    }
+  ]
+}   
