@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const status = document.getElementById("news-status");
 
   // ===== CONFIG =====
-  const NEWSAPI_KEY = "20b2411f80db4714b6b75a56031369a0";
+  const NEWSAPI_KEY = "";
   const LOCAL_API_URL = "http://localhost:3000/articles"; 
   // ===== HELPER: Detect if mobile =====
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
