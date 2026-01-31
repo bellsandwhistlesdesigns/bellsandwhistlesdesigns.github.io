@@ -70,13 +70,13 @@
 	text-decoration: none;
 	font-weight: bold;
 	color: white;
-	background: #0f172a;
+	background: #335fe4;
 	padding: 0.5rem 1rem;
 	border-radius: 8px;
-	transition: background 0.2s ease, transform 0.2s ease;
+	transition: 0.2s ease, transform 0.2s ease;
 }
 
 .project-links a:hover {
-	background: #004d40;
+	background: #2b9785;
 	transform: translateY(-2px);
 }

@@ -2,9 +2,8 @@
 
 
 .contact-section {
-	position: center;
 	padding: 2rem;
-	background: linear-gradient(180deg, #5167a0, #0e1d5f);
+	background: linear-gradient(180deg, #5a6fb0, #2f437f);
 	border-radius: 1rem;
 	border: 1px solid #999;
 	max-width: 800px;
@@ -20,7 +19,7 @@
 /*Layout for Contact form */
 .contact-form table {
 	width: 100%;
-	border: 1px solid rgb(240, 20, 20);
+	border: 1px solid rgb(109, 43, 43);
 	border-collapse: seperate;
 	border-spacing: 0 1rem;
 	border-radius: 12px;
@@ -40,8 +39,8 @@
 
 .contact-form input,
 .contact-form textarea,
-.cotact-form select {
-	width: 100%;
+.contact-form select {
+	max-width: 100%;
 	padding: 0.8rem;
 	border: 1px solid #999;
 	border-radius: 6px;
@@ -58,20 +57,40 @@
 	border-color: #0077b6;
 	box-shadow: 0 0 4px rgba(0,119,182,0.4);
 }
-/* Button */
-.contact-form button {
+.form-actions {
+	text-align: center;
+	padding-top: 1rem;
+}
+
+/*email-button for style-contact */
+.email-button {
+	display: inline-block;
+	padding: 0.7rem 1.5rem;
+	border-radius: 10px;
 	background: #0077b6;
-	color: #fff;
-	padding: 0.8rem 2rem;
-	border: none;
-	border-radius: 6px;
-	cursor: pointer;
-	font-size: 1.1rem;
-	transition: background 0.3s ease;
-}
-.contact-form button:hover {
-	background: #005f8a;
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 1rem;
+	transition: 0.2s ease, transform 0.2s ease;
 }
 
+.email-button:hover {
+	background: #2b9785;
+	transform: translateY(-2px);
+}
+@media (max-width: 600px) {
+  .contact-form table,
+  .contact-form tbody,
+  .contact-form tr,
+  .contact-form td {
+    display: block;
+	padding: .75rem;
+    width: 100%;
+  }
 
+  .contact-form td {
+    padding: 0.5rem 0;
+  }
+}
 

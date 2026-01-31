@@ -55,7 +55,7 @@ h2 {
   	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-/* Coming soon: Belongs in Index react Demo index and serverless Demo*/
+/* Coming soon: Belongs in index, reactdemo, crud, and serverlessdemo*/
 .coming-soon {
 	background: linear-gradient(270deg, #e8f5e9 0%, #c8e6c9 100%);
 	text-align: center;
@@ -88,7 +88,7 @@ h2 {
 }
 .coming-soon h2 {
 	font-size: 1.8rem;	
-	color: #0f172a;
+	color: #676b72;
 	margin-bottom: 1rem;
 }
 
@@ -209,139 +209,7 @@ h2 {
 }
 
 
-/* ==========================
-   News API Demo ========Create new file================
-   ========================== */
 
-.news-demo {
-	max-width: 1000px;
-	margin: 3rem auto;
-	padding: 1.5rem;
-	background: white;
-	border-radius: 16px;
-	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-}
-
-.news-demo h2 {
-	margin-top: 0;
-	color: #00796b;
-	text-align: center;
-}
-
-.news-intro {
-	text-align: center;
-	font-size: 1rem;
-	color: #444;
-	margin-bottom: 2rem;
-	line-height: 1.6;
-}
-
-/* Controls */
-.news-controls {
-	display: flex;
-	gap: 1rem;
-	justify-content: center;
-	margin-bottom: 1.5rem;
-	flex-wrap: wrap;
-}
-
-.news-controls input {
-	padding: 0.6rem 0.8rem;
-	border-radius: 8px;
-	border: 1px solid #ccc;
-	font-size: 0.95rem;
-	min-width: 260px;
-}
-
-.news-controls input:focus {
-	outline: none;
-	border-color: #00796b;
-	box-shadow: 0 0 0 2px rgba(0, 121, 107, 0.2);
-}
-
-.news-controls button {
-	padding: 0.6rem 1.2rem;
-	border-radius: 8px;
-	border: none;
-	background: #00796b;
-	color: white;
-	font-weight: bold;
-	cursor: pointer;
-	transition: background 0.2s ease, transform 0.2s ease;
-}
-
-.news-controls button:hover {
-	background: #004d40;
-	transform: translateY(-2px);
-}
-
-/* Status */
-.news-status {
-	text-align: center;
-	font-weight: 600;
-	margin-bottom: 1.5rem;
-	color: #00796b;
-}
-
-/* Results Grid */
-.news-results {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-	gap: 1.5rem;
-}
-
-/* Article Card */
-.news-card {
-	background: #f9fafb;
-	border-radius: 14px;
-	padding: 1.2rem;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.news-card h3 {
-	margin-top: 0;
-	font-size: 1.1rem;
-	color: #004d40;
-}
-
-.news-card p {
-	font-size: 0.95rem;
-	color: #444;
-	line-height: 1.5;
-	margin-bottom: 1rem;
-}
-
-.news-card a {
-	align-self: flex-start;
-	text-decoration: none;
-	font-weight: bold;
-	color: #00796b;
-}
-
-.news-card a:hover {
-	text-decoration: underline;
-	color: #004d40;
-}
-/*email button for style-contact */
-.email-button {
-	display: inline-block;
-	padding: 0.7rem 1.5rem;
-	border-radius: 10px;
-	background: #00796b;
-	color: white;
-	font-weight: bold;
-	text-decoration: none;
-	font-size: 1rem;
-	transition: background 0.2s ease, transform 0.2s ease;
-}
-
-.email-button:hover {
-	background: #004d40;
-	transform: translateY(-2px);
-}
 
 /* Global Inline Link*/
 .inline-link {
