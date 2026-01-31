@@ -1,4 +1,4 @@
-console.log("news-demo.js is working");
+console.log("news-demo.js loaded");
 
 document.addEventListener("DOMContentLoaded", () => {
   const fetchBtn = document.getElementById("fetchNewsBtn");
@@ -6,16 +6,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const resultsContainer = document.getElementById("news-results");
   const status = document.getElementById("news-status");
 
-  // ===== CONFIG =====
-  const NEWSAPI_KEY = "";
-  const LOCAL_API_URL = "http://localhost:3000/articles"; 
-  // ===== HELPER: Detect if mobile =====
+  // Detect mobile (used only for messaging / awareness)
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
   fetchBtn.addEventListener("click", async () => {
     const query = queryInput.value.trim();
-    resultsContainer.innerHTML = ""; // clear previous results
-    status.textContent = "Fetching news articles...";
+
+    // Reset UI
+    resultsContainer.innerHTML = "";
+    status.textContent = "Fetching news articles…";
 
     if (!query) {
       status.textContent = "Please enter a search term.";
@@ -23,51 +22,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     try {
-      let articles = [];
+      // Call Netlify serverless function (API key lives there)
+      const response = await fetch(
+        `/.netlify/functions/news?q=${encodeURIComponent(query)}`
+      );
 
-      // ===== If mobile, use NewsAPI only =====
-      if (isMobile) {
-        const newsAPIUrl = `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&pageSize=10&apiKey=${NEWSAPI_KEY}`;
-        const response = await fetch(newsAPIUrl);
-        if (!response.ok) throw new Error("Failed to fetch NewsAPI");
-        const data = await response.json();
-        articles = data.articles;
-      } else {
-        // ===== Desktop: try NewsAPI first, fallback to local =====
-        try {
-          const newsAPIUrl = `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&pageSize=10&apiKey=${NEWSAPI_KEY}`;
-          const response = await fetch(newsAPIUrl);
-          if (response.ok) {
-            const data = await response.json();
-            articles = data.articles;
-          }
-        } catch (err) {
-          console.warn("NewsAPI fetch failed, using local fallback");
-        }
-
-        // Fallback to local JSON if no articles
-        if (!articles || articles.length === 0) {
-          const localResponse = await fetch(LOCAL_API_URL);
-          const localData = await localResponse.json();
-          articles = localData.filter(article =>
-            article.title.toLowerCase().includes(query.toLowerCase())
-          );
-        }
+      if (!response.ok) {
+        throw new Error("Serverless function request failed");
       }
 
-      // ===== Display results =====
+      const data = await response.json();
+      const articles = data.articles;
+
       if (!articles || articles.length === 0) {
         status.textContent = "No articles found.";
         return;
       }
 
       status.textContent = "";
+
       articles.forEach(article => {
         const card = document.createElement("div");
         card.className = "news-card";
 
-        const title = article.title || "No title";
-        const description = article.description || "";
+        const title = article.title || "Untitled article";
+        const description = article.description || "No description available.";
         const url = article.url || "#";
 
         card.innerHTML = `
@@ -81,9 +60,12 @@ document.addEventListener("DOMContentLoaded", () => {
         resultsContainer.appendChild(card);
       });
 
-    } catch (err) {
-      console.error(err);
-      status.textContent = "Error fetching articles. Check console for details.";
+    } catch (error) {
+      console.error("News fetch error:", error);
+
+      status.textContent = isMobile
+        ? "Unable to load live articles on mobile at the moment."
+        : "Error fetching articles. Please try again.";
     }
   });
 });
