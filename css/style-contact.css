@@ -1,7 +1,10 @@
+/*========== Contact Page ======*/
+
+
 .contact-section {
 	position: center;
 	padding: 2rem;
-	background-color: #f0f0f0;
+	background: linear-gradient(180deg, #5167a0, #0e1d5f);
 	border-radius: 1rem;
 	border: 1px solid #999;
 	max-width: 800px;
@@ -9,24 +12,27 @@
 	box-shadow: 0 0 20px rgba(0, 119, 182, 0.3);
 }
 
-.contact-section h2 {
+.contact-section h1 {
 	text-align: center;
 	margin-bottom: 1.5rem;
-	color: #6a0dad;
+	color: white;
 }
-
+/*Layout for Contact form */
 .contact-form table {
 	width: 100%;
+	border: 1px solid rgb(240, 20, 20);
 	border-collapse: seperate;
 	border-spacing: 0 1rem;
+	border-radius: 12px;
 }
 
 .contact-form td {
 	width: 100%;
-	padding: 0.5rem;
+	padding: 1rem;
 }
 
 .contact-form label {
+	padding: 1rem;
 	font-weight: bold;
 	display: block;
 	margin-bottom: 0.3rem;
@@ -44,15 +50,15 @@
 }
 .contact-form textarea {
 	min-height: 120px;
-	resize: vertical:
+	resize: vertical;
 }
 .contact-form input:focus,
 .contact-form textarea:focus {
 	outline: none;
-	border-color: #0077b6; /* coastal blue accent */
+	border-color: #0077b6;
 	box-shadow: 0 0 4px rgba(0,119,182,0.4);
 }
-
+/* Button */
 .contact-form button {
 	background: #0077b6;
 	color: #fff;

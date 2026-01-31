@@ -76,7 +76,7 @@ function FeaturePanel() {
 
             {enabled && key === "darkMode" && (
               <p style={{ fontSize: "0.9rem" }}>
-                Dark mode is applied to this panel.
+                Dark mode is now applied to this panel.
               </p>
             )}
           </li>

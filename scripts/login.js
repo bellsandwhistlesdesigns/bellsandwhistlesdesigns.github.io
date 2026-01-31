@@ -1,4 +1,4 @@
-//Deez login.js 
+//Bells and Whistles Login Script
 
 document.addEventListener("DOMContentLoaded", () => { 
 	console.log("login.js is working");

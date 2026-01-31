@@ -1,27 +1,20 @@
-.body {
-	font-family: 'Segoe UI', sans-serif;
-	margin: 0;
-	background: #f4f4f4;
-	color: #333;
+/* Global Styles for Bells and Whistles */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #fff;
 }
+/* Global Main */ 
 main {
 	padding: 2rem;
 	max-width: 800px;
 	margin: auto;
 }
+/* Look for other h2*/
 h2 {
 	color: #00796b;
 }
-.case-study {
-  	margin-top: 2rem;
-  	padding: 1.5rem;
- 	border-left: 4px solid #80cbc4;
-}
-.case-study2 {
-  	margin-top: 2rem;
-  	padding: 1.5rem;
- 	border-right: 4px solid #80cbc4;
-}
+/* Global about section */ 
 .about {
 	max-width: 800px;
 	margin: 3rem auto;
@@ -31,7 +24,6 @@ h2 {
 	box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
 	
 }
-
 .about h2 {
 	font-size: 2rem;
   	margin-bottom: 1.25rem;
@@ -39,38 +31,31 @@ h2 {
   	position: relative;
 	text-shadow: 0 2px 6px rgba(128,203,196,0.35);
 }
-
-.about h2::after {
- 	content: "";
-	display: block;
-  	width: 80px;
-  	height: 4px;
-  	margin-top: 0.4rem;
-  	background: linear-gradient(90deg, #80cbc4, #004d40);
-}
-
 .about p {
 	font-size: 1.1rem;
 	line-height: 1.6;
 	color: #333;
 }
 
+
+/* Appdev page */
 .verified {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  	gap: 10px;
+  	margin-top: 20px;
 }
 .verified p {
 	color: #333;
 }
-
 .verified-badge {
-  height: 40px;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  	height: 40px;
+  	border-radius: 6px;
+  	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
+
+/* Coming soon: Belongs in Index react Demo index and serverless Demo*/
 .coming-soon {
 	background: linear-gradient(270deg, #e8f5e9 0%, #c8e6c9 100%);
 	text-align: center;
@@ -103,7 +88,7 @@ h2 {
 }
 .coming-soon h2 {
 	font-size: 1.8rem;	
-	color: #00796b;
+	color: #0f172a;
 	margin-bottom: 1rem;
 }
 
@@ -115,24 +100,51 @@ h2 {
 	margin: 0 auto 1.5rem;
 }
 .coming-soon li {
-  color: #798697; /* muted slate, darker than body text */
-  line-height: 1.6;
+  	color: #798697; /* muted slate, darker than body text */
+  	line-height: 1.6;
 }
 
 .coming-soon pre {
 	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 	font-size: 0.95rem;
-  line-height: 1.6;
+  	line-height: 1.6;
 
-  color: #161616; /* darker, muted slate */
-  background: transparent;
+  	color: #161616; /* darker, muted slate */
+  	background: transparent;
 
-  margin: 0;
-  white-space: pre-wrap;
+  	margin: 0;
+  	white-space: pre-wrap;
+}
+/*this is a component */
+.section-divider {
+  	border: none;
+  	height: 3px;
+  	width: 600px;
+  	background-color: #181752;
+  	margin: 2rem auto;
+  	border-radius: 2px;
+
+  	/* animation setup */
+  	transform: scaleX(0);
+  	transform-origin: center;
+  	animation: grow-line 2400ms ease-out forwards;
+}
+.section-divertwo {
+	border: none;
+  	height: 3px;
+  	background-color: #181752;
+  	margin: 2.5rem auto;
+  	width: 60%;
+  	opacity: 0.7;
+
 }
 
-
-
+@keyframes grow-line {
+  to {
+    transform: scaleX(1);
+  }
+}
+/*This is for Appdev Page */
 .app-preview {
 	margin-top: 2rem;
 }
@@ -198,7 +210,7 @@ h2 {
 
 
 /* ==========================
-   News API Demo
+   News API Demo ========Create new file================
    ========================== */
 
 .news-demo {
@@ -313,6 +325,7 @@ h2 {
 	text-decoration: underline;
 	color: #004d40;
 }
+/*email button for style-contact */
 .email-button {
 	display: inline-block;
 	padding: 0.7rem 1.5rem;
@@ -329,6 +342,8 @@ h2 {
 	background: #004d40;
 	transform: translateY(-2px);
 }
+
+/* Global Inline Link*/
 .inline-link {
 	color: #4f46e5;
 	font-weight: 600;
@@ -339,7 +354,7 @@ h2 {
 	text-decoration: underline;
 	color: #004d40;
 }
-
+/* Global Site Footer */ 
 .site-footer {
 	background: linear-gradient(180deg, #0f172a, #020617);
 	color: #cfd8dc;
@@ -376,11 +391,16 @@ h2 {
 .footer-links a:hover {
 	text-decoration: underline;
 }
+
+/*Global UL List */
 ul {
 	list-style: none;
 	padding-left: 0;
 	margin-left: 0;
 }
+/*=====================
+Panel is used in React demo **need to create new react.css**
+=======================*/
 .dark-panel {
   	background: #121212;
  	 color: #e0e0e0;
@@ -412,69 +432,71 @@ ul {
 /* Product- Grid for SQL demo */
 
 .product-grid {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 2rem 2.5rem;
-  background: linear-gradient(180deg, #5167a0, #0e1d5f);
-  border-radius: 16px;
-  box-shadow:
+  	max-width: 900px;
+  	margin: 3rem auto;
+  	padding: 2rem 2.5rem;
+  	background: linear-gradient(180deg, #5167a0, #0e1d5f);
+  	border-radius: 16px;
+  	box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.04);
-  color: #e5e7eb;
+  	color: #e5e7eb;
 }
 
 /* Title */
 .product-grid h2 {
-  margin: 0 0 0.75rem;
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: #f8fafc;
+  	margin: 0 0 0.75rem;
+  	font-size: clamp(1.5rem, 2.5vw, 2rem);
+  	font-weight: 600;
+  	letter-spacing: -0.02em;
+  	color: #f8fafc;
 }
 
 /* Description text */
 .product-grid p {
-  margin: 0 0 1.75rem;
-  max-width: 700px;
-  line-height: 1.6;
-  font-size: 1rem;
-  color: #cbd5f5;
+  	margin: 0 0 1.75rem;
+  	max-width: 700px;
+  	line-height: 1.6;
+  	font-size: 1rem;
+  	color: #cbd5f5;
 }
 
 /* Code / schema block */
 .product-grid pre {
-  background: #0a0d1b;
-  border-radius: 12px;
-  padding: 1.5rem;
-  overflow-x: auto;
+  	background: #0a0d1b;
+  	border-radius: 12px;
+ 	padding: 1.5rem;
+  	overflow-x: auto;
 
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.95rem;
-  line-height: 1.6;
+  	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  	font-size: 0.95rem;
+  	line-height: 1.6;
 
-  color: #e5e7eb;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+  	color: #e5e7eb;
+  	border: 1px solid rgba(255, 255, 255, 0.06);
+  	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
 }
 
 /* Subtle accent line */
 .product-grid pre::before {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 48px;
-  margin-bottom: 1rem;
-  background: linear-gradient(90deg, #38bdf8, #6366f1);
-  border-radius: 999px;
+  	content: "";
+  	display: block;
+  	height: 2px;
+  	width: 48px;
+  	margin-bottom: 1rem;
+  	background: linear-gradient(90deg, #38bdf8, #6366f1);
+  	border-radius: 999px;
 }
+
+/* =========== Pre is used in SQL DEMO and Serverless*/
 .pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.95rem;
-  line-height: 1.6;
+  	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  	font-size: 0.95rem;
+  	line-height: 1.6;
 
-  color: #19191a; /* darker, muted slate */
-  background: transparent;
+  	color: #19191a; 
+  	background: transparent;
 
-  margin: 0;
-  white-space: pre-wrap;
+  	margin: 0;
+  	white-space: pre-wrap;
 }

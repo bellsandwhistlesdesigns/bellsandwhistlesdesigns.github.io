@@ -1,32 +1,40 @@
+/* 	==========
+	Log in Page
+	========== */
+
 .login-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 80vh;
-	background: #f2f2f2;
+	min-height: 60vh;
+	padding: 2rem 1rem;
 }
 
 .login-box {
-	background: #ffffff;
-	padding: 2rem 2.5rem;
-	border-radius: 12px;
-	box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+	background: white;
+	padding: 2.5rem 2rem;
+	border-radius: 16px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+	max-width: 420px;
 	width: 100%;
-	max-width: 400px;
-	
+	text-align: left;
+	animation: fadeUp 0.8s ease-out forwards;
 }
 
 .login-box h2 {
-	text-align: center;
+	margin-top: 0;
 	margin-bottom: 1.5rem;
-	color: red;
+	text-align: center;
+	color: #0f172a;
+	font-size: 1.6rem;
 }
 
 .login-box label {
+	text-align: center;
 	display: block;
 	margin-bottom: 0.5rem;
 	font-weight: 500;
-	color: red;
+	color: rgb(25, 39, 223);
 }
 
 .login-box input {
@@ -42,9 +50,9 @@
 	margin: 1rem auto;
 	width: 100%;
 	padding: 0.75rem;
-	background-color: #333;
+	background-color: #0f172a;
 	color: #fff;
-	align: center;
+	text-align: center;
 	border: none;
 	border-radius: 8px;
 	font-weight: bold;
@@ -56,16 +64,22 @@
 	background-color: #555;
 }
 
-.login-links {
-	margin-top: 1rem;
+/* Links */
+.login-links,
+.login-box a {
+	display: block;
 	text-align: center;
-}
-
-.login-links a {
-	color: #0077cc;
+	margin-top: 1rem;
+	font-size: 0.9rem;
+	color: rgb(25, 39, 223);;
 	text-decoration: none;
+	font-weight: 600;
 }
 
-.login-links a:hover {
+.login-box a:hover {
 	text-decoration: underline;
+	color: #004d40;
+}
+#login-message {
+	color: black;
 }
