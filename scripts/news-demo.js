@@ -7,10 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const status = document.getElementById("news-status");
 
   // ===== CONFIG =====
-  const NEWSAPI_KEY = "20b2411f80db4714b6b75a56031369a0"; // replace with your key
-  const LOCAL_API_URL = "http://localhost:3000/articles"; // fallback JSON Server
+  const NEWSAPI_KEY = "20b2411f80db4714b6b75a56031369a0";
+  const LOCAL_API_URL = "http://192.168.1.12:3000/articles"; // <-- replace with your computer's local IP
 
-  // ===== FETCH BUTTON CLICK =====
+  // ===== HELPER: Detect if mobile =====
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
   fetchBtn.addEventListener("click", async () => {
     const query = queryInput.value.trim();
     resultsContainer.innerHTML = ""; // clear previous results
@@ -22,39 +24,49 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     try {
-      // ===== Attempt live NewsAPI fetch =====
-      const newsAPIUrl = `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&pageSize=10&apiKey=${NEWSAPI_KEY}`;
       let articles = [];
 
-      const response = await fetch(newsAPIUrl);
-      if (response.ok) {
+      // ===== If mobile, use NewsAPI only =====
+      if (isMobile) {
+        const newsAPIUrl = `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&pageSize=10&apiKey=${NEWSAPI_KEY}`;
+        const response = await fetch(newsAPIUrl);
+        if (!response.ok) throw new Error("Failed to fetch NewsAPI");
         const data = await response.json();
         articles = data.articles;
       } else {
-        throw new Error("NewsAPI request failed, using local fallback");
-      }
+        // ===== Desktop: try NewsAPI first, fallback to local =====
+        try {
+          const newsAPIUrl = `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&pageSize=10&apiKey=${NEWSAPI_KEY}`;
+          const response = await fetch(newsAPIUrl);
+          if (response.ok) {
+            const data = await response.json();
+            articles = data.articles;
+          }
+        } catch (err) {
+          console.warn("NewsAPI fetch failed, using local fallback");
+        }
 
-      // ===== Fallback to local JSON if no articles or error =====
-      if (!articles || articles.length === 0) {
-        const localResponse = await fetch(LOCAL_API_URL);
-        const localData = await localResponse.json();
-        // Filter local articles based on query
-        articles = localData.filter(article =>
-          article.title.toLowerCase().includes(query.toLowerCase())
-        );
-        if (articles.length === 0) {
-          status.textContent = "No articles found (local or live).";
-          return;
+        // Fallback to local JSON if no articles
+        if (!articles || articles.length === 0) {
+          const localResponse = await fetch(LOCAL_API_URL);
+          const localData = await localResponse.json();
+          articles = localData.filter(article =>
+            article.title.toLowerCase().includes(query.toLowerCase())
+          );
         }
       }
 
-      // ===== DISPLAY ARTICLES =====
+      // ===== Display results =====
+      if (!articles || articles.length === 0) {
+        status.textContent = "No articles found.";
+        return;
+      }
+
       status.textContent = "";
       articles.forEach(article => {
         const card = document.createElement("div");
         card.className = "news-card";
 
-        // Some NewsAPI articles may not have description or url
         const title = article.title || "No title";
         const description = article.description || "";
         const url = article.url || "#";
