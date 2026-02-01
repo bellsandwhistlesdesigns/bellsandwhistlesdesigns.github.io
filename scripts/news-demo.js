@@ -1,10 +1,16 @@
+// news-demo //
+
+console.log("news-demo.js is working");
+
 document.addEventListener("DOMContentLoaded", () => {
 	const fetchBtn = document.getElementById("fetchNewsBtn");
 	const queryInput = document.getElementById("newsQuery");
 	const resultsContainer = document.getElementById("news-results");
 	const status = document.getElementById("news-status");
 
- 
+ const API_BASE = window.location.hostname.includes("netlify.app")
+  ? "/.netlify/functions/news"
+  : null;
 
 	fetchBtn.addEventListener("click", async () => {
 		const query = queryInput.value.trim() || "technology";

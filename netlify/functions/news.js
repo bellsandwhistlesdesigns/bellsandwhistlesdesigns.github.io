@@ -1,3 +1,7 @@
+// news.js //
+
+console.log("news.js is working");
+
 export async function handler(event) {
   const query = event.queryStringParameters?.q || "technology";
 
