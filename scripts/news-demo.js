@@ -1,71 +1,53 @@
-console.log("news-demo.js loaded");
-
 document.addEventListener("DOMContentLoaded", () => {
-  const fetchBtn = document.getElementById("fetchNewsBtn");
-  const queryInput = document.getElementById("newsQuery");
-  const resultsContainer = document.getElementById("news-results");
-  const status = document.getElementById("news-status");
+	const fetchBtn = document.getElementById("fetchNewsBtn");
+	const queryInput = document.getElementById("newsQuery");
+	const resultsContainer = document.getElementById("news-results");
+	const status = document.getElementById("news-status");
 
-  // Detect mobile (used only for messaging / awareness)
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+ 
 
-  fetchBtn.addEventListener("click", async () => {
-    const query = queryInput.value.trim();
+	fetchBtn.addEventListener("click", async () => {
+		const query = queryInput.value.trim() || "technology";
 
-    // Reset UI
-    resultsContainer.innerHTML = "";
-    status.textContent = "Fetching news articles…";
+		resultsContainer.innerHTML = "";
+		status.textContent = "Fetching news articles...";
 
-    if (!query) {
-      status.textContent = "Please enter a search term.";
-      return;
-    }
+		try {
+			const response = await fetch(
+				`/.netlify/functions/news?q=${encodeURIComponent(query)}`
+			);
 
-    try {
-      // Call Netlify serverless function (API key lives there)
-      const response = await fetch(
-        `/.netlify/functions/news?q=${encodeURIComponent(query)}`
-      );
+			if (!response.ok) {
+				throw new Error(`Server error: ${response.status}`);
+			}
 
-      if (!response.ok) {
-        throw new Error("Serverless function request failed");
-      }
+			const data = await response.json();
 
-      const data = await response.json();
-      const articles = data.articles;
+			status.textContent = "";
 
-      if (!articles || articles.length === 0) {
-        status.textContent = "No articles found.";
-        return;
-      }
+			if (!data.articles || data.articles.length === 0) {
+				status.textContent = "No articles found.";
+				return;
+			}
 
-      status.textContent = "";
+			data.articles.forEach(article => {
+				const card = document.createElement("div");
+				card.className = "news-card";
 
-      articles.forEach(article => {
-        const card = document.createElement("div");
-        card.className = "news-card";
+				card.innerHTML = `
+					<h3>${article.title}</h3>
+					<p>${article.description}</p>
+					<a href="${article.url}" target="_blank" rel="noopener noreferrer">
+						Read more →
+					</a>
+				`;
 
-        const title = article.title || "Untitled article";
-        const description = article.description || "No description available.";
-        const url = article.url || "#";
-
-        card.innerHTML = `
-          <h3>${title}</h3>
-          <p>${description}</p>
-          <a href="${url}" target="_blank" rel="noopener noreferrer">
-            Read more →
-          </a>
-        `;
-
-        resultsContainer.appendChild(card);
-      });
-
-    } catch (error) {
-      console.error("News fetch error:", error);
-
-      status.textContent = isMobile
-        ? "Unable to load live articles on mobile at the moment."
-        : "Error fetching articles. Please try again.";
-    }
-  });
+				resultsContainer.appendChild(card);
+			});
+		} catch (error) {
+			console.error(error);
+			status.textContent =
+				"Error fetching articles. Please try again later.";
+		}
+	});
 });
