@@ -1,50 +1,47 @@
-// news.js set up with Netlify 
-
 export async function handler(event) {
-	try {
-		const query = event.queryStringParameters.q || "technology";
-		const apiKey = process.env.CURRENTS_API_KEY;
+  const query = event.queryStringParameters?.q || "technology";
 
-		if (!apiKey) {
-			return {
-				statusCode: 500,
-				body: JSON.stringify({ error: "API key missing" })
-			};
-		}
+  const API_KEY = process.env.CURRENTS_API_KEY;
 
-		const url = `https://api.currentsapi.services/v1/search?keywords=${encodeURIComponent(
-			query
-		)}&language=en&apiKey=${apiKey}`;
+  if (!API_KEY) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: "Missing API key" })
+    };
+  }
 
-		const response = await fetch(url);
+  const url = `https://api.currentsapi.services/v1/search?keywords=${encodeURIComponent(
+    query
+  )}&language=en&apiKey=${API_KEY}`;
 
-		if (!response.ok) {
-			throw new Error(`Currents API error: ${response.status}`);
-		}
+  try {
+    const response = await fetch(url);
 
-		const data = await response.json();
+    if (!response.ok) {
+      const text = await response.text();
+      return {
+        statusCode: response.status,
+        body: JSON.stringify({ error: text })
+      };
+    }
 
-		// Normalize response for frontend
-		const articles = (data.news || []).map(article => ({
-			title: article.title,
-			description: article.description || "No description available.",
-			url: article.url
-		}));
+    const data = await response.json();
 
-		return {
-			statusCode: 200,
-			headers: {
-				"Cache-Control": "public, max-age=600" // cache for 10 min
-			},
-			body: JSON.stringify({ articles })
-		};
-	} catch (error) {
-		return {
-			statusCode: 500,
-			body: JSON.stringify({
-				error: "Failed to fetch articles",
-				details: error.message
-			})
-		};
-	}
+    // Normalize response to match your frontend
+    const articles = (data.news || []).map(article => ({
+      title: article.title,
+      description: article.description || "No description available.",
+      url: article.url
+    }));
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ articles })
+    };
+  } catch (error) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: error.message })
+    };
+  }
 }
