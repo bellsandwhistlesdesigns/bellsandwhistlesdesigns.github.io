@@ -1,7 +1,7 @@
 # Bells and Whistles Designs
 
 Official personal portfolio site created by **Douglas Moth**  
-Welcome! This repository hosts my interactive portfolio showcasing real-world web development projects, full-stack readiness, and thoughtful UX design. It demonstrates my ability to build user-centered web applications.
+Welcome! This repository hosts my interactive portfolio showcasing real-world web development projects, full-stack readiness, and thoughtful UX design. It demonstrates my ability to build user-centered web applications, integrate third-party APIs, and deploy production-ready solutions.
 
 ---
 
@@ -9,55 +9,73 @@ Welcome! This repository hosts my interactive portfolio showcasing real-world we
 
 Community impact:
 
-Thank you to the community!
-This project has been cloned 750+ times by 350+ unique developers in the last two weeks 
+Huge thanks to the developer community!
 
-If this project has helped you, please consider giving it a star. It helps others discover the repo.
+Bells and Whistles Designs continues to see high engagement, with hundreds of clones each week by developers exploring, learning, and experimenting with the code.
+
+If this project has helped you, please consider giving it a star on GitHub. It helps others discover the repository.
 
 ---
 
-## What This Project Is
+## What This Project Is:
+
 This site serves as a living portfolio and technical playground where I design, build, and refine real-world web application features.
 
-The site highlights both **frontend execution** and **backend architecture concepts**, with a focus on clarity, usability, and clean implementation.
+The site highlights both frontend execution and backend architecture concepts, including secure serverless API integration, with a focus on clarity, usability, and maintainable code.
 
 ---
 
+## Recent Updaye - 02/01/2026
+
+Live RESTful API Demo
+
+My portfolio now features a live news API integration via Netlify serverless functions, demonstrating:
+
+- Consumption of third-party APIs (Currents News API)
+- Secure storage of API keys using environment variables
+- Dynamic data rendering with responsive, mobile-first design
+- Graceful handling when viewed on static hosts like GitHub Pages
+
+On GitHub Pages, the live API is replaced with a friendly message, ensuring no broken experience or exposed API keys.
+
 ## Recent Updates - 01/26/2026
+
 Project Manager (CRUD Demo)
 
--Full frontend CRUD application with Create, Read, Update, and Delete workflows
--Client-side persistence using localStorage
--State-driven UI: Add/Edit forms, Cancel-safe workflow, notes support
--Extensible architecture ready for authentication, image handling, and backend integration
--Responsive design 
--Dynamic forms with validation and inline state updates
--Interactive table with edit/delete actions and visual indicators for notes
+- Full frontend CRUD application with Create, Read, Update, and Delete workflows
+- Client-side persistence using localStorage
+- State-driven UI: Add/Edit forms, Cancel-safe workflow, notes support
+- Extensible architecture ready for authentication, image handling, and backend integration
+- Responsive design for desktop and mobile
+- Dynamic forms with validation and inline state updates
+- Interactive table with edit/delete actions and visual indicators for notes
 
 
 ## Recent Updates - 01/19/2026
-- Implemented a fully responsive, mobile-first navigation system with a custom hamburger menu
-- Added authentication-aware UI logic (logout visibility based on user session state)
-- Refactored global and component-level CSS for better maintainability
-- Improved mobile usability and cross-device layout consistency
+
+- Fully responsive, mobile-first navigation with custom hamburger menu
+- Authentication-aware UI logic (logout visibility based on user session state)
+- Refactored global and component-level CSS for maintainability
+- Enhanced mobile usability and cross-device layout consistency
 - Added site-wide favicons for professional browser and bookmark appearance
-- Refactored HTML semantics across all pages for improved accessibility and maintainability
-- Improved internal documentation with descriptive HTML comments
-- Enhanced layout consistency across desktop and mobile views
+- Improved HTML semantics for accessibility and maintainability
+- Enhanced layout consistency across desktop and mobile
 - Streamlined development workflow using VS Code and GitHub version control
 
 ---
 
 ## Quality & Accessibility
 
-This site was audited using Chrome Lighthouse to validate accessibility and
-best practices. Core pages scored 100 in accessibility, with dashboard views
-maintaining 95+ scores due to intentional design tradeoffs related to color
-contrast. Best Practices audits scored 100 across evaluated pages.
+This site was audited using Chrome Lighthouse:
+
+- Core pages scored 100 in accessibility
+- Dashboard views maintain 95+ due to intentional color contrast tradeoffs
+- Best Practices audits scored 100 across evaluated pages
 
 ---
 
 ## Core Concepts Demonstrated
+
 - Frontend architecture and state-driven JavaScript
 - Dynamic CRUD workflows with safe cancel and edit flows
 - Responsive and accessible design using HTML5 and CSS3
@@ -65,11 +83,11 @@ contrast. Best Practices audits scored 100 across evaluated pages.
 - Local authentication patterns and gated content management
 - React components showcasing conditional rendering, event handling, and immutable state updates
 - SQL database design and relational data modeling
-- Serverless computing concepts (stateless functions, API-driven logic)
+- Serverless computing (Netlify, API-driven logic)
 - Frontend animations and UI interactions
-- Responsive, mobile-first layout considerations
+- Mobile-first and responsive layout considerations
 
-Some demos are conceptual or simulated to reflect real production patterns without requiring live infrastructure.
+Note - Some demos are conceptual or simulated to reflect real production patterns without requiring full backend infrastructure.
 
 ---
 
@@ -82,7 +100,7 @@ Some demos are conceptual or simulated to reflect real production patterns witho
 - Fetch API
 - REST architecture principles
 - SQL concepts and relational schema design
-- Serverless architecture patterns
+- Serverless architecture patterns (Netlify functions)
 - Git & GitHub Pages for version control and deployment
 
 ---
@@ -91,10 +109,10 @@ Some demos are conceptual or simulated to reflect real production patterns witho
 
 - Authentication Demo (login / registration / session logic)
 - React with conditional rendering, event handling and immutable state updates
-- RESTful API & Fetch integration demo
+- RESTful API & Fetch integration demo with serverless backend
 - Project Manager (CRUD Demo)
 - SQL database design & query examples
-- Serverless computing architecture demo
+- Serverless computing live demo
 - Responsive navigation and layout
 
 ---
@@ -103,7 +121,7 @@ Some demos are conceptual or simulated to reflect real production patterns witho
 
 - Backend-backed authentication
 - Persistent data storage
-- Anything else I feel like learning to build
+- Any new features I explore and implement 
 
 ---
 
