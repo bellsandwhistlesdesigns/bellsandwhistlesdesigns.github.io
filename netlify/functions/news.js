@@ -1,7 +1,5 @@
 // netlify/functions/news.js
 
-console.log("netlify/function/news.js is working");
-
 const CACHE_TTL = 1000 * 60 * 10; // 10 minutes
 const cache = new Map();
 
@@ -48,9 +46,11 @@ export async function handler(event) {
       statusCode: 200,
       headers: {
         "Content-Type": "application/json",
-        "X-Cache": "MISS"
+        "Cache-Control": "public, max-age=600"
       },
-      body: JSON.stringify(data)
+      body: JSON.stringify({
+        articles: data.news || []
+      })
     };
   } catch (error) {
     return {
