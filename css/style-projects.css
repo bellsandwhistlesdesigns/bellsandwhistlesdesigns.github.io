@@ -30,7 +30,7 @@
 .project-card h2 {
 	margin-top: 0;
 	font-size: 1.4rem;
-	color: #0f172a;
+	color: #34436e;
 }
 
 .project-card p {
@@ -70,7 +70,7 @@
 	text-decoration: none;
 	font-weight: bold;
 	color: white;
-	background: #335fe4;
+	background: #34436e;
 	padding: 0.5rem 1rem;
 	border-radius: 8px;
 	transition: 0.2s ease, transform 0.2s ease;
