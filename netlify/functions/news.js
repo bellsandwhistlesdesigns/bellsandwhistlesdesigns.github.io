@@ -3,9 +3,22 @@
 const CACHE_TTL = 1000 * 60 * 10; // 10 minutes
 const cache = new Map();
 
+const RATE_LIMIT_WINDOW = 10_000; // 10 seconds
+let lastRequestTime = 0;
+
+const now = Date.now();
+if (now - lastRequestTime < RATE_LIMIT_WINDOW) {
+  return {
+    statusCode: 429,
+    body: JSON.stringify({ error: "Too many requests" })
+  };
+}
+lastRequestTime = now;
+
 export async function handler(event) {
   try {
-    const query = event.queryStringParameters?.q || "technology";
+    const rawQuery = event.queryStringParameters?.q || "technology";
+    const query = rawQuery.trim().toLowerCase();
 
     // Check cache
     const cached = cache.get(query);

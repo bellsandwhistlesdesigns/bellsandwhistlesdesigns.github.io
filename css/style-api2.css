@@ -63,6 +63,10 @@
 	background: #004d40;
 	transform: translateY(-2px);
 }
+.news-controls button:disabled {
+  	opacity: 0.6;
+  	cursor: not-allowed;
+}
 
 /* Status */
 .news-status {

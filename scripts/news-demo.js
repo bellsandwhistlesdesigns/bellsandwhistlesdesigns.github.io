@@ -8,52 +8,67 @@ document.addEventListener("DOMContentLoaded", () => {
 	const resultsContainer = document.getElementById("news-results");
 	const status = document.getElementById("news-status");
 
- const API_BASE = window.location.hostname.includes("netlify.app")
-  ? "/.netlify/functions/news"
-  : null;
+ 	const API_BASE = window.location.hostname.includes("netlify.app")
+  	? "/.netlify/functions/news"
+  	: null;
 
 	fetchBtn.addEventListener("click", async () => {
-		const query = queryInput.value.trim() || "technology";
+  	fetchBtn.disabled = true;
+  	fetchBtn.textContent = "Fetching…";
 
-		resultsContainer.innerHTML = "";
-		status.textContent = "Fetching news articles...";
+  	try {
+    	const query = queryInput.value.trim();
 
-		try {
-			const response = await fetch(
-				`/.netlify/functions/news?q=${encodeURIComponent(query)}`
-			);
+    if (!query) {
+      	status.textContent = "Please enter a search term.";
+      	return;
+    }
 
-			if (!response.ok) {
-				throw new Error(`Server error: ${response.status}`);
-			}
+    if (!API_BASE) {
+      	status.textContent = "Live API demo available on the hosted site.";
+      	return;
+    }
 
-			const data = await response.json();
+    status.textContent = "Fetching news articles…";
 
-			status.textContent = "";
+    const response = await fetch(
+      	`${API_BASE}?q=${encodeURIComponent(query)}`
+    );
 
-			if (!data.articles || data.articles.length === 0) {
-				status.textContent = "No articles found.";
-				return;
-			}
+    if (!response.ok) {
+     	throw new Error(`Server error: ${response.status}`);
+    }
 
-			data.articles.forEach(article => {
-				const card = document.createElement("div");
-				card.className = "news-card";
+    const data = await response.json();
+    status.textContent = "";
 
-				card.innerHTML = `
-					<h3>${article.title}</h3>
-					<p>${article.description}</p>
-					<a href="${article.url}" target="_blank" rel="noopener noreferrer">
-						Read more →
-					</a>
-				`;
+    if (!data.articles || data.articles.length === 0) {
+      	status.textContent = "No articles found.";
+      	return;
+    }
 
-				resultsContainer.appendChild(card);
-			});
-		} catch (error) {
-			console.error(error);
-			status.textContent =
-				"Error fetching articles. Please try again later.";
-		}
-	});
+    resultsContainer.innerHTML = "";
+
+    data.articles.forEach(article => {
+      	const card = document.createElement("div");
+      	card.className = "news-card";
+      	card.innerHTML = `
+        	<h3>${article.title}</h3>
+        	<p>${article.description || ""}</p>
+        	<a href="${article.url}" target="_blank" rel="noopener noreferrer">
+          	Read more →
+        	</a>
+      	`;
+     	resultsContainer.appendChild(card);
+    });
+  } catch (err) {
+    	status.textContent = "Error fetching articles. Check console for details.";
+    	console.error(err);
+  } finally {
+    setTimeout(() => {
+      	fetchBtn.disabled = false;
+      	fetchBtn.textContent = "Fetch News";
+    }, 5000);
+  }
+});
 });
