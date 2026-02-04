@@ -25,7 +25,18 @@ The site highlights both frontend execution and backend architecture concepts, i
 
 ---
 
-## Recent Updaye - 02/01/2026
+## Recent Update - 02/04/2026
+
+Live RESTful API Demo
+
+Serverless credits reached!
+
+Current Status: Capped at 300 build credits
+I hit the 300 build credit limit on my serverless account in just 4 days! 
+Maxing out credits = proof of an active, dynamic workflow! 
+Progress is real!
+
+## Recent Update - 02/01/2026
 
 Live RESTful API Demo
 
