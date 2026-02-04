@@ -48,26 +48,25 @@
 	box-shadow: 0 0 0 2px rgba(0, 121, 107, 0.2);
 }
 
-.news-controls button {
-	padding: 0.6rem 1.2rem;
-	border-radius: 8px;
-	border: none;
-	background: #00796b;
-	color: white;
-	font-weight: bold;
-	cursor: pointer;
-	transition: background 0.2s ease, transform 0.2s ease;
+.demo-button {
+  	display: inline-block;
+  	padding: 0.8rem 1.6rem;
+  	background: #0077b6;
+  	color: #fff;
+  	text-decoration: none;
+  	border-radius: 6px;
+  	font-weight: 600;
+  	transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.news-controls button:hover {
-	background: #004d40;
-	transform: translateY(-2px);
+.demo-button:hover {
+  	background: #005f8a;
+  	transform: translateY(-1px);
 }
-.news-controls button:disabled {
+.demo-button button:disabled {
   	opacity: 0.6;
   	cursor: not-allowed;
 }
-
 /* Status */
 .news-status {
 	text-align: center;
