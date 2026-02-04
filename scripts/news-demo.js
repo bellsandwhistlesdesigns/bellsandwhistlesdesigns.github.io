@@ -17,10 +17,14 @@ document.addEventListener("DOMContentLoaded", () => {
     	window.open(liveDemoUrl, "_blank", "noopener,noreferrer");
   	});
 
-  	status.textContent =
-    "This demo uses live APIs and is hosted separately to manage usage and performance.";
-  
-  	return; // stops any API logic from loading
+  	const netlifyPaused = true; // flip to false after reset
+
+	if (netlifyPaused) {
+  		fetchBtn.disabled = true;
+  		fetchBtn.textContent = "API Demo Temporarily Paused";
+  		status.textContent =
+    	"High traffic temporarily exhausted serverless credits. Demo will resume after reset.";
+ 	return;
 	}
 
  	const API_BASE = window.location.hostname.includes("netlify.app")
