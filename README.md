@@ -29,12 +29,10 @@ The site highlights both frontend execution and backend architecture concepts, i
 
 Live RESTful API Demo
 
-Serverless credits reached!
-
-Current Status: Capped at 300 build credits
-I hit the 300 build credit limit on my serverless account in just 4 days! 
-Maxing out credits = proof of an active, dynamic workflow! 
-Progress is real!
+Credit limit reached. Capped out in just four days!
+- Rapid deployments show active development and experimentation
+- Next month, I can optimize builds or scale up as needed! For now, this is a productivity milestone!
+- Maxing out credits = proof of an active, dynamic workflow!
 
 ## Recent Update - 02/01/2026
 

@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const isGitHubPages = window.location.hostname.includes("github.io");
   const isNetlify = window.location.hostname.includes("netlify.app");
-  const liveDemoUrl = "https://dapper-raindrop-17978a.netlify.app/restfulapi";
+  const liveDemoUrl = "https://dapper-raindrop-17978a.netlify.app/restfulapi.html";
 
   /* -------------------------------
      GitHub Pages behavior
