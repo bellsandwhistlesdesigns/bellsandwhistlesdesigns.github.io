@@ -20,10 +20,9 @@ function FeaturePanel() {
 
   return (
     <div className={features.darkMode ? "dark-panel" : ""}>
-      <h2>Component-Based UI (React Demo)</h2>
+      <h2>Component-Based UI</h2>
       <p>
-        This demo showcases React components, state management,
-        conditional rendering, and feature-driven UI behavior.
+        React components, state management, conditional rendering, and feature-driven UI behavior.
       </p>
 
       <ul style={{ listStyle: "none", padding: 0 }}>

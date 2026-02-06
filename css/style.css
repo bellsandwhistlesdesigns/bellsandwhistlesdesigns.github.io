@@ -7,8 +7,8 @@ body {
 /* Global Main */ 
 main {
 	padding: 2rem;
-	max-width: 800px;
-	margin: auto;
+	 width: min(1200px, 92vw);
+  	margin: 0 auto;
 }
 /* Look for other h2*/
 h2 {
@@ -16,18 +16,21 @@ h2 {
 }
 /* Global about section */ 
 .about {
-	max-width: 800px;
+	position: relative;
+	max-width: 1200px;
 	margin: 3rem auto;
+	background: #fff;
 	text-align: center;	padding: 1rem;
-	border: 3px solid #181752;
+	border: 3px solid #807ef0;
 	border-radius: 12px;
 	box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+	z-index: 0;
 	
 }
 .about h2 {
 	font-size: 2rem;
   	margin-bottom: 1.25rem;
-  	color: #1e7c71;
+  	color: #181752;
   	position: relative;
 	text-shadow: 0 2px 6px rgba(128,203,196,0.35);
 }
@@ -36,9 +39,52 @@ h2 {
 	line-height: 1.6;
 	color: #333;
 }
+
+/* Glint layer */
+.about::after {
+  content: "";
+  position: absolute;
+  inset: -3px; /* match border thickness */
+  border-radius: inherit;
+  pointer-events: none;
+  animation-play-state: running;
+
+  /* This gradient IS the glint */
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(19, 184, 87, 0.9) 50%,
+    transparent 100%
+  );
+
+  background-size: 200% 100%;
+  animation: glint-move 10s linear infinite;
+}
+
+/* Clip gradient so only border shows */
+.about::after {
+  padding: 3px;
+  box-sizing: border-box;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+@keyframes glint-move {
+  from {
+    background-position: -10% 0;
+  }
+  to {
+    background-position: 350% 0;
+  }
+}
+
+
 /* Quote of the Day */
 .quote-card {
-  max-width: 720px;
+  max-width: 900px;
   margin: 3rem auto;
   padding: 1.75rem 2rem;
   background: linear-gradient(
@@ -186,6 +232,11 @@ h2 {
   	transform-origin: center;
   	animation: grow-line 2400ms ease-out forwards;
 }
+@keyframes grow-line {
+  to {
+    transform: scaleX(1);
+  }
+}
 .section-divertwo {
 	border: none;
   	height: 3px;
@@ -194,12 +245,6 @@ h2 {
   	width: 60%;
   	opacity: 0.7;
 
-}
-
-@keyframes grow-line {
-  to {
-    transform: scaleX(1);
-  }
 }
 /*This is for Appdev Page */
 .app-preview {
@@ -265,7 +310,49 @@ h2 {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
+.case-studytwo {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2.25rem 2.5rem;
+  background: linear-gradient(270deg, #e8f5e9 0%, #c8e6c9 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow:
+    0 8px 24px rgba(18, 18, 19, 0.35),
+    inset 0 1px 0 rgba(8, 8, 8, 0.03);
+  color: #e5e7eb;
+}
 
+/* Title */
+.case-studytwo h3 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  font-weight: 600;
+  color: #f8fafc;
+  letter-spacing: -0.015em;
+}
+
+/* Paragraph blocks */
+.case-studytwo p {
+  margin: 0 0 1.25rem;
+  line-height: 1.65;
+  font-size: 1rem;
+  color: #0d0d0e;
+}
+
+/* Section labels (Problem / Approach / Outcome) */
+.case-studytwo p strong {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  color: #181752;
+  font-weight: 600;
+}
+
+/* Subtle divider between sections */
+.case-studytwo p + p {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
 
 
 /* Global Inline Link*/
@@ -278,6 +365,16 @@ h2 {
 .inline-link:hover {
 	text-decoration: underline;
 	color: #004d40;
+}
+
+.inline-linktwo {
+	color: #676b72;
+	font-weight: 600;
+	text-decoration: underline;
+}
+.inline-linktwo:hover {
+	text-decoration: none;
+	color: #4f46e5;
 }
 /* Global Site Footer */ 
 .site-footer {
