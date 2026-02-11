@@ -42,13 +42,16 @@
 
 /* Tech Stack List */
 .tech-list {
-	list-style: none;
-	padding: 0;
-	margin: 0 0 1.2rem 0;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0.5rem;
+	
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem;
 }
+
 
 .tech-list li {
 	background: #e0f2f1;
@@ -57,6 +60,10 @@
 	border-radius: 6px;
 	font-size: 0.85rem;
 	font-weight: 600;
+}
+.tech-list li:hover {
+  	transform: translateY(-2px);
+  	transition: transform 0.2s ease;
 }
 
 /* Project Links */

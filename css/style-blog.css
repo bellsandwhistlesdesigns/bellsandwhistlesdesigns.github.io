@@ -36,3 +36,18 @@
   color: black;
   font-style: italic;
 }
+.post-nav {
+  margin-top: 3rem;
+  text-align: left;
+}
+
+.back-link {
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  color: #80cbc4;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
