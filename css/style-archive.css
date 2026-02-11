@@ -1,0 +1,243 @@
+/* =========================
+   Archive Page
+========================= */
+
+#archive {
+  padding: 3rem 0;
+}
+.archive-intro {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  padding: 0 1.5rem;
+  text-align: left;
+}
+
+.archive-intro h1 {
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+.archive-intro p {
+  line-height: 1.6;
+  color: #7f8588;
+}
+/* =========================
+   Archive Sections
+========================= */
+
+.archive-section {
+  margin-bottom: 4rem;
+}
+
+.archive-section__header {
+  max-width: 900px;
+  margin: 0 auto 1.25rem;
+  padding: 0 1.5rem;
+}
+
+.archive-section__header h2 {
+  margin-bottom: 0.5rem;
+}
+
+.archive-section__header p {
+  color: #676b72;
+  line-height: 1.6;
+}
+.archive-divider {
+  width: 100%;
+  margin: 4rem auto;
+  border: none;
+  height: 2px;
+  background-color: #181752;
+  opacity: 0.4;
+}
+/* =========================
+   Horizontal Scroll
+========================= */
+
+.archive-section__controls {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.archive-track {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem 2rem;
+
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+.archive-scroll {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #80cbc4;
+
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 999px;
+
+  cursor: pointer;
+  font-size: 1rem;
+
+  display: grid;
+  place-items: center;
+
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.archive-scroll:hover {
+  background: rgba(15, 23, 42, 1);
+  transform: translateY(-1px);
+}
+
+.archive-scroll:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none;
+}
+/* =========================
+   Archive Cards
+========================= */
+
+.archive-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  padding: .5rem 1rem;
+
+  min-width: 260px;
+  max-width: 320px;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.archive-card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.archive-card a {
+  display: block;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+.archive-card__content {
+  text-align: left;
+  padding: 1rem;
+}
+
+.archive-card h3 {
+  margin-bottom: 0.5rem;
+  color: #f8fafc;
+}
+
+.archive-card__meta,
+.archive-card time {
+  font-size: 0.85rem;
+  color: #80cbc4;
+  margin-bottom: 0.5rem;
+}
+
+.archive-card__excerpt,
+.archive-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #cbd5f5;
+}
+/* =========================
+   Card Variants
+========================= */
+
+/* Case studies */
+ .archive-card--case {
+   background: linear-gradient(
+    90deg,
+    #6b7692,
+    #040b1d
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+.archive-card--case:hover {
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05)
+}
+
+/* Blog posts */
+.archive-card--blog {
+  background: linear-gradient(
+    27deg,
+    #4164b6,
+    #0c2055
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.archive-card--blog:hover {
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+/* Thoughts of the week */
+.archive-card--thought {
+  background: linear-gradient(
+    180deg,
+    #5167a0,
+    #2a3a7a
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.archive-card--thought:hover {
+  box-shadow:
+    0 10px 26px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.archive-card--thought p {
+  font-style: italic;
+  line-height: 1.6;
+}
+@media (max-width: 700px) {
+  .archive-section__controls {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-scroll {
+    display: none;
+  }
+
+  .archive-track {
+    padding: 1rem;
+  }
+}
+.archive-card__readmore {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-weight: 600;
+  color: #80cbc4;
+}

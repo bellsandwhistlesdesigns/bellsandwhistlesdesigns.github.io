@@ -1,15 +1,15 @@
-<!-- Bells and Whistles Projects page -->
+<!-- Bells and Whistles Archive page -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Development Archive | Bells and Whistles Designs</title>
+	<title>Development Stories | Bells and Whistles Designs</title>
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-16x16.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-32x32.png">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/style-projects.css">
+	<link rel="stylesheet" href="css/style-archive.css">
 	<link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/style-video.css">
 </head>
@@ -22,7 +22,7 @@
     <div class="brand">
       <img src="images/bellsandwhistles.svg" alt="Bells and Whistles Designs Logo">
       <span class="brand-text">Bells & Whistles Designs</span>
-	</div>
+	  </div>
 
     <!-- Hamburger -->
     <button class="nav-toggle"
@@ -36,13 +36,185 @@
     <nav class="nav" id="nav">
       <a href="index.html">Home</a>
       <a href="projects.html">My Dev Skills</a>
-	  <a href="appdev.html">Android Skills</a>
-	  <a href="contactus.html">Contact Me</a>
-	  <a href="#" id="logoutBtn" class="logout hidden">Log Out</a>
-	</nav>
-  	</div>
+	    <a href="appdev.html">Android Skills</a>
+	    <a href="contactus.html">Contact Me</a>
+	    <a href="#" id="logoutBtn" class="logout hidden">Log Out</a>
+	  </nav>
+  </div>
 </header>
-<main></main>
+<main id="archive">
+	<section class="about">
+	   	<h2>Bells and Whistles Documentation:</h2>
+    	<p>
+      		A living collection of case studies, form writing, 
+      		documenting process, experiments, and ideas over time.
+    	</p>
+  	</section>
+	<!-- Case Studies -->
+	<section class="archive-section archive-section--case">
+  	<header class="archive-section__header">
+    	<h2>Case Studies</h2>
+    	<p>Deep dives into my portfolio problems, process, and outcomes.<br>
+        Full case studies <strong>(login required).</strong>
+      </p>
+  	</header>
+
+  	<div class="archive-section__controls" data-archive>
+    <button
+    	class="archive-scroll archive-scroll--prev"
+      	aria-label="Scroll case studies left">
+      	←
+    </button>
+    
+    <div class="archive-track" tabindex="0">
+    <article class="archive-card archive-card--case">
+  	<a href="login.html">
+      <h3>Bells & Whistles Portfolio</h3>
+      <div class="archive-card__content">
+      <p class="archive-card__meta">
+        Case Study #1<br>
+        UI/UX · Personal Project
+      </p>
+      <p class="archive-card__excerpt">
+        Designing and iterating on a portfolio as a living product.
+      </p>
+      <span class="archive-card__readmore">Read more →</span>
+    </div>	
+  	</a>
+	</article>
+	<article class="archive-card archive-card--case">
+    <a href="loginhtml">
+      <h3>React Demo</h3>      
+      <div class="archive-card__content">
+        
+        <p class="archive-card__meta">
+          Case Study #2<br>
+          React · State · UI</p>
+        <p class="archive-card__excerpt">
+          
+          Exploring component-based UI and state flow.
+        </p>
+        <span class="archive-card__readmore">Read more →</span>
+      </div>
+    </a>
+	</article>
+	<article class="archive-card archive-card--case">
+    <a href="login.html">
+      <h3>Serverless Experiment</h3>
+        <div class="archive-card__content">
+        
+        <p class="archive-card__meta">
+          Case Study #3<br>
+          API · Netlify · Functions</p>
+        <p class="archive-card__excerpt">
+          Building and testing a lightweight backend.
+        </p>
+        <span class="archive-card__readmore">Read more →</span>
+      </div>
+    </a>
+  </article>
+  <article class="archive-card archive-card--case">
+    <a href="login.html">
+        <h3>Client-Side Authentication</h3>
+        <div class="archive-card__content">
+        
+        <p class="archive-card__meta">
+          Case Study #4<br>
+          Without a backend server</p>
+        <p class="archive-card__excerpt">
+          Responsive Navigation & Auth-Aware UI
+        </p>
+        <span class="archive-card__readmore">Read more →</span>
+      </div>
+    </a>
+  </article>
+  <article class="archive-card archive-card--case">
+    <a href="login.html">
+        <h3>UI Validation</h3>
+        <div class="archive-card__content">
+        
+        <p class="archive-card__meta"> 
+          Case Study #5<br>
+          Ensuring my portfolio was accessible</p>
+        <p class="archive-card__excerpt">
+          Run Lighthouse audits across core pages
+        </p>
+         <span class="archive-card__readmore">Read more →</span>
+      </div>
+    </a>
+  </article>
+</div>
+    <button
+      	class="archive-scroll archive-scroll--next"
+      	aria-label="Scroll case studies right">
+      	→
+    </button>
+  	</div>
+</section>
+
+<hr class="archive-divider" />
+
+<!-- Blog -->
+	<section class="archive-section archive-section--blog">
+  <header class="archive-section__header">
+    <h2>Blog Posts</h2>
+    <p>Form writing on design, development, and process.
+    </p>
+  </header>
+
+  <div class="archive-section__controls" data-archive>
+    <button class="archive-scroll archive-scroll--prev" aria-label="Scroll blog posts left">←</button>
+
+    <div class="archive-track" tabindex="0">
+        <article class="archive-card archive-card--blog">
+        <a href="design-in-public.html">
+          <h3>Designing in Public</h3>
+          <div class="archive-card__content"></div>
+          <time datetime="2025-01-10">Dec 20, 2025</time>
+          <p>From Static to Intentional</p>
+        </a>
+      </article>
+      <article class="archive-card archive-card--blog">
+        <a href="fun-first.html">
+          <h3>Fundamentals First</h3>
+          <div class="archive-card__content"></div>
+          <time datetime="2025-01-10">Dec 28, 2025</time>
+          <p>Fundamentals before Frameworks</p>
+        </a>
+      </article>
+      <article class="archive-card archive-card--blog">
+        <a href="sound-structure.html">
+          <h3>Structure is Sound</h3>
+          <div class="archive-card__content"></div>
+          <time datetime="2025-01-10">Jan 05, 2026</time>
+          <p>From Intentional to Platform</p>
+        </a>
+      </article>
+      
+      <article class="archive-card archive-card--blog">
+        <a href="debugging.html">
+          <h3>The Art of Debugging</h3>
+          <div class="archive-card__content"></div>
+          <time datetime="2025-01-10">Jan 10, 2025</time>
+          <p>Debugging is development</p>
+        </a>
+      </article>
+      <article class="archive-card archive-card--blog">
+        <a href="understand-design.html">
+          <h3>The Art of  Web Design</h3>
+          <div class="archive-card__content"></div>
+          <time datetime="2025-01-10">Jan 25, 2026</time>
+          <p>Web Design is Hard</p>
+        </a>
+      </article>
+    </div>
+
+    <button class="archive-scroll archive-scroll--next" aria-label="Scroll blog posts right">→</button>
+  </div>
+</section>
+
+<hr class="archive-divider" />
+</main>
 <!-- Global Footer -->
 <footer class="site-footer">
 	<div class="footer-content">
@@ -59,6 +231,7 @@
 </footer>
 <!-- Script Source -->
 <script src="scripts/mobilenav.js"></script>
+<script src="scripts/archive.js"></script>
 	
 </body>
 </html>

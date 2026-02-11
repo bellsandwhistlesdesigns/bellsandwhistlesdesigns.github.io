@@ -7,7 +7,7 @@ body {
 /* Global Main */ 
 main {
 	padding: 2rem;
-	 width: min(1200px, 92vw);
+	width: min(1200px, 92vw);
   	margin: 0 auto;
 }
 /* Look for other h2*/
@@ -37,6 +37,21 @@ h2 {
 .about p {
 	font-size: 1.1rem;
 	line-height: 1.6;
+	color: #333;
+}
+.clear {
+	margin: 4rem auto;
+	max-width: 800px;
+	text-align: center;	padding: 1rem;
+	padding: 1rem;
+}
+.clear h2 {
+	font-size: 2rem;
+	color: black;
+}
+.clear p {
+	max-width: 60ch;
+	margin: 0.5rem auto;
 	color: #333;
 }
 
@@ -84,7 +99,7 @@ h2 {
 
 /* Quote of the Day */
 .quote-card {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 3rem auto;
   padding: 1.75rem 2rem;
   background: linear-gradient(
@@ -222,7 +237,7 @@ h2 {
 .section-divider {
   	border: none;
   	height: 3px;
-  	width: 600px;
+  	width: 400px;
   	background-color: #181752;
   	margin: 2rem auto;
   	border-radius: 2px;

@@ -53,42 +53,70 @@
     </section>
 
     <section class="case-study">
-        <h3>Case Study #1: Responsive Navigation & Auth-Aware UI</h3>
-        <p><strong>Problem:</strong>
-            Navigation worked on desktop but failed on mobile.
-            Hamburger menu logic conflicted with auth state.
-            Logout visibility needed to adapt dynamically.
-            CSS and JS were fighting each other.</p>
-        <p><strong>Approach:</strong>
-            Separated global vs component CSS.
-            Refactored header into modular styles.
-            Centralized auth logic using localStorage.
-            Implemented breakpoint-specific behavior.
-            Debugged stacking contexts (z-index issues).</p>
-        <p><strong>Outcome:</strong>
-            Fully responsive navigation across devices.
-            Clean, predictable auth-based UI behavior.
-            Improved maintainability and clarity.
-            Professional UX polish.</p>
+        <h3>Case Study #1: Bells & Whistles · UI/UX Personal Project </h3>
+        <p><strong>Problem:</strong><br>
+            When I first launched Bells & Whistles Designs, it was essentially a static placeholder, a single page that existed only to “be there.” 
+            It didn’t communicate my skills, my thinking, or my growth as a developer and designer.
+            More importantly, it couldn't evolve. Any update required manual changes with no clear structure, no narrative, and no sense of progression. 
+            The site only functioned as a snapshot in time rather than a reflection of how I actually work.
+
+            I needed a portfolio that could grow with me not just visually, but structurally and conceptually.</p>
+        <p><strong>Approach:</strong><br>
+
+            I reframed my portfolio as a living product, not a finished artifact.
+            Instead of redesigning everything at once, I chose an iterative approach, treating the site as something that could be continuously improved:
+
+            - Broke the site into reusable components (cards, sections, layouts)
+            - Introduced an Archive to document work over time rather than hiding it
+            - Designed clear distinctions between previews and full content
+            - Implemented authentication flows to demonstrate real-world UX patterns
+
+
+            Focused on clarity, readability, and intent over visual noise.
+
+            Each change was incremental tested visually, refined, refined again, and then built upon. 
+            I intentionally avoided over-engineering and instead leaned into progressive enhancement.</p>
+        <p><strong>Outcome:</strong><br>
+            Bells & Whistles Designs is now a structured, evolving portfolio that reflects how I actually think and build.
+            The site communicates process, not just outcomes.
+            - Authentication is used intentionally to demonstrate gated experiences
+            - Case studies, blog posts, and weekly thoughts create a consistent narrative
+            - DEmonstrations are real world scenarios
+            - The archive serves as both documentation and discovery
+            - The system is easy to extend without redesigning from scratch
+
+            What began as a static, “do nothing” page has become a flexible platform for experimentation, reflection, and growth. One that mirrors how I can evolve in the real world.</p>
     </section>
     <section class="case-study">
-         <h3>Case Study #2: Implementing Client-Side Authentication and Session Handling</h3>
-        <p><strong>Problem:</strong>
-            Needed login/logout behavior without a backend server.
-            Pages required conditional UI rendering.
-            Session state had to persist across refreshes.</p>   
-        <p><strong>Approach:</strong>
-            Used localStorage for session persistence.
-            Centralized auth checks in dashboard.js.
-            Condition-based UI rendering (logout visibility).
-            Redirect handling for protected pages.</p>  
-        <p><strong>Outcome:</strong>
-            Functional authentication flow.
-            Clear separation of concerns.
-            Scalable foundation for backend integration later.</p>
+         <h3>Case Study #2: React · State · UI · Personal Project</h3>
+        <p><strong>Problem:</strong><br>
+            As my projects grew beyond static pages, I needed a clearer way to manage UI complexity and state. 
+            In vanilla JavaScript, even small interactions quickly became difficult to reason about, especially as components started to depend on shared data.
+            I wanted a focused environment to explore how component-based architecture and state flow could simplify UI logic and improve maintainability.</p>   
+        <p><strong>Approach:</strong><br>
+            I built a small React demo with the explicit goal of understanding how data moves through an application, not just how components render.
+            Key decisions included:
+
+            Breaking the interface into small, reusable components
+            Passing state intentionally through props to understand data ownership
+            Using local state where appropriate to avoid unnecessary complexity
+
+            Treating components as predictable, isolated units
+
+            Prioritizing readability over cleverness
+
+            Rather than reaching for advanced patterns immediately, I focused on mastering the fundamentals, component boundaries, state updates, and UI reactivity.</p>  
+        <p><strong>Outcome:</strong><br>
+            The React Demo clarified how component-based systems scale more cleanly than ad-hoc DOM manipulation.
+            UI changes became predictable and traceable
+            Components were easier to test and reason about
+            State-driven rendering reduced manual updates
+            The project formed a foundation for more complex React work
+            
+            This demo now serves as both a learning artifact and a reference point for future projects that require structured UI logic and shared state.</p>
     </section>
     <section class="case-study">
-        <h3>Case Study #3: Secure Serverless API Integration</h3>
+        <h3>Case Study #3: API · Netlify · Functions</h3>
 
         <p><strong>Problem:</strong><br>
         The portfolio required a live RESTful API demo that could fetch and display
@@ -115,16 +143,32 @@
     </section>
     
     <section class="case-study">
-        <h3>Case study #4: Does my UI validate against real-world standards?</h3>
-        <p><strong>Problem:</strong>
+        <h3>Case Study #4: Client-Side Authentication · Session Handling</h3>
+        <p><strong>Problem:</strong><br>
+            Needed login/logout behavior without a backend server.
+            Pages required conditional UI rendering.
+            Session state had to persist across refreshes.</p>
+        <p><strong>Approach:</strong><br>
+            Used localStorage for session persistence.
+            Centralized auth checks in dashboard.js.
+            Condition-based UI rendering (logout visibility).
+            Redirect handling for protected pages.</p>
+        <p><strong>Outcome:</strong><br>
+            Functional authentication flow.
+            Clear separation of concerns.
+            Scalable foundation for backend integration later.
+    </section>
+    <section class="case-study">
+        <h3>Case study #5: Does my UI validate against real-world standards?</h3>
+        <p><strong>Problem:</strong><br>
             Ensuring my portfolio was accessible, and usable.
             Is it aligned with modern web best practices?
             Across multiple pages?</p>
-        <p><strong>Approach:</strong>
+        <p><strong>Approach:</strong><br>
             Ran Lighthouse audits across core pages (Home, Login, Dashboard).
             Evaluated accessibility, contrast, semantic structure, and interaction patterns.
             Addressed issues where appropriate without compromising design consistency.</p>
-        <p><strong>Outcome:</strong>
+        <p><strong>Outcome:</strong><br>
             Lighthouse Accessibility scores of 100 on public-facing pages.
             Dashboard Accessibility score of 95, with remaining items related to color contrast tradeoffs.
             100 Best Practices score across audited pages.

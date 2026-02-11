@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/style-video.css">
+	<link rel="stylesheet" href="css/style-archive.css">
 </head>
 <body>
 <!-- Main Navigation: responsive + auth aware-->
@@ -33,6 +34,7 @@
     <!-- Navigation -->
     <nav class="nav" id="nav">
       <a href="projects.html">My Dev Skills</a>
+	  <a href="archive.html">Case Studies</a>
 	  <a href="appdev.html">Android Skills</a>
 	  <a href="contactus.html">Contact Me</a>
 	  <a href="#" id="logoutBtn" class="logout hidden">Log Out</a>
@@ -85,51 +87,97 @@
     	New Quote
   	</button>
 </section>
+		
+<!-- Projects-->
+<section class="archive-section archive-section--thoughts">
+  <header class="archive-section__header">
+    <h2>Featured Work</h2>
+    <p>Web and Application <a href="projects.html" class="inline-link">demonstrations</a> that I am proud to present.</p>
+  </header>
+
+  <div class="archive-section__controls" data-archive>
+    <button class="archive-scroll archive-scroll--prev" aria-label="Scroll thoughts left">←</button>
+
+    <div class="archive-track" tabindex="0">
+      <article class="archive-card archive-card--thought">
+        <a href="restfulapi.html">
+          	<h3>RESTful API Demo</h3>
+          	<div class="archive-card__content"></div>
+			<p>Monthly Credits Used!</p>
+        	<p>
+          	So proud to showcase this!
+        	</p>
+        </a>
+      </article>
+      <!-- New Project Section -->
+      <article class="archive-card archive-card--thought">
+        <a href="crud.html">
+          	<h3>Project Manager Demo</h3>
+          	<div class="archive-card__content"></div>
+        <p>
+        	Hand built this Project Manager demo.
+        </p>
+		<P>Another Proud Showcase</P>
+        </a>
+      </article>
+	  <!-- New Project Section -->
+      <article class="archive-card archive-card--thought">
+        <a href="reactdemo.html">
+          	<h3>React Demo</h3>
+          	<div class="archive-card__content"></div>
+        <p>
+        	Coding complete! Check it out.
+        </p>
+		<P>I love the dark mode!</P>
+        </a>
+      </article>
+	  <!-- New Project Section -->
+      <article class="archive-card archive-card--thought">
+        <a href="archive.html">
+          	<h3>Documentation</h3>
+          	<div class="archive-card__content"></div>
+        <p>
+        	Case Studies.
+        </p>
+		<P>Blog Posts</P>
+        </a>
+      </article>
+	  <!-- New Project Section -->
+      <article class="archive-card archive-card--thought">
+        <a href="login.html">
+          	<h3>About the Developer</h3>
+          	<div class="archive-card__content"></div>
+        <p>
+        	Douglas Moth.
+        </p>
+		<P>Coquitlam, BC</P>
+        </a>
+      </article>
+	  <!-- New Project Section -->
+      <article class="archive-card archive-card--thought">
+        <a href="sqldemo.html">
+          	<h3>Design and Logic</h3>
+          	<div class="archive-card__content"></div>
+        <p>
+        	My understanding of: 
+        </p>
+		<p>Backend data handling</p>
+        </a>
+      </article>
+    </div>
+
+    <button class="archive-scroll archive-scroll--next" aria-label="Scroll thoughts right">→</button>
+  </div>
+</section>
 	<section class="coming-soon">
-		<h2>My Featured Work:</h2>
-		<p>Web and Application <a href="projects.html" class="inline-link">demonstrations</a> that I am proud to present.</p>
-		<h2>Core Technologies</h2>
+		<h2>Tech Stack</h2>
 			<p>
 				HTML5, CSS3, JavaScript (ES6+), React (functional components & hooks), jQuery, RESTful APIs, 
    				Serverless Computing (netlify), JSON, Authentication Patterns, Node.js, Responsive Design, 
     			VS Code, Git & GitHub, Git Pages.
-			</p>		
-	
-	<section class="coming-soon2">
-		<h2>Live RESTful API Demo </h2>
-		<p>
-			<strong>| Brand New | </strong>
-			So proud to showcase this live <a href="restfulapi.html" class="inline-link">RESTful API</a> demo.
-		</p>
-		<hr class="section-dividertwo"></hr>
-		<h2>Project Manager (CRUD Demo)</h2>
-		<p>
-			<strong>| Newer | </strong>
-			Hand built this <a href="crud.html" class="inline-link">Project Manager</a> demo.
-			
-		</p>
-		<hr class="section-dividertwo"></hr>
-		<h2>React Demo</h2>
-		<p>
-			<strong>| New | </strong>
-			Coding complete! Check out my <a href="reactdemo.html" class="inline-link">React Demo</a>.
-		</p>
-		<hr class="section-dividertwo"></hr>
-		<h2>Case Studies</h2>
-		<p>
-			<strong>| New Update | </strong>
-			<a href="login.html" class="inline-link">Case Study</a>: Secure Serverless API Integration.
-		</p>
-		<hr class="section-dividertwo"></hr>
-		<h2>About the Developer</h2>
-		<p>
-			Explore more information about <a href="projects.html" class="inline-link">Douglas Moth</a> in our Dev Team page.
-			
-		</p> 
-	</section>
-		
-	</section>
-</main>
+			</p>
+		</section>
+	</main>
 <!-- Global Footer -->
 <footer class="site-footer">
 	<div class="footer-content">
@@ -138,7 +186,6 @@
 		<ul class="footer-links">
 			<li><a href="https://www.linkedin.com/in/douglasmoth" target="_blank">LinkedIn Profile</a></li>
 			<li><a href="https://github.com/bellsandwhistlesdesigns/bellsandwhistlesdesigns.github.io" target="_blank">GitHub</a></li>
-			<li><a href="archive.html">Archive</a></li>
 			<li><a href="privacypolicy.html">Privacy Policy</a></li>
 			<li><a href="usage.html">Terms of Use</a></li>
 			<li><a href="contactus.html">Contact Me</a></li>
@@ -149,6 +196,7 @@
 <script src="scripts/mobilenav.js"></script>
 <script src="scripts/video.js"></script>
 <script src="scripts/quote-of-day.js" defer></script>
+<script src="scripts/archive.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,38 @@
+.blog-post {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  color: #ffffff;
+}
+
+.blog-post__header {
+  margin-bottom: 2rem;
+}
+
+.blog-post__meta {
+  font-size: 0.9rem;
+  
+}
+
+.blog-post__content h2 {
+  margin-top: 2.5rem;
+}
+
+.blog-post__content p {
+  margin-bottom: 1.25rem;
+  color: black;
+  
+}
+
+.blog-post__content blockquote {
+  margin: 3rem 0;
+  padding: 1.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(128, 203, 196, 0.15),
+    rgba(14, 29, 95, 0.6)
+  );
+  border-radius: 8px;
+  color: black;
+  font-style: italic;
+}
