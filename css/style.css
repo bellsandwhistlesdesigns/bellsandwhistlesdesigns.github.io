@@ -68,13 +68,17 @@ h2 {
 .about::after {
   padding: 3px;
   box-sizing: border-box;
+
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
-          mask-composite: exclude;
-}
 
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
 @keyframes glint-move {
   from {
     background-position: -10% 0;
