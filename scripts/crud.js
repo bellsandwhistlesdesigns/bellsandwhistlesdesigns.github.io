@@ -19,8 +19,7 @@ const submitProjectBtn = document.getElementById("submitProjectBtn");
 
 const cancelAddProjectsBtn = document.getElementById("cancelAddProjectBtn");
 
-
-cancelAddProjectBtn.addEventListener("click", () => {
+cancelAddProjectsBtn.addEventListener("click", () => {
   editingProjectId = null;
   addProjectForm.reset();
   document.querySelector("#addProjectFormContainer h2").textContent =
@@ -41,7 +40,9 @@ function createProject({ title, description = "", status = "active", notes = "" 
     status, // new | draft | active | archived
     notes,
     createdAt: now,
-    updatedAt: now
+    updatedAt: now,
+    image: imageURL,
+    imageName: imageName
   };
 }
 
@@ -77,7 +78,7 @@ function renderProjects() {
   if (projects.length === 0) {
     projectTableBody.innerHTML = `
       <tr>
-        <td colspan="5" class="empty-state">No projects yet.</td>
+        <td colspan="6" class="empty-state">There are no projects yet.</td>
       </tr>
     `;
     return;
@@ -91,6 +92,14 @@ function renderProjects() {
       <td>${project.status}</td>
       <td>${formatDate(project.updatedAt)}</td>
       <td>${project.notes ? "✔️" : ""}</td>
+      <td>
+      ${project.image ? `
+        <div class="image-preview">
+            <img src="${project.image}" alt="${project.imageName}" width="50">
+            <div>${project.imageName}</div>
+        </div>
+        ` : "No Image"}
+      </td>
       <td>
         <button class="btn-secondary editBtn">Edit</button>
         <button class="btn-danger deleteBtn">Delete</button>
@@ -164,42 +173,73 @@ addProjectForm.addEventListener("submit", (e) => {
   const status = document.getElementById("projectStatus").value;
   const notes = document.getElementById("projectNotes").value.trim();
 
+  const imageFileInput = document.getElementById("projectImage");
+  const imageNameInput = document.getElementById("imageName");
+
+  const imageFile = imageFileInput.files[0];
+  const imageName = imageNameInput.value.trim();
+
   if (!title) {
     alert("Title cannot be empty.");
     return;
   }
 
-  const now = new Date().toISOString();
   let projects = loadProjects();
+  const now = new Date().toISOString();
 
-  if (editingProjectId) {
-    // EDIT
-    const project = projects.find(p => p.id === editingProjectId);
-    if (!project) return;
+  // Convert image to base64 if present
+  const processProjectSave = (imageDataUrl = null) => {
 
-    project.title = title;
-    project.description = description;
-    project.status = status;
-    project.notes = notes;
-    project.updatedAt = now;
+    if (editingProjectId) {
+      const project = projects.find(p => p.id === editingProjectId);
+      if (!project) return;
 
-    editingProjectId = null;
+      project.title = title;
+      project.description = description;
+      project.status = status;
+      project.notes = notes;
+
+      project.updatedAt = now;
+
+      if (imageDataUrl) {
+        project.image = imageDataUrl;
+        project.imageName = imageName || "Project Image";
+      }
+
+      editingProjectId = null;
+
+    } else {
+      const newProject = {
+        id: `proj_${Date.now()}`,
+        ownerId: CURRENT_USER.id,
+        title,
+        description,
+        status,
+        notes,
+        createdAt: now,
+        updatedAt: now,
+        image: imageDataUrl,
+        imageName: imageDataUrl ? (imageName || "Project Image") : ""
+      };
+
+      projects.push(newProject);
+    }
+
+    saveProjects(projects);
+    addProjectForm.reset();
+    addProjectFormContainer.classList.add("hidden");
+    renderProjects();
+  };
+
+  if (imageFile) {
+    const reader = new FileReader();
+    reader.onload = function(event) {
+      processProjectSave(event.target.result);
+    };
+    reader.readAsDataURL(imageFile);
   } else {
-    // ADD
-    const newProject = createProject({
-    title,
-    description,
-    status,
-    notes
-});
-projects.push(newProject);
-       
-}
-
-  saveProjects(projects);
-  addProjectForm.reset();
-  addProjectFormContainer.classList.add("hidden");
-  renderProjects();
+    processProjectSave();
+  }
 });
 
 // ===== Init =====

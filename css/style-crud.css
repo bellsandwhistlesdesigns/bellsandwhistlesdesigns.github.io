@@ -5,7 +5,7 @@
 
 /* Container for the CRUD app */
 .crud-container {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -63,6 +63,7 @@
   
   font-weight: 600;
   margin-bottom: 0.25rem;
+  color: black;
 }
 
 .form-group input,
@@ -151,7 +152,7 @@ button {
 }
 
 .crud-table tr:nth-child(even) {
-  background-color: #0f0f0f;
+  background-color: #f3f4f6;
 }
 
 /* Empty state */
@@ -164,6 +165,16 @@ button {
 
 .hidden {
   display: none !important;
+}
+.image-preview {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.image-preview img {
+    border-radius: 6px;
+    border: 1px solid #ccc;
 }
 
 /* Responsive tweaks */

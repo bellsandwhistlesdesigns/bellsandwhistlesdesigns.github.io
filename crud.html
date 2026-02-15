@@ -43,19 +43,30 @@
 	</nav>
   	</div>
 </header>
-<main class="crud-container">
+<main>
+    <section class="about">
+    <h2>This is growing!</h2>
+	<p>
+        My <strong>Project Manager Demo</strong> represents Phase 1 of a larger system design focusing on frontend CRUD operations, validation, and structured data modeling. 
+        In Phase 2, I will implement a secure backend with authentication, role-based access control, and persistent database integration to demonstrate full-stack architecture and scalable application design.
+    </p>
+	</section>
+    <section class ="crud-container">
     <section class="coming-soon2">
     <section class="crud-add-project hidden" id="addProjectFormContainer">
     <h2>Add New Project</h2>
     <form id="addProjectForm">
+    <!-- Company Field -->
     <div class="form-group">
         <label for="projectTitle">Title:</label>
-        <input type="text" id="projectTitle" name="projectTitle" required maxlength="100">
+        <textarea id="projectTitle" name="projectTitle" required maxlength="100" placeholder="Company Name"></textarea>
     </div>
+    <!-- Description Field -->
     <div class="form-group">
         <label for="projectDescription">Description:</label>
-        <textarea id="projectDescription" name="projectDescription" rows="3" maxlength="500"></textarea>
+        <textarea id="projectDescription" name="projectDescription" rows="3" maxlength="500" placeholder="Company Description"></textarea>
     </div>
+    <!-- Drop Down List -->
     <div class="form-group">
         <label for="projectStatus">Status:</label>
         <select id="projectStatus" name="projectStatus">
@@ -69,6 +80,14 @@
     <div class="form-group">
         <label for="projectNotes">Notes:</label>
         <textarea id="projectNotes" name="projectNotes" rows="3" maxlength="1000" placeholder="Add any notes here…"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="projectImage">Upload Image</label>
+        <input type="file" id="projectImage" accept="image/*">
+    </div>
+    <div class="form-group">
+        <label for="imageName">Image Name</label>
+        <input type="text" id="imageName" placeholder="Image Name">
     </div>
 
     <div class="form-actions">
@@ -99,6 +118,7 @@
           <th>Status</th>
           <th>Updated</th>
           <th>Notes</th>
+          <th>Images</th>
           <th>Actions</th>
         </tr>
         </thead>
@@ -108,11 +128,12 @@
     </table>
 
     <p id="emptyState" class="empty-state hidden">
-      No projects yet. Create your first one to get started.
+      You have no projects yet. Create your first one to get started.
     </p>
     </section>
     </section>
-    </main>
+</section>
+</main>
 
 <!-- Global Footer -->
 <footer class="site-footer">
@@ -131,6 +152,8 @@
 <!-- Script Sources -->
 <script src="scripts/mobilenav.js"></script>
 <script src="scripts/crud.js"></script>
+
+
 
 </body>
 </html>
