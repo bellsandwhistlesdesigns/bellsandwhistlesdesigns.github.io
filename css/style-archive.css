@@ -234,14 +234,15 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.4);
-  border: 1px solid black;
+  background: transparent;
+  border: 1px solid green;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .archive-dot.active {
-  background: #4f46e5;
+  background: #9693d3;
+  border-color: #9693d3;
   transform: scale(1.2);
 }
 .archive-dot:hover {

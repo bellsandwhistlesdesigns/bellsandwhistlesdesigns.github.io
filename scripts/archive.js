@@ -22,23 +22,23 @@ document.querySelectorAll('[data-archive]').forEach(section => {
   dots.forEach(dot => dot.classList.remove('active'));
   if (dots[index]) dots[index].classList.add('active');
 };
-    // Create dots container
-    const dotsContainer = document.createElement('div');
-      dotsContainer.classList.add('archive-dots');
-      section.appendChild(dotsContainer);
+// dots container
+const dotsContainer = document.createElement('div');
+  dotsContainer.classList.add('archive-dots');
+    section.appendChild(dotsContainer);
     const cards = track.querySelectorAll('.archive-card');
     const dots = [];
 
-  cards.forEach((_, index) => {
-  const dot = document.createElement('button');
-  dot.classList.add('archive-dot');
-  if (index === 0) dot.classList.add('active');
+    cards.forEach((_, index) => {
+    const dot = document.createElement('button');
+    dot.classList.add('archive-dot');
+    if (index === 0) dot.classList.add('active');
 
-  dot.addEventListener('click', () => {
-    track.scrollTo({
-      left: index * scrollAmount(),
-      behavior: 'smooth'
-    });
+    dot.addEventListener('click', () => {
+      track.scrollTo({
+        left: index * scrollAmount(),
+        behavior: 'smooth'
+      });
   });
 
   dotsContainer.appendChild(dot);
