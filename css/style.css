@@ -168,10 +168,10 @@ h2 {
 
 /* Coming soon: Belongs in, reactdemo, crud, and serverlessdemo */
 .coming-soon {
-	background: linear-gradient(270deg, #e8f5e9 0%, #c8e6c9 100%);
+	background: linear-gradient(270deg, #e3f2fd 0%, #bbdefb 100%);
 	text-align: center;
 	padding: 3rem 1rem;
-	border-top: 4px solid #b2dfdb;
+	
 	border-bottom: 4px solid #2e3f3e;
 	border-radius: 12px;
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
@@ -180,10 +180,10 @@ h2 {
 	animation: fadeUp 2s ease-out forwards;
 }
 .coming-soon2 {
-	background: linear-gradient(90deg, #e8f5e9 0%, #add8ae 100%);
+	background: linear-gradient(90deg, #e3f2fd 0%, #bbdefb 100%);
 	text-align: center;
 	padding: 3rem 1rem;
-	border-top: 4px solid #b2dfdb;
+	
 	border-bottom: 4px solid #2e3f3e;
 	border-radius: 12px;
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
@@ -210,11 +210,13 @@ h2 {
 	max-width: 700px;
 	margin: 0 auto 1.5rem;
 }
-.coming-soon li {
-  	color: #798697; /* muted slate, darker than body text */
-  	line-height: 1.6;
+.coming-soon2 p {
+  	font-size: 1.1rem;
+	color: #444;
+	line-height: 1.6;
+	max-width: 700px;
+	margin: 0 auto 1.5rem;
 }
-
 .coming-soon pre {
 	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 	font-size: 0.95rem;
@@ -528,9 +530,9 @@ Panel is used in React demo **need to create new react.css**
   gap: 2rem;
 }
 .grid-index {
-  	max-width: 900px;
+  	max-width: 1200px;
   	margin: 4rem auto;
-  	padding: 2.5rem;
+  	padding: 1.0rem;
 
    	display: flex;
   	flex-direction: column;
@@ -549,6 +551,7 @@ Panel is used in React demo **need to create new react.css**
 }
 .grid-index h2 {
 	color: #0e1d5f;
+	margin-bottom: 0.25rem; /* adjust to taste */
 }
 
 .grid-index ul li {
@@ -647,6 +650,25 @@ Panel is used in React demo **need to create new react.css**
   gap: 2rem;
   margin-bottom: 3rem;
 }
+.resume-section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.resume-section-title::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 4px;
+  background: linear-gradient(to right, #4f46e5, transparent);
+  margin-top: 0.5rem;
+  border-radius: 2px;
+}
 .highlight-card h3 {
 	color: #181752;
 }
@@ -662,6 +684,21 @@ Panel is used in React demo **need to create new react.css**
 	color: black;
   line-height: 1.6;
   font-size: 1.25rem;
+}
+.post-nav {
+  margin-top: 3rem;
+  text-align: left;
+}
+
+.back-link {
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  color: #80cbc4;
+}
+
+.back-link:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 600px) {

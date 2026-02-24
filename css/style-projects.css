@@ -45,8 +45,7 @@
 	
   list-style: none;
   padding: 0;
-  margin: 1.5rem 0 0;
-
+  margin-top: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 0.75rem;
@@ -56,7 +55,7 @@
 .tech-list li {
 	background: #e0f2f1;
 	color: #004d40;
-	padding: 0.3rem 0.7rem;
+	
 	border-radius: 6px;
 	font-size: 0.85rem;
 	font-weight: 600;

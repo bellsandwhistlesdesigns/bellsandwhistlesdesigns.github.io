@@ -21,8 +21,10 @@
 .blog-post__content p {
   margin-bottom: 1.25rem;
   color: black;
-  
-}
+  }
+  .blog-post__content ul {
+    color: black;
+  }
 
 .blog-post__content blockquote {
   margin: 3rem 0;
