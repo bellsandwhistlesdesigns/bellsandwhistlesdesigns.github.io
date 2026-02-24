@@ -12,7 +12,8 @@ main {
 }
 /* Look for other h2*/
 h2 {
-	color: #00796b;
+	color: #181752;
+	font-size: 1.75rem;
 }
 /* Global about section */ 
 .about {
@@ -598,6 +599,71 @@ Panel is used in React demo **need to create new react.css**
   	margin: 0;
   	white-space: pre-wrap;
 }
+.resume {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 2rem;
+}
+
+.resume-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.resume-hero h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: 0.5rem;
+  color: black;
+}
+.resume-hero p {
+	color: black;
+	font-size: 1.5rem;
+}
+
+.resume-download {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #5167a0, #0e1d5f);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.resume-download:hover {
+  opacity: 0.85;
+}
+
+.resume-tagline {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  margin-bottom: 1.5rem;
+}
+
+.resume-highlights {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.highlight-card h3 {
+	color: #181752;
+}
+.highlight-card {
+  padding: 1.5rem;
+  font-size: 1.25rem;
+  color: black;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.03);
+}
+
+.resume-stack p {
+	color: black;
+  line-height: 1.6;
+  font-size: 1.25rem;
+}
+
 @media (max-width: 600px) {
   .quote-card {
     margin: 2rem 1rem;
@@ -608,3 +674,4 @@ Panel is used in React demo **need to create new react.css**
     font-size: 1.05rem;
   }
 }
+

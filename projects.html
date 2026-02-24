@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="css/style-projects.css">
 	<link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/style-video.css">
+	<link rel="stylesheet" href="css/style-archive.css">
 </head>
 <body>
 <!-- Main Navigation: responsive + auth aware-->
@@ -36,7 +37,7 @@
     <nav class="nav" id="nav">
       <a href="index.html">Home</a>
 	  <a href="archive.html">Case Studies</a>
-	  <a href="appdev.html">Android Skills</a>
+	  <a href="appdev.html">Experience</a>
 	  <a href="contactus.html">Contact Me</a>
 	  <a href="#" id="logoutBtn" class="logout hidden">Log Out</a>
 	</nav>
@@ -55,20 +56,12 @@
 	</section>
 
 	<section class="projects-container">
+	<div class="archive-section__controls" data-archive>
+    <button class="archive-scroll archive-scroll--prev" aria-label="Scroll thoughts left">←</button>
+
+    <div class="archive-track" tabindex="0">
 	
-	<section class="project-card">
-		<h2>Authentication System</h2>
-		<p>
-			Content accessible via a local browser login session, my resume, and portfolio-related case studies.
-		</p>
-		
-		<div class="project-links">
-			<a href="login.html">Access Demo</a>
-			<a href="https://github.com/bellsandwhistlesdesigns/bellsandwhistlesdesigns.github.io" target="_blank"
-			class btn="btn secondary">
-			View Code</a>
-		</div>
-	</section>
+	
 
 	<section class="project-card">
 		<h2>React Components</h2>
@@ -115,6 +108,20 @@
 			View Code</a>
 		</div>
 	</section>
+
+	<section class="project-card">
+		<h2>Authentication System</h2>
+		<p>
+			Content accessible via a local browser login session, Portfolio-related case studies.
+		</p>
+		
+		<div class="project-links">
+			<a href="login.html">Access Demo</a>
+			<a href="https://github.com/bellsandwhistlesdesigns/bellsandwhistlesdesigns.github.io" target="_blank"
+			class btn="btn secondary">
+			View Code</a>
+		</div>
+	</section>
 	
 	<section class="project-card">
 		<h2>Database Design Logic</h2>
@@ -145,6 +152,10 @@
 				View Code
 			</a>
 	</section>
+	
+  	</div>
+	<div class="archive-dots"></div>
+    <button class="archive-scroll archive-scroll--next" aria-label="Scroll thoughts right">→</button>
 	</section>
 	<div class="grid-index">
 		<h2>Tech Stack</h2>
@@ -181,6 +192,7 @@
 </footer>
 <!-- Script Source -->
 <script src="scripts/mobilenav.js"></script>
+<script src="scripts/archive.js"></script>
 	
 </body>
 </html>
