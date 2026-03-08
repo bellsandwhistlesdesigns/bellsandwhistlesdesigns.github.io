@@ -115,7 +115,7 @@ h2 {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #d3cd1f; 
-  text-shadow: 0 0 1.5px #fff700, 0 0 12px #fff700; /* subtle glow */
+
 }
 
 /* Quote Text */
@@ -242,7 +242,7 @@ h2 {
 .section-divider {
   	border: none;
   	height: 3px;
-  	width: 400px;
+  	width: 200px;
   	background-color: #181752;
   	margin: 2rem auto;
   	border-radius: 2px;

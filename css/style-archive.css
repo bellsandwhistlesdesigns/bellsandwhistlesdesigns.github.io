@@ -218,10 +218,58 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
-.archive-card--thought p {
+/* TaskNova Feature Card */
+
+.archive-card--tasknova {
+  background: radial-gradient(
+      circle at 30% 20%,
+      rgba(255, 215, 0, 0.15),
+      transparent 60%
+    ),
+    linear-gradient(
+      180deg,
+      #0b0b0f,
+      #14141c
+    );
+
+  border: 1px solid rgba(255, 215, 0, 0.35);
+  border-radius: 16px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.55),
+    0 0 20px rgba(255,215,0,0.15);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.archive-card--tasknova:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 14px 38px rgba(0,0,0,0.7),
+    0 0 30px rgba(255,215,0,0.35);
+}
+
+.archive-card--tasknova h3 {
+  color: #ffd84a;
+  letter-spacing: 0.5px;
+}
+
+.archive-card--tasknova p {
+  font-style: italic;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.85);
+}
+
+.archive-card--tasknova strong {
+  color: #ffd84a;
+}
+
+.archive-card--tasknova p {
   font-style: italic;
   line-height: 1.6;
 }
+
 /* Archive Dots */
 .archive-dots {
   display: none;

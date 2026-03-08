@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* -------------------------------
      Netlify pause switch
   -------------------------------- */
-  const netlifyPaused = true; // flip to false after credit reset
+  const netlifyPaused = false; // flip to false after credit reset - flip to true when credits used up
 
   if (isNetlify && netlifyPaused) {
     fetchBtn.disabled = true;
