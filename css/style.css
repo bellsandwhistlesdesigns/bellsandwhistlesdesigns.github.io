@@ -240,21 +240,36 @@ h2 {
 }
 /*this is a component */
 .section-divider {
-  	border: none;
-  	height: 3px;
-  	width: 200px;
-  	background-color: #181752;
-  	margin: 2rem auto;
-  	border-radius: 2px;
+  border: none;
+  height: 3px;
+  width: 800px;
+  margin: 2rem auto;
+  border-radius: 2px;
 
-  	/* animation setup */
-  	transform: scaleX(0);
-  	transform-origin: center;
-  	animation: grow-line 2400ms ease-out forwards;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #181752,
+    transparent
+  );
+
+  animation: breathe-line 4s ease-in-out infinite;
 }
-@keyframes grow-line {
-  to {
-    transform: scaleX(1);
+
+@keyframes breathe-line {
+  0% {
+    transform: scaleX(0.9);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: scaleX(1.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleX(0.9);
+    opacity: 0.6;
   }
 }
 .section-divertwo {

@@ -140,7 +140,7 @@
 .archive-card__meta,
 .archive-card time {
   font-size: 0.85rem;
-  color: #80cbc4;
+  color:  #fff700;
   margin-bottom: 0.5rem;
 }
 
@@ -269,6 +269,7 @@
   font-style: italic;
   line-height: 1.6;
 }
+
 
 /* Archive Dots */
 .archive-dots {
