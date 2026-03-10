@@ -719,7 +719,7 @@ Panel is used in React demo **need to create new react.css**
   display: inline-block;
   font-weight: 600;
   text-decoration: none;
-  color: #80cbc4;
+  color: #000000;
 }
 
 .back-link:hover {
