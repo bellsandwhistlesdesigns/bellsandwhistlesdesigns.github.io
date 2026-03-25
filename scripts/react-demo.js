@@ -1,7 +1,7 @@
 // React Feature Panel Demo
 // Demonstrates state-driven UI, conditional rendering,
 // feature flags, and basic React fundamentals.
-console.log("reactdemo.js is working");
+console.log("react-demo.js is working");
 function FeaturePanel() {
   const [features, setFeatures] = React.useState({
     authentication: false,
