@@ -113,7 +113,48 @@
   font-size: 1.8rem;
   cursor: pointer;
 }
+/* Right side container */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 
+/* Cart button */
+.cart-btn {
+    position: relative;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--primary);
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.cart-btn:hover {
+    color: var(--secondary);
+    transform: scale(1.1);
+}
+
+/* Cart count badge */
+.cart-count {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background: var(--secondary);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 3px 6px;
+    border-radius: 50%;
+    min-width: 18px;
+    text-align: center;
+}
+
+/* Hide when empty */
+.cart-count:empty {
+    display: none;
+}
 /* Utility */
 .hidden {
   display: none;

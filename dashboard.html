@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Your Dashboard | Bells and Whistles Designs</title>
+	<title>Dashboard | Bells and Whistles Designs</title>
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-16x16.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-32x32.png">
 	<link rel="stylesheet" href="css/style.css">
@@ -24,7 +24,11 @@
            alt="Bells and Whistles Designs Logo">
       <span class="brand-text">Bells & Whistles Designs</span>
     </div>
-
+	<!-- Shopping Cart Button -->
+    <button class="cart-btn" id="cartBtn" onclick="goToCart()" aria-label="Shopping cart">
+        🛒
+    	<span class="cart-count" id="cartCount">0</span>
+    </button>
     <!-- Hamburger -->
     <button class="nav-toggle"
             id="navToggle"
@@ -35,7 +39,8 @@
 
     <!-- Navigation -->
     <nav class="nav" id="nav">
-        <a href="#" id="logoutBtn" class="logout hidden">Log Out</a>
+		<a href="settings.html">Settings</a>
+		<a href="#" id="logoutBtn" class="logout hidden">Log Out</a>
     </nav>
 	</div>
 </header>
@@ -43,18 +48,70 @@
 <main>
 <section id="shop">
 	<h2 class="dashboard-title">
-	<h2></h2>
+	<h2>Check out more of my personal showcases here.</h2>
 	<div class="product-grid">
 		<div class="product-card">
 			<img src="images/sunrisebaker.jpg" alt="dusk" class="product-img">
-			<h3>Case Studies</h3>
+			<h3>Project Manager Demo</h3>
+			<p class="product-desc">
+				Front Page UI/UX 
+			</p>
+			<p class="product-price">$0.00</p>
+			<a href="crud.html"
+   				class="buy-button"
+   				data-product="Project Manager Demo"
+   				data-price="0.00"
+   				data-desc="Front Page UI/UX">
+  				 Add to Cart
+			</a>
+			<p class="added-message hidden">✔ Added to cart</p>
+		</div>
+		<div class="product-card">
+			<img src="images/Bluesky.jpg" alt="dusk" class="product-img">
+			<h3>Restful API Demo</h3>
+			<p class="product-desc">
+				Hosted Via Netlify  
+			</p>
+			<p class="product-price">$0.00</p>
+			<a href="restfulapi.html"
+   				class="buy-button"
+   				data-product="Restful API Demo"
+   				data-price="0.00"
+   				data-desc="Hosted via Netlify">
+  				 Add to Cart
+			</a>
+			<p class="added-message hidden">✔ Added to cart</p>
+		</div>
+		<div class="product-card">
+			<img src="images/Newmom.jpg" alt="dusk" class="product-img">
+			<h3>Component Demo</h3>
+			<p class="product-desc">
+				Dark Mode is boring! 
+			</p>
+			<p class="product-price">$0.00</p>
+			<a href="reactdemo.html"class="buy-button"
+   				data-product="React Components"
+   				data-price="0.00"
+   				data-desc="React Components">
+  				 Add to Cart
+			</a>
+			<p class="added-message hidden">✔ Added to cart</p>
+		</div>
+		
+		<div class="product-card">
+			<img src="images/sunrise.jpg" alt="dusk" class="product-img">
+			<h3>Portfolio Case Studies</h3>
 			<p class="product-desc">
 				Challenges 
 			</p>
-			<p class="product-price">Free</p>
-			<a href="casestudies.html" class="buy-button">
-				Read More
+			<p class="product-price">$0.00</p>
+			<a href="casestudies.html"class="buy-button"
+   				data-product="Case Studies"
+   				data-price="0.00"
+   				data-desc="Case Studies">
+  				 Add to Cart
 			</a>
+			<p class="added-message hidden">✔ Added to cart</p>
 		</div>
 	</div>
 </section>
@@ -62,7 +119,7 @@
 <!-- Global Footer -->
 <footer class="site-footer">
 	<div class="footer-content">
-		<p>© 2026 Douglas Moth - Bells & Whistles Designs</p>
+		<p>© 2026 Douglas James - Bells & Whistles Designs</p>
 
 		<ul class="footer-links">
 			<li><a href="https://www.linkedin.com/in/douglasmoth" target="_blank">LinkedIn Profile</a></li>
@@ -78,6 +135,7 @@
 <script src="scripts/database.js"></script>
 <script src="scripts/dashboard.js"></script>
 <script src="scripts/logout.js"></script>
+<script src="scripts/cart.js"></script>
 </body>
 </html>
 

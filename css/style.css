@@ -42,9 +42,6 @@ h2 {
 	color: #333;
 }
 
-
-
-
 /* Glint layer */
 .about::after {
   content: "";
@@ -384,11 +381,7 @@ h2 {
   font-weight: 600;
 }
 
-/* Subtle divider between sections */
-.case-studytwo p + p {
-  padding-top: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
+
 
 
 /* Global Inline Link*/

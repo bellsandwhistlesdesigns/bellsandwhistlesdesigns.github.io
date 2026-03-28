@@ -9,6 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
      ========================= */
   const dashboardHeader = document.querySelector("h2.dashboard-title");
   if (dashboardHeader && currentUser) {
-    dashboardHeader.textContent = `Hi, ${currentUser.username}`;
+    dashboardHeader.textContent = `Nice to meet you! ${currentUser.username}`;
   }
 });

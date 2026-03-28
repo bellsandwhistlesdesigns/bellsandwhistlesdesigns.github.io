@@ -1,9 +1,18 @@
 /*Dashboard*/
-
+:root {
+    --primary: #1f3c88;       /* deep blue */
+    --secondary: #f39c12;     /* warm gold/orange */
+    --accent: #16a085;        /* teal accent */
+    --bg: #f5f7fa;            /* soft background */
+    --card-bg: #ffffff;
+    --text-dark: #2c3e50;
+    --text-light: #7f8c8d;
+    --shadow: rgba(0, 0, 0, 0.08);
+}
 .dashboard {
       background: #fff;
       padding: 2em;
-      max-width: 500px;
+      max-width: 800px;
       margin: auto;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -43,9 +52,21 @@
 
 .product-grid {
 	display: flex;
+	background: 
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(255,215,0,0.15),
+      transparent 60%
+    ),
+    linear-gradient(
+      270deg,
+      #0a1a2f,
+      #070b14
+    );
 	flex-wrap: wrap;
 	gap: 2rem;
 	justify-content: center;
+	
 }
 
 .product-card {
@@ -58,6 +79,7 @@
 	text-align: center;
 	transition: transform 0.3s ease;
 	color: black;
+	
 }
 .product-card p {
 	color: black;
@@ -74,6 +96,7 @@
 }
 
 .product-desc {
+	
 	font-size: 0.95rem;
 	color: #555;
 	margin: 0.5rem 0 1rem;
@@ -98,5 +121,18 @@
 }
 
 .buy-button:hover {
-	background: #DAAC8A;
+	background: #093d10;
+}
+.added-message {
+    color: var(--accent);
+    font-size: 0.85rem;
+    margin-top: 6px;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: all 0.3s ease;
+}
+
+.added-message.show {
+    opacity: 1;
+    transform: translateY(0);
 }

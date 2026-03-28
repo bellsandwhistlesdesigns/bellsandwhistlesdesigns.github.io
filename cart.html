@@ -1,0 +1,66 @@
+<!-- Bells and Whistles Cart Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Your Cart | Bells and Whistles Designs</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-32x32.png">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style-crud.css">
+    <link rel="stylesheet" href="css/style-video.css">
+    <link rel="stylesheet" href="css/style-cart.css">
+</head>
+<body>
+<!-- Main Navigation: responsive + auth aware-->
+<header class="site-header">
+  	<div class="header-inner">
+
+    <!-- Logo -->
+    <div class="brand">
+      <img src="images/bellsandwhistles.svg"
+           alt="Bells and Whistles Designs Logo">
+      <span class="brand-text">Bells & Whistles Designs</span>
+    </div>
+
+    <!-- Hamburger -->
+    <button class="nav-toggle"
+            id="navToggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false">
+      ☰
+    </button>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="dashboard.html">Back</a>
+        <a href="#" id="logoutBtn" class="logout hidden">Log Out</a>
+    </nav>
+	</div>
+</header>
+<body>
+<main>
+<div class="cart-container">
+    <h2>Your Cart</h2>
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="cart-summary">
+        <p>Subtotal: <span id="subtotal">$0.00</span></p>
+        <p>Delivery: <span id="delivery">$0.00</span></p>
+        <p>Tax (5%): <span id="tax">$0.00</span></p>
+        <hr>
+        <p class="total">Total: <span id="total">$0.00</span></p>
+
+        <button class="checkout-btn">Fake Checkout</button>
+        
+    </div>
+    
+</div>
+</main>
+<script src="scripts/mobilenav.js"></script>
+<script src="scripts/cart.js"></script>
+</body>
+</html>

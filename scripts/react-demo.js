@@ -52,7 +52,7 @@ function FeaturePanel() {
               onClick={() => toggleFeature(key)}
               style={{ marginBottom: "0.5rem" }}
             >
-              {enabled ? "Works!" : "Doesn't Work"}
+              {enabled ? "On" : "Off"}
             </button>
 
             {/* Feature-specific behavior */}

@@ -1,0 +1,87 @@
+<!-- Bells and Whistles Settings page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Your Settings | Bells and Whistles Designs</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-32x32.png">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style-dashboard.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/style-video.css">
+	<link rel="stylesheet" href="css/settings.css">
+</head>
+<body>
+	<!-- Main Navigation: responsive + auth aware-->
+<header class="site-header">
+  	<div class="header-inner">
+
+    <!-- Logo -->
+    <div class="brand">
+      <img src="images/bellsandwhistles.svg"
+           alt="Bells and Whistles Designs Logo">
+      <span class="brand-text">Bells & Whistles Designs</span>
+    </div>
+
+    <!-- Hamburger -->
+    <button class="nav-toggle"
+            id="navToggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false">
+      ☰
+    </button>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+		<a href="dashboard.html">Back</a>
+		
+		<a href="#" id="logoutBtn" class="logout hidden">Log Out</a>
+    </nav>
+	</div>
+</header>
+<body>
+<main>
+	<div class="dashboard">
+    <h2>Hello again, <span id="userName"></span></h2>
+	<div class="info">
+		<p><label>Email:</label> <span id="userEmail"></span></p>
+		<p><label>You have been a Bells & Whistles Designs Member since:</label> <span id="joinDate"></span></p>
+		<p><label> Bells & Whistles Designs Membership Duration:</label> <span id="duration"></span></p>
+	</div>
+	<!-- Recalculate example -->
+	<span class="link" id="recalcLink">Recalculate Your Membership duration</span>
+	<p id="manualResult" class="hidden"></p>
+	</div>
+		<div class="progress-container">
+			<h2>Your Membership progress</h2>
+			<div class="progress-bar">
+		<div id="progressFill"></div>
+		</div>
+		</div>
+	</section>
+</main>
+<!-- Global Footer -->
+<footer class="site-footer">
+	<div class="footer-content">
+		<p>© 2026 Douglas James - Bells & Whistles Designs</p>
+
+		<ul class="footer-links">
+			<li><a href="https://www.linkedin.com/in/douglasmoth" target="_blank">LinkedIn Profile</a></li>
+			<li><a href="https://github.com/bellsandwhistlesdesigns/bellsandwhistlesdesigns.github.io" target="_blank">GitHub</a></li>
+			<li><a href="privacypolicy.html">Privacy Policy</a></li>
+			<li><a href="usage.html">Terms of Use</a></li>
+			<li><a href="contactus.html">Contact Me</a></li>
+		</ul>
+	</div>
+</footer>
+<script src="scripts/mobilenav.js"></script>
+<script src="scripts/database.js"></script>
+<script src="scripts/dashboard.js"></script>
+<script src="scripts/settings.js"></script>
+<script src="scripts/logout.js"></script>
+
+</body>
+</html>
