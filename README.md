@@ -37,7 +37,18 @@ The goal is clarity, usability, and maintainable structure.
 
 ## Recent Iterations
 
-02/013/2026 | Portfolio Refactor and UX Enhancements
+03/30/2026 | Re Added Full-Stack Development into Portfolio
+
+- Brought back my Authentication pages
+- Created fictional store with Shopping Cart
+- Ensured the mobile navigation for the Cart was functional
+- Removed from landing page information that was put into the Cart
+
+This iteration was focused to showcase that I still have the skills. Looking for employment everyday makes the skills go away.
+
+
+
+02/13/2026 | Portfolio Refactor and UX Enhancements
 
 - Refactored layout architecture for improved scalability
 - Modularized archive sections and reusable scroll components

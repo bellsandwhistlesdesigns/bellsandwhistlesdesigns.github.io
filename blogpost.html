@@ -1,0 +1,177 @@
+<!-- Bells and Whistles Blog page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Blog Posts | Bells and Whistles Designs</title>
+  <meta name="description" content="Technical case studies and development blog posts documenting architecture decisions, UI/UX refinements, and the evolution of my modern web projects.">
+  
+  <!-- Open Graph for sharing on socials-->
+	<meta property="og:title" content="Bells & Whistles Designs | Full-Stack Developer Portfolio">
+	<meta property="og:description" content="Form Writing and Documentation of my blog posts.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://bellsandwhistlesdesigns.github.io/archive.html">
+	<meta property="og:image" content="https://bellsandwhistlesdesigns.github.io/images/og-index.png">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+
+  <!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Case Studies & Blogs | Bells and Whistles Designs">
+	<meta name="twitter:description" content="Form Writing and Documentation of my blog posts.">
+	<meta name="twitter:image" content="https://bellsandwhistlesdesigns.github.io/images/og-index.png">
+  
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-32x32.png">
+	
+    <link rel="canonical" href="https://bellsandwhistlesdesigns.github.io/archive.html">
+  
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style-archive.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/style-video.css">
+</head>
+<body>
+<!-- Main Navigation: responsive + auth aware-->
+<header class="site-header">
+ 	<div class="header-inner">
+
+    <!-- Logo -->
+    <div class="brand">
+      <img src="images/bellsandwhistles.svg" alt="Bells and Whistles Designs Logo">
+      <span class="brand-text">Bells & Whistles Designs</span>
+	  </div>
+
+    <!-- Hamburger -->
+    <button class="nav-toggle"
+            id="navToggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false">
+      ☰
+    </button>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="appdev.html">Experience</a>
+        <a href="archive.html">Case Studies</a>
+	    <a href="contactus.html">Contact Me</a>
+	    <a href="#" id="logoutBtn" class="logout hidden">Log Out</a>
+	  </nav>
+  </div>
+</header>
+<main id="archive">
+    <section class="about">
+	   	<h2>My Personal Blog Posts:</h2>
+    	<p>
+      		A living collection of my current thoughts on technology, news, and whatever else comes to mind.
+    	</p>
+  	</section>
+    <!-- Blog -->
+	<section class="archive-section archive-section--blog">
+  <header class="archive-section__header">
+    <h2>Blog Posts</h2>
+    <p>Form writing on design, development, and process.
+    </p>
+  </header>
+
+  <div class="archive-section__controls" data-archive>
+    <button class="archive-scroll archive-scroll--prev" aria-label="Scroll blog posts left">←</button>
+    <div class="archive-track" tabindex="0">
+
+      <article class="archive-card archive-card--blog">
+        <a href="no-work.html">
+          <h3>Are there Careers in Web Development?</h3>
+          <div class="archive-card__content"></div>
+          <time datetime="2025-01-10">April 2, 2026</time>
+          
+          <p>Frustrating!!</p>
+        </a>
+      </article>
+
+      <article class="archive-card archive-card--tasknova">
+        <a href="tasknova-idea.html">
+          	<h3>TaskNova</h3>
+          	<div class="archive-card__content--tasknova"></div>
+             <time datetime="2025-01-10">Feb 3, 2026</time>
+        <p>Building Mini Saas Platforms</p>
+    	  <p><strong>From Ideas to Intentional Systems</strong></p>
+        </a>
+  	  </article>
+
+      <article class="archive-card archive-card--blog">
+        <a href="understand-design.html">
+          <h3>Web Design is not hard...</h3>
+          <div class="archive-card__content"></div>
+          <time datetime="2025-01-10">Jan 25, 2026</time>
+          
+          <p>The browser has opinions!</p>
+        </a>
+      </article>
+        
+      <article class="archive-card archive-card--blog">
+        <a href="debugging.html">
+          <h3>The Art of Debugging</h3>
+          <div class="archive-card__content"></div>
+          <time datetime="2025-01-10">Jan 10, 2026</time>
+          <p>Debugging is development!</p>
+        </a>
+      </article>
+      
+      <article class="archive-card archive-card--blog">
+        <a href="sound-structure.html">
+          <h3>Structure is Sound</h3>
+          <div class="archive-card__content"></div>
+          <time datetime="2025-01-10">Jan 05, 2026</time>
+          <p>From Intentional to Platform</p>
+        </a>
+      </article>
+      
+      
+      <article class="archive-card archive-card--blog">
+        <a href="fun-first.html">
+          <h3>Fundamentals First</h3>
+          <div class="archive-card__content"></div>
+          <time datetime="2025-01-10">Dec 28, 2025</time>
+          <p>Fundamentals before Frameworks</p>
+        </a>
+      </article>
+      
+      <article class="archive-card archive-card--blog">
+        <a href="design-in-public.html">
+          <h3>Designing in Public</h3>
+          <div class="archive-card__content"></div>
+          <time datetime="2025-01-10">Dec 20, 2025</time>
+          <p>From Static to Intentional</p>
+        </a>
+      </article>
+    </div>
+    <div class="archive-dots"></div>
+
+    <button class="archive-scroll archive-scroll--next" aria-label="Scroll blog posts right">→</button>
+  </div>
+</section>
+</main>
+<!-- Global Footer -->
+<footer class="site-footer">
+	<div class="footer-content">
+		<p>© 2026 Douglas Moth - Bells & Whistles Designs</p>
+
+		<ul class="footer-links">
+			<li><a href="https://www.linkedin.com/in/douglasmoth" target="_blank">LinkedIn Profile</a></li>
+			<li><a href="contactus.html">Contact Me</a></li>
+			<li><a href="privacypolicy.html">Privacy Policy</a></li>
+			<li><a href="usage.html">Terms of Use</a></li>
+			<li><a href="https://github.com/bellsandwhistlesdesigns/bellsandwhistlesdesigns.github.io" target="_blank">GitHub</a></li>
+		</ul>
+	</div>
+</footer>
+<!-- Script Source -->
+<script src="scripts/mobilenav.js"></script>
+<script src="scripts/archive.js"></script>
+	
+</body>
+</html>
