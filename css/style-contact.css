@@ -1,6 +1,8 @@
 /*========== Contact Page ======*/
 
-
+html, body {
+	overflow-x: hidden;
+}
 .contact-section {
 	padding: 2rem;
 	background: linear-gradient(180deg, #5a6fb0, #2f437f);
@@ -41,7 +43,7 @@
 .contact-form textarea,
 .contact-form select {
 	max-width: 100%;
-	padding: 0.8rem;
+	padding: 1.5rem;
 	border: 1px solid #999;
 	border-radius: 6px;
 	font-size: 1rem;
@@ -85,14 +87,15 @@
   .contact-form tr,
   .contact-form td {
     display: block;
-	width: 100%;
+    width: 100%;
+  }
+
+  .contact-form table {
+    border-spacing: 0;
   }
 
   .contact-form td {
     padding: 0.5rem 0;
-  }
-  .contact-section {
-	padding: 1rem;
   }
 }
 

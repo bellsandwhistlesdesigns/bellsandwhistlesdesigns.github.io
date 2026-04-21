@@ -1,3 +1,5 @@
+console.log("email.js is working");
+
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("contact-form").addEventListener("submit", function(e) {
     e.preventDefault();
