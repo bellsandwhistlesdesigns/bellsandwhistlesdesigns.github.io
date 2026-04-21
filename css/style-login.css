@@ -10,75 +10,136 @@
 	padding: 2rem 1rem;
 }
 
+/* The "portal frame" */
 .login-box {
-	background: white;
-	padding: 2.5rem 2rem;
+	width: 100%;
+	max-width: 420px;
+
+	padding: 2rem;
+
+	position: relative;
+	overflow: hidden;
+
 	border-radius: 16px;
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-	max-width: 600px;
-	width: 100%;
-	text-align: left;
-	animation: fadeUp 0.8s ease-out forwards;
+
+	background: rgba(255, 255, 255, 0.04);
+
+	border: 1px solid rgba(255, 215, 0, 0.25);
+
+	box-shadow:
+		0 15px 40px rgba(0, 0, 0, 0.55),
+		0 0 25px rgba(255, 215, 0, 0.08),
+		inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+	backdrop-filter: blur(10px);
+
+	color: white;
 }
 
+/* subtle energy glow layer */
+.login-box::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+
+	background: radial-gradient(
+		circle at 30% 20%,
+		rgba(255, 215, 0, 0.12),
+		transparent 55%
+	);
+
+	opacity: 0.6;
+	pointer-events: none;
+}
+
+/* heading */
 .login-box h2 {
-	margin-top: 0;
+	text-align: center;
 	margin-bottom: 1.5rem;
-	text-align: center;
-	color: #0f172a;
-	font-size: 1.6rem;
+
+	font-size: 1.3rem;
+	letter-spacing: 0.5px;
+	color: rgba(36, 35, 35, 0.95);
 }
 
+/* form spacing */
+.login-box form {
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+}
+
+/* labels */
 .login-box label {
-	text-align: center;
-	display: block;
-	margin-bottom: 0.5rem;
-	font-weight: 500;
-	color: rgb(25, 39, 223);
+	font-size: 0.9rem;
+	color: rgba(36, 35, 35, 0.95);
 }
 
+/* inputs */
 .login-box input {
-	width: 100%;
-	padding: 0.75rem;
-	margin-bottom: 1rem;
-	border: 1px solid #ccc;
+	padding: 0.8rem;
+
 	border-radius: 8px;
+
+	border: 1px solid rgba(255, 215, 0, 0.25);
+
+	background: rgba(0, 0, 0, 0.25);
+	color: rgba(36, 35, 35, 0.95);
+
+	outline: none;
+
+	transition: 0.2s ease;
 }
 
+.login-box input:focus {
+	border-color: rgba(255, 215, 0, 0.8);
+	box-shadow: 0 0 12px rgba(255, 215, 0, 0.15);
+}
+
+/* button */
 .login-box button {
-	display: block;
-	margin: 1rem auto;
-	width: 100%;
-	padding: 0.75rem;
-	background-color: #0f172a;
-	color: #fff;
-	text-align: center;
-	border: none;
-	border-radius: 8px;
+	margin-top: 0.5rem;
+
+	padding: 0.8rem;
+
+	border-radius: 10px;
+
+	background: rgba(255, 215, 0, 0.15);
+	border: 1px solid rgba(255, 215, 0, 0.4);
+
+	color: rgba(36, 35, 35, 0.95);
 	font-weight: bold;
+
 	cursor: pointer;
-	transition: background 0.3s ease;
+
+	transition: 0.2s ease;
 }
 
 .login-box button:hover {
-	background-color: #555;
+	transform: translateY(-2px);
+	background: rgba(255, 215, 0, 0.25);
 }
 
-/* Links */
-.login-links,
-.login-box a {
-	display: block;
+/* links */
+.login-links {
+	margin-top: 1.2rem;
 	text-align: center;
-	margin-top: 1rem;
-	font-size: 0.9rem;
-	color: rgb(25, 39, 223);;
-	text-decoration: none;
-	font-weight: 600;
 }
 
-.login-box a:hover {
-	text-decoration: underline;
-	color: #004d40;
+.login-links a {
+	display: inline-block;
+	margin: 0.3rem 0.6rem;
+
+	color: rgba(36, 35, 35, 0.95);
+	text-decoration: none;
+
+	font-size: 0.85rem;
+
+	transition: 0.2s ease;
+}
+
+.login-links a:hover {
+	color: rgba(255, 215, 0, 0.9);
 }
 #login-message {
 	color: black;

@@ -198,24 +198,42 @@
 }
 /* Thoughts of the week */
 .archive-card--thought {
-  background: linear-gradient(
-    180deg,
-    #5167a0,
-    #2a3a7a
-  );
+  position: relative;
+  overflow: hidden;
 
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 215, 0, 0.08),
+      transparent 60%
+    ),
+    linear-gradient(
+      180deg,
+      #0a1a2f,
+      #070b14
+    );
+
+  border: 1px solid rgba(255, 215, 0, 0.18);
   border-radius: 14px;
 
   box-shadow:
-    0 6px 18px rgba(0, 0, 0, 0.35),
+    0 10px 25px rgba(0, 0, 0, 0.45),
+    0 0 18px rgba(255, 215, 0, 0.06),
     inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  color: white;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Subtle hover lift (matches modern hero feel) */
 .archive-card--thought:hover {
+  transform: translateY(-4px);
+
   box-shadow:
-    0 10px 26px rgba(0, 0, 0, 0.45),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    0 14px 30px rgba(0, 0, 0, 0.55),
+    0 0 22px rgba(255, 215, 0, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 /* TaskNova Feature Card */

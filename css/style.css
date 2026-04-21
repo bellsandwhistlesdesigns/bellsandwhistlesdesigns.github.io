@@ -1,6 +1,10 @@
 /* Global Styles for Bells and Whistles */
+
+
+
 body {
   margin: 0;
+  padding: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   color: #ffffff;
   background: #f3f2f2;
