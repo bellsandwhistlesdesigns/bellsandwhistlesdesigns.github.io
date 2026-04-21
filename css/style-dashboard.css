@@ -46,7 +46,7 @@
 #shop h2 {
 	font-family: 'Playfair Display', serif;
 	color: #253027;
-	font-size: 2.5rem;
+	font-size: 1.5rem;
 	margin-bottom: 2rem;
 }
 
@@ -113,7 +113,7 @@
 	background: #007BFF;
 	color: #fff;
 	padding: 0.75rem 1.5rem;
-	border-radius: 50px;
+	border-radius: 6px;
 	text-decoration: none;
 	font-weight: 600;
 	box-shadow: 0 4px 12px rgba(0,0,0,0.3);

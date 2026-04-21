@@ -66,7 +66,7 @@
 <!-- Contact Form -->
 <main> 
 	<section class="about">
-		<h2>Let’s Connect</h2>
+		<h2>Why didn't anyone tell me this wasn't working?<br>Well it works now!</h2>
 		<p>Whether you’re looking for a developer to hire, need help bringing an idea to life, or just want to talk through a project, <strong>let's connect</strong>.
 		I’m always open to new opportunities, thoughtful conversations, and interesting challenges.
 		</p>
@@ -74,7 +74,7 @@
 	<div class="contact"> 
 		<section class="contact-section">
 		<h1>Always Learning, Always Developing</h1> 
-		<form class="contact-form" action="#" method="post">
+		<form class="contact-form" id="contact-form">
 		<table>
 				<tr>
 					<td><label for="name">Full Name:</label></td>
@@ -132,6 +132,13 @@
 </footer>
 <!-- Script Sources -->
 <script src="scripts/mobilenav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+(function(){
+  emailjs.init("WhzsGln5xj1J_VPUE");
+})();
+</script>
+<script src="scripts/email.js"></script>
 
 
 </body>

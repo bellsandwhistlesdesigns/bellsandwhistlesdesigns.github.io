@@ -67,3 +67,47 @@
     border-radius: 10px;
     cursor: pointer;
 }
+/* Empty Cart Container */
+.empty-cart {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Heading */
+.empty-cart h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+
+/* Supporting Text */
+.empty-cart p {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Explore Button */
+.explore-btn {
+    display: inline-block;
+    padding: 10px 22px;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 10px var(--shadow);
+    transition: all 0.25s ease;
+}
+
+.explore-btn:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px var(--shadow);
+}
