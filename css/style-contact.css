@@ -20,7 +20,7 @@
 .contact-form table {
 	width: 100%;
 	border: 1px solid rgb(109, 43, 43);
-	border-collapse: seperate;
+	border-collapse: separate;
 	border-spacing: 0 1rem;
 	border-radius: 12px;
 }
@@ -85,12 +85,14 @@
   .contact-form tr,
   .contact-form td {
     display: block;
-	padding: .75rem;
-    width: 100%;
+	width: 100%;
   }
 
   .contact-form td {
     padding: 0.5rem 0;
+  }
+  .contact-section {
+	padding: 1rem;
   }
 }
 
