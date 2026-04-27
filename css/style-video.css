@@ -59,11 +59,4 @@
   background: #fff;
 }
 
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .hero-video {
-    display: none;
-  }
 
-  
-}
