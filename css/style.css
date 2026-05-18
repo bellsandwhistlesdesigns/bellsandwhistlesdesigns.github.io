@@ -7,7 +7,7 @@ body {
   padding: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   color: #ffffff;
-  background: #f3f2f2;
+  background: hsl(0, 4%, 95%);
 }
 /* Global Main */ 
 main {
@@ -416,7 +416,11 @@ h2 {
 }
 /* Global Site Footer */ 
 .site-footer {
-	background: linear-gradient(180deg, #0f172a, #020617);
+	background:
+  radial-gradient(circle at top,
+    rgba(255,215,0,0.03),
+    transparent 30%),
+    #05070d;
 	color: #cfd8dc;
 	padding: 1.5rem 1rem;
 	margin-top: 4rem;
@@ -443,7 +447,7 @@ h2 {
 }
 
 .footer-links a {
-	color: #80cbc4;
+	color: #ffd54a;
 	text-decoration: none;
 	font-size: 0.9rem;
 }
@@ -610,7 +614,7 @@ Panel is used in React demo **need to create new react.css**
 .tech-list-index li {
   font-size: 1rem;
   line-height: 1.6;
-  color: #cbd5f5; /* adjust to match your text tone */
+  color: #cbd5f5; 
 
   background: none;
   padding: 0;
@@ -630,73 +634,7 @@ Panel is used in React demo **need to create new react.css**
   	margin: 0;
   	white-space: pre-wrap;
 }
-.resume {
-  max-width: 1000px;
-  margin: 4rem auto;
-  padding: 2rem;
-}
 
-.resume-hero {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.resume-hero h1 {
-  font-size: clamp(2rem, 4vw, 2.75rem);
-  margin-bottom: 0.5rem;
-  color: black;
-}
-.resume-hero p {
-	color: black;
-	font-size: 1.5rem;
-}
-
-.resume-download {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1.25rem;
-  border-radius: 8px;
-  background: linear-gradient(180deg, #5167a0, #0e1d5f);
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s ease;
-}
-
-.resume-download:hover {
-  opacity: 0.85;
-}
-
-.resume-tagline {
-  font-size: 1.1rem;
-  opacity: 0.85;
-  margin-bottom: 1.5rem;
-}
-
-.resume-highlights {
-  display: grid;
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-.resume-section-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-  position: relative;
-  display: inline-block;
-}
-
-.resume-section-title::after {
-  content: "";
-  display: block;
-  width: 60%;
-  height: 4px;
-  background: linear-gradient(to right, #4f46e5, transparent);
-  margin-top: 0.5rem;
-  border-radius: 2px;
-}
 .highlight-card h3 {
 	color: #181752;
 }
@@ -708,11 +646,7 @@ Panel is used in React demo **need to create new react.css**
   background: rgba(255,255,255,0.03);
 }
 
-.resume-stack p {
-	color: black;
-  line-height: 1.6;
-  font-size: 1.25rem;
-}
+
 .post-nav {
   margin-top: 3rem;
   text-align: left;
