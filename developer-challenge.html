@@ -1,4 +1,4 @@
-<!-- Bells and Whistles Settings page -->
+<!-- Bells and Whistles Developer's Challenge page -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/style-video.css">
 	<link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="css/style-challenge.css">
 </head>
 <body>
 	<!-- Main Navigation: responsive + auth aware-->
@@ -37,64 +38,40 @@
     <!-- Navigation -->
     <nav class="nav" id="nav">
 		<a href="dashboard.html">Back</a>
+		
 		<a href="#" id="logoutBtn" class="logout hidden">Log Out</a>
     </nav>
 	</div>
 </header>
 <section class="hero">
-    <div class="dashboard">
-    <h2>Hello again, <span id="userName"></span></h2>
-	<div class="info">
-		<p><label>Email:</label> <span id="userEmail"></span></p>
-		<p><label>You have been a Bells & Whistles Designs Member since:</label> <span id="joinDate"></span></p>
-		<p><label> Bells & Whistles Designs Membership Duration:</label> <span id="duration"></span></p>
-	
-	<!-- Recalculate example -->
-	<span class="link" id="recalcLink">Recalculate Your Membership duration</span>
-	<p id="manualResult" class="hidden"></p>
-	</div>
-
-	<div class="progress-container">
-		<h2>Your Membership Progress</h2>
-		<div class="progress-bar">
-			<div id="progressFill"></div>
-		</div>
-	</div>
-	</div>
+    <div class="hero-content">
+      	<h1>New Developers Challenge</h1>
+		<p>Every developer has a story. Every challenge reveals a skill level. Have fun!</p>
+    </div>
 </section>
-<main>
-	<section class="achievement-card">
-		<h2>Developers Challenge Results</h2>
-		<p>This table is growing</p>
+<main class="challenge-container">
 
-		<div class="achievement-status">
-		
-    	<span 
-      		id="rankBadge"
-      		class="rank-badge">
-        Explorer
-    	</span>
+    <section class="challenge-header">
+        <h1>Developer Challenge</h1>
 
-    	<p id="challengeScore">
-        	Best Score: No attempts yet
-    	</p>
+        <p>
+            Take the challenge, earn your badge,
+            and see where you rank.
+        </p>
+    </section>
 
-		<p id="challengeDate"></p>
+    <section id="quiz-container">
 
-		</div>
+        <h2 id="question"></h2>
 
-		<a href="developer-challenge.html"
-   			class="challenge-button">
-   			Restart Challenge
-		</a>
-		
-		<button 
-			id="resetChallengeBtn"
-			class="danger-button"
-			title="Remove your saved Developer Challenge Results">
-			Reset Stats
-		</button>
-	</section>
+        <div id="answers"></div>
+
+        <button id="next-btn">
+            Next Question
+        </button>
+
+    </section>
+
 </main>
 <!-- Global Footer -->
 <footer class="site-footer">
@@ -113,6 +90,7 @@
 <script src="scripts/mobilenav.js"></script>
 <script src="scripts/database.js"></script>
 <script src="scripts/dashboard.js"></script>
+<script src="scripts/developer-challenge.js"></script>
 <script src="scripts/settings.js"></script>
 <script src="scripts/logout.js"></script>
 

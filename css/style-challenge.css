@@ -1,0 +1,137 @@
+.challenge-container {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(22,160,133,0.08),
+            transparent 40%
+        ),
+        linear-gradient(
+            180deg,
+            #0f172a,
+            #111827
+        );
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.3);
+
+    color: #f8fafc;
+}
+.challenge-container::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    top: -150px;
+    right: -150px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            rgba(22,160,133,0.15),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+.challenge-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.challenge-header h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 0.75rem;
+}
+
+.challenge-header p {
+    color: #cbd5e1;
+    max-width: 60ch;
+    margin: auto;
+}
+#question {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    color: #f8fafc;
+}
+#answers {
+    display: grid;
+    gap: 1rem;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+}
+.answer-btn {
+    padding: 1rem;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #1e293b;
+
+    color: #f8fafc;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.answer-btn:hover {
+    transform: translateY(-3px);
+
+    background: #16a085;
+
+    box-shadow:
+        0 8px 20px rgba(22,160,133,0.35);
+}
+/* Answer Checking */
+.answer-btn.correct {
+    background: #16a34a;
+}
+.answer-btn.wrong {
+    background: #dc2626;
+}
+
+/* Next Button */
+#next-btn {
+    display: block;
+
+    margin: 2rem auto 0;
+
+    padding: 0.85rem 1.75rem;
+
+    border: none;
+    border-radius: 10px;
+
+    background: var(--accent);
+
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+#next-btn:hover {
+    transform: translateY(-2px);
+}
+
