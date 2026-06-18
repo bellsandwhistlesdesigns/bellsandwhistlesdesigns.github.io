@@ -134,4 +134,53 @@
 #next-btn:hover {
     transform: translateY(-2px);
 }
+.category-wrapper {
 
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 1rem;
+
+}
+#questionCategory {
+
+    display: inline-block;
+
+    padding: 0.4rem 1rem;
+
+    border-radius: 999px;
+
+    background: var(--accent);
+
+    color: white;
+
+    font-weight: 600;
+
+    margin-bottom: 1rem;
+
+}
+.difficultly-wrapper {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 1rem;
+
+}
+#difficultyLevel{
+
+    display: inline-block;
+
+    padding: 0.4rem 1rem;
+
+    border-radius: 999px;
+
+    background: #5167a0;
+
+    color: white;
+
+    font-weight: 600;
+
+}

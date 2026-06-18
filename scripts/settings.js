@@ -62,62 +62,62 @@ const progressFill = document.getElementById("progressFill");
 
 const rankBadge =
     document.getElementById("rankBadge");
-
 const challengeScore =
     document.getElementById("challengeScore");
-
 const challengeData =
     JSON.parse(
         localStorage.getItem(
             `challengeData_${currentUser.username}`
         )
     );
-
-
 if(challengeData) {
 
     if(rankBadge) {
       rankBadge.textContent =
       challengeData.rank;
     }
-
-
     if(challengeScore) {
 
         challengeScore.textContent =
         `Best Score: ${challengeData.percentage}%`;
-
     }
-
 }
 else {
-
     if(rankBadge) {
         rankBadge.textContent =
         "🧭 Explorer";
     }
-
-
     if(challengeScore) {
-
         challengeScore.textContent =
         "Best Score: No attempts yet";
-
     }
-
 }
 const challengeDate =
     document.getElementById(
         "challengeDate"
     );
 
-if(
+    if(
     challengeDate &&
     challengeData
 ) {
 
     challengeDate.textContent =
         `Completed: ${challengeData.completed}`;
+
+}
+const challengeVersion =
+    document.getElementById(
+        "challengeVersion"
+    );
+
+if(
+    challengeVersion &&
+    challengeData
+) {
+
+    challengeVersion.textContent =
+        `Version: ${challengeData.version}`;
 
 }
 const resetChallengeBtn =
@@ -130,23 +130,17 @@ if(resetChallengeBtn) {
     resetChallengeBtn.addEventListener(
         "click",
         () => {
-
             const confirmed =
                 confirm(
                     "Are you sure you want to reset your Developer Challenge results? This cannot be undone."
                 );
-
             if(!confirmed) return;
-
             localStorage.removeItem(
                 `challengeData_${currentUser.username}`
             );
-
             location.reload();
-
         }
-    );
-
+   );
 }
 });
 

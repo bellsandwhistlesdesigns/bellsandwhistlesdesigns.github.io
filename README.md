@@ -10,7 +10,7 @@ Bells & Whistles Designs is an evolving frontend portfolio showcasing production
 
 Huge thanks to the developer community!
 
-Since January 20, 2026 this repository has been cloned over 800+ times by 370+ unique developers exploring, learning from, and experimenting with the codebase.
+This repository continues to have heavy traffic from unique developers exploring, learning from, and experimenting with the codebase.
 
 Feedback, discussion, and professional connections are always welcome.
 Actively seeking opportunities to contribute to modern frontend and full-stack teams.
@@ -36,6 +36,12 @@ The goal is clarity, usability, and maintainable structure.
 ---
 
 ## Recent Iterations
+
+06/16/2026 | New Developer Challenge
+
+- Built a gamified developer assessment feature
+- v1.1 already in production
+- The challenge is behind local authentication
 
 03/30/2026 | Re Added Full-Stack Development into Portfolio
 
