@@ -1,6 +1,6 @@
 ## Bells and Whistles Designs
 
-Personal portfolio and living product built by Douglas Moth
+Full-Stack Development | Creative Web design | built by: Douglas Moth
 
 Bells & Whistles Designs is an evolving frontend portfolio showcasing production-ready web applications, modern UI architecture, and scalable development patterns. 
 
@@ -17,9 +17,9 @@ Actively seeking opportunities to contribute to modern frontend and full-stack t
 
 ---
 
-## What This Project Represents:
+## What This Site Represents:
 
-The project reflects real-world implementation of responsive design, state-driven JavaScript, serverless integration, and thoughtful UX refinement.
+The site reflects real-world implementation of responsive design, state-driven JavaScript, serverless integration, and thoughtful UX refinement.
 
 It demonstrates:
 
@@ -39,9 +39,24 @@ The goal is clarity, usability, and maintainable structure.
 
 06/16/2026 | New Developer Challenge
 
+An interactive quiz system built into Bells & Whistles Designs
+
 - Built a gamified developer assessment feature
 - v1.1 already in production
+- Randomized question selection
+- Randomized answer ordering
+- Category filtering
+- Difficulty level selection 
+- User-specific challenge results
+- Achievement rankings
+- Version tracking
+- Challenge statistics
+- Mobile responsive design
 - The challenge is behind local authentication
+
+A new challenge hub was added to allow visitors the ability to customize their quiz experience before starting a trivia challenge. Records are stored per user account and can be reviewed from the Settings dashboard.
+
+This new feature demonstrates JavaScript fundamentals including array manipulation, object-filtering, localStorage persistence, DOM maniplulation, event handling, dynamic UI generation, and scalable application architecture
 
 03/30/2026 | Re Added Full-Stack Development into Portfolio
 
@@ -51,8 +66,6 @@ The goal is clarity, usability, and maintainable structure.
 - Removed from landing page information that was put into the Cart
 
 This iteration was focused to showcase that I still have the skills. Looking for employment everyday makes the skills go away.
-
-
 
 02/13/2026 | Portfolio Refactor and UX Enhancements
 
@@ -150,8 +163,9 @@ Note - Some demos are conceptual or simulated to reflect real production pattern
 ## About This Portfolio
 
 This portfolio evolves continuously as new features and refinements are implemented. 
-It reflects ongoing learning, iteration, and my commitment to building production-grade software.
+It reflects my ongoing learning, iteration, and my commitment to building production-grade software.
 
+---
 
 ## License & Usage
 
