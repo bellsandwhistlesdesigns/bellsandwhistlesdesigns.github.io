@@ -85,7 +85,7 @@ if(challengeData) {
 else {
     if(rankBadge) {
         rankBadge.textContent =
-        "🧭 Explorer";
+        "🧭 Explorer Badge";
     }
     if(challengeScore) {
         challengeScore.textContent =

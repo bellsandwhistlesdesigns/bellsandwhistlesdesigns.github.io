@@ -6,12 +6,14 @@ let currentQuestionIndex = 0;
 let score = 0;
 let currentShuffeldAnswers = [];
 
-const challengeVersion = "1.0";
+const challengeVersion = "1.1";
+
+
 
 const questionBank = [
 {
-    category: "Web Development",
-    difficultyLevel: "Beginner",
+    category:"Web Development",
+    difficultyLevel:"Beginner",
     question:
     "Which language runs natively in every modern web browser?",
     answers: [
@@ -23,8 +25,8 @@ const questionBank = [
     correct: 2
 },
 {
-    category: "Web Development",
-    difficultyLevel: "Beginner",
+    category:"Web Development",
+    difficultyLevel:"Beginner",
     question:
     "What does CSS stand for?",
     answers: [
@@ -36,8 +38,8 @@ const questionBank = [
     correct: 1
 },
 {
-    category: "General Knowledge",
-    difficultyLevel: "Beginner",
+    category:"General Knowledge",
+    difficultyLevel:"Beginner",
     question:
     "Which company created React?",
     answers: [
@@ -49,8 +51,8 @@ const questionBank = [
     correct: 2
 },
 {
-    category: "Web Development",
-    difficultyLevel: "Intermediate",
+    category:"Web Development",
+    difficultyLevel:"Intermediate",
     question:
     "What does API stand for?",
     answers: [
@@ -62,8 +64,8 @@ const questionBank = [
     correct: 0
 },
 {
-    category: "General Knowledge",
-    difficultyLevel: "Beginner",
+    category:"General Knowledge",
+    difficultyLevel:"Beginner",
     question:
     "Which planet is known as the Red Planet?",
     answers: [
@@ -75,8 +77,8 @@ const questionBank = [
     correct: 1
 },
 {
-    category: "Tech Category",
-    difficultyLevel: "Beginner",
+    category:"Technology",
+    difficultyLevel:"Beginner",
     question:
     "How many bits make one byte?",
     answers: [
@@ -88,8 +90,8 @@ const questionBank = [
     correct: 1
 },
 {
-    category: "Web Development",
-    difficultyLevel: "Beginner",
+    category:"Web Development",
+    difficultyLevel:"Beginner",
     question:
     "Which database type stores information as documents?",
     answers: [
@@ -101,8 +103,8 @@ const questionBank = [
     correct: 2
 },
 {
-    category: "Web Development",
-    difficultyLevel: "Beginner",
+    category:"Web Development",
+    difficultyLevel:"Beginner",
     question:
     "What does HTML primarily define?",
     answers: [
@@ -114,8 +116,8 @@ const questionBank = [
     correct: 1
 },
 {
-    category: "General Knowledge",
-    difficultyLevel: "Beginner",
+    category:"General Knowledge",
+    difficultyLevel:"Beginner",
     question:
     "Which animal is known as the fastest land animal?",
     answers: [
@@ -127,8 +129,8 @@ const questionBank = [
     correct: 1
 },
 {
-    category: "Web Development",
-    difficultyLevel: "Beginner",
+    category:"Web Development",
+    difficultyLevel:"Beginner",
     question:
     "What does 'responsive design' mean?",
     answers: [
@@ -140,8 +142,8 @@ const questionBank = [
     correct: 1
 },
 {   
-    category: "Web Development",
-    difficultyLevel: "Beginner",
+    category:"Web Development",
+    difficultyLevel:"Beginner",
     question:
     "Which Git command downloads a repository?",
     answers: [
@@ -153,8 +155,8 @@ const questionBank = [
     correct: 2
 },
 {
-    category: "Web Development",
-    difficultyLevel: "Beginner",
+    category:"Web Development",
+    difficultyLevel:"Beginner",
     question:
     "Which technology is used to create the structure of a webpage?",
     answers: [
@@ -166,8 +168,8 @@ const questionBank = [
     correct: 1
 },
 {
-    category: "General Knowledge",
-    difficultyLevel: "Beginner",
+    category:"General Knowledge",
+    difficultyLevel:"Beginner",
     question:
     "What is the largest ocean on Earth?",
     answers: [
@@ -179,8 +181,8 @@ const questionBank = [
     correct: 2
 },
 {
-    category: "General Kowledge",
-    difficultyLevel: "Beginner",
+    category:"General Kowledge",
+    difficultyLevel:"Beginner",
     question:
     "What year was the first iPhone released?",
     answers: [
@@ -192,7 +194,7 @@ const questionBank = [
     correct: 1
 },
 {
-    category: "Web Development",
+    category:"Web Development",
     difficultyLevel: "Beginner",
     question:
     "Which company developed TypeScript?",
@@ -219,8 +221,8 @@ const questionBank = [
     correct: 4
 },
 {
-    category: "Bells & Whistles",
-    difficultyLevel: "Beginner",
+    category:"Bells & Whistles",
+    difficultyLevel:"Beginner",
     question:
     "What Next.js platform did the developer create?",
     answers: [
@@ -232,11 +234,11 @@ const questionBank = [
     correct: 0
 },
 {
-    category: "Bells & Whistles",
-    difficultyLevel: "Beginner",
+    category:"Bells & Whistles",
+    difficultyLevel:"Beginner",
     question:
     "Where is the devloper located?",
-    answer: [
+    answers: [
         "Coquitlam, BC",
         "New Westminster, BC",
         "Vancouver, WA",
@@ -357,6 +359,39 @@ const questionBank = [
 
     correct:1
 },
+{
+    category:"Bells & Whistles",
+    difficultyLevel:"Intermediate",
+
+    question:
+    "Whis is the developers favourite quote?",
+
+    answers: [
+        "Curiosity fuels every great creation.",
+        "The darkest hours are often when the brightest ideas ignite.",
+        "The night may be silent, but ideas are loud if you listen.",
+        "Ideas are seeds; action is the sunlight.",
+    ],
+
+    correct: 1
+},
+{
+    category:"Bells & Whistles",
+    difficultyLevel:"Intermediate",
+
+    question: 
+    "What does the developer think is boring?",
+
+    answers: [
+        "Skydiving",
+        "Lawn Darts",
+        "Dark Mode",
+        "Pickle Ball",
+    ],
+
+    correct: 2
+},
+{}
 ];
 
 // Shuffle Questions
@@ -367,10 +402,57 @@ function shuffle(array) {
     );
 
 }
-// How many questions
+const selectedDifficulty =
+    localStorage.getItem(
+        "selectedDifficulty"
+    ) || "all";
+
+const selectedCategory =
+    localStorage.getItem(
+        "selectedCategory"
+    ) || "all";
+
+
+let filteredQuestions =
+    questionBank;
+
+
+// Filter by Difficulty
+
+if(
+    selectedDifficulty !== "all"
+) {
+
+    filteredQuestions =
+        filteredQuestions.filter(
+            question =>
+                question.difficultyLevel ===
+                selectedDifficulty
+        );
+
+}
+
+
+// Filter by Category
+
+if(
+    selectedCategory !== "all"
+) {
+
+    filteredQuestions =
+        filteredQuestions.filter(
+            question =>
+                question.category ===
+                selectedCategory
+        );
+
+}
+
+// Generate Challenge
+
 const questions =
-    shuffle(questionBank)
-    .slice(0, 10);
+    shuffle(filteredQuestions)
+    .slice(0, 15);
 
 console.log(
     `Challenge generated with ${questions.length} questions`
@@ -595,16 +677,16 @@ function getRank(score) {
     (score / questions.length) * 100;
 
     if(percentage === 100)
-        return "🚀 Architect";
+        return "🚀 Champion Badge";
 
     if(percentage >= 80)
-        return "⚙️ Engineer";
+        return "⚙️ Jeopardy Badge";
 
     if(percentage >= 60)
-        return "💻 Developer";
+        return "💻 Computer Badge";
 
     if(percentage >= 30)
-        return "🔨 Builder";
+        return "🔨 Builder badge";
 
     return "🧭 Explorer";
 }

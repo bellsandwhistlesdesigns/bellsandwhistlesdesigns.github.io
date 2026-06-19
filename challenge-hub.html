@@ -1,0 +1,157 @@
+<!-- Bells and Whistles Developer's Challenge Hub page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Developers Trivia Challenge Hub | Bells and Whistles Designs</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-32x32.png">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style-dashboard.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/style-video.css">
+	<link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="css/style-challenge.css">
+</head>
+<body>
+	<!-- Main Navigation: responsive + auth aware-->
+<header class="site-header">
+  	<div class="header-inner">
+
+    <!-- Logo -->
+    <div class="brand">
+      <img src="images/bellsandwhistles.svg"
+           alt="Bells and Whistles Designs Logo">
+      <span class="brand-text">Bells & Whistles Designs</span>
+    </div>
+
+    <!-- Hamburger -->
+    <button class="nav-toggle"
+            id="navToggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false">
+      ☰
+    </button>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+		<a href="dashboard.html">Back</a>
+		<a href="settings,html">Settings</a>
+		
+		<a href="#" id="logoutBtn" class="logout hidden">Log Out</a>
+    </nav>
+	</div>
+</header>
+<main class="hub-container">
+
+    <section class="hub-intro">
+        <h2>Choose Your Challenge</h2>
+        <p>
+            Test your knowledge across web development,
+            technology, general knowledge, and many more.
+            Each challenge is randomly generated from an
+            expanding question bank.
+        </p>
+    </section>
+
+    <section class="hub-stats">
+        <div class="hub-card">
+            <h3>Question Bank</h3>
+            <p>45+ Random Questions</p>
+        </div>
+        <div class="hub-card">
+            <h3>Current Version</h3>
+            <p>v1.1. Limited Questions and Difficulties</p>
+        </div>
+        <div class="hub-card">
+            <h3>Categories</h3>
+            <p>Web Dev • Tech • General Knowledge • Bells & Whistles</p>
+        </div>
+    </section>
+
+    <section class="hub-options">
+        <h2>Challenge Settings</h2>
+        <div class="option-group">
+
+            <label for="difficulty">
+                Difficulty
+            </label>
+
+            <select id="difficultyLevel">
+                <option value="all">
+                    Mixed
+                </option>
+                <option value="Beginner">
+                    Beginner
+                </option>
+                <option value="Intermediate">
+                    Intermediate
+                </option>
+                <option value="Advanced" disabled>
+                    Advanced (Coming Soon)
+                </option>
+            </select>
+        </div>
+        <div class="option-group">
+            <label for="category">
+                Category
+            </label>
+            <select id="category">
+				<option value="all">
+                    All Categories
+                </option>
+                <option value="General Knowledge" disabled>
+                    General Knowledge
+                </option>
+                <option value="Web Development" disabled>
+                    Web Development
+                </option>
+                <option value="Technology" disabled>
+                    Technology
+                </option>
+				<option value="Bells & Whistles" disabled>
+                    My Website
+                </option>
+				<option value="JavaScript" disabled>
+                    JavaScript
+                </option>
+            </select>
+        </div>
+    </section>
+<!-- Start Trivia v1.0-->
+<section class="hub-launch">
+    <a
+        href="#"
+		id="startChallengeBtn"
+        class="challenge-button">
+        Start Challenge
+    </a>
+</section>
+
+</main>
+<!-- Global Footer -->
+<footer class="site-footer">
+	<div class="footer-content">
+		<p>© 2026 Douglas James - Bells & Whistles Designs</p>
+
+		<ul class="footer-links">
+			<li><a href="https://www.linkedin.com/in/douglasmoth" target="_blank">LinkedIn Profile</a></li>
+			<li><a href="https://github.com/bellsandwhistlesdesigns/bellsandwhistlesdesigns.github.io" target="_blank">GitHub</a></li>
+			<li><a href="privacypolicy.html">Privacy Policy</a></li>
+			<li><a href="usage.html">Terms of Use</a></li>
+			<li><a href="contactus.html">Contact Me</a></li>
+		</ul>
+	</div>
+</footer>
+<script src="scripts/mobilenav.js"></script>
+<script src="scripts/database.js"></script>
+<script src="scripts/dashboard.js"></script>
+
+<script src="scripts/developer-hub.js"></script>
+<script src="scripts/settings.js"></script>
+<script src="scripts/logout.js"></script>
+
+</body>
+</html>
